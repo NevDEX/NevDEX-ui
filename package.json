@@ -1,0 +1,37 @@
+{
+  "name": "nervos_dex1.0",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "deploy": "gh-pages -d build"
+  },
+  "dependencies": {
+    "@heroicons/vue": "^1.0.6",
+    "@popperjs/core": "^2.11.2",
+    "@tailwindcss/forms": "^0.4.0",
+    "@tailwindcss/postcss7-compat": "^2.0.2",
+    "autoprefixer": "^9",
+    "axios": "^0.26.1",
+    "core-js": "^3.6.5",
+    "dayjs": "^1.10.4",
+    "eth-sig-util": "^3.0.1",
+    "ethers": "^5.5.3",
+    "mosha-vue-toastify": "^1.0.23",
+    "postcss": "^7",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0-0",
+    "vue-tradingview-widgets": "^1.0.2",
+    "vuex": "^4.0.2",
+    "web3": "^1.7.4"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "vue-cli-plugin-tailwind": "~2.0.6"
+  }
+}

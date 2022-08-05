@@ -1,0 +1,39 @@
+{
+  "tokens": [
+    {
+      "chainId": 1,
+      "address": "0x48d1f4Fea60fE15f476643ea77e53eCba43B672e",
+      "name": "Bit Coin",
+      "symbol": "BTC",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/compound-finance/token-list/master/assets/asset_ZRX.svg",
+      "id": "bitcoin"
+    },
+    {
+      "chainId": 1,
+      "address": "0x48d1f4Fea60fE15f476643ea77e53eCba43B672e",
+      "name": "BSC Token",
+      "symbol": "BNB",
+      "decimals": 18,
+      "logoURI": "https://trade.mango.markets/assets/icons/bnb.svg",
+      "id": "binancecoin"
+    },
+    {
+      "chainId": 1,
+      "address": "0xc1cB78e38F125E2Ed53a269035f837b16aD0BBCA",
+      "name": "CKB",
+      "symbol": "CKB",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/compound-finance/token-list/master/assets/ctoken_dai.svg",
+      "id": "nervos-network"
+    },
+    {
+      "chainId": 1,
+      "address": "0x1BC82d9c5767Bea66fa6078b46E60866e22aed57",
+      "name": "USDT",
+      "symbol": "USDT",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/compound-finance/token-list/master/assets/ctoken_dai.svg"
+    }
+  ]
+}
