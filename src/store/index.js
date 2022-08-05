@@ -43,19 +43,19 @@ export default createStore({
       state.crypto = payload
     },
     setMarket: (state, payload) => {
-      console.log('setMarket', payload)
+      // console.log('setMarket', payload)
       state.market = payload
     },
     setAccount: (state, payload) => {
-      console.log('setAccount', payload)
+      // console.log('setAccount', payload)
       state.account = payload
     },
     setWalletBalance: (state, payload) => {
-      console.log('setWalletBalance', payload)
+      // console.log('setWalletBalance', payload)
       state.walletBalance = payload
     },
     setAccountBalance: (state, payload) => {
-      console.log('setAccountBalance', payload)
+      // console.log('setAccountBalance', payload)
       state.accountBalance = payload
     }
   },
