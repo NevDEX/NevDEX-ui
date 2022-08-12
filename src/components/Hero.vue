@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col text-center mass-header z-10">
+  <div class="flex flex-col text-center mass-header z-10  h-screen relative">
     <video autoPlay loop muted id="video">
       <source src="../assets/header-bg.mp4" type="video/mp4" />
     </video>

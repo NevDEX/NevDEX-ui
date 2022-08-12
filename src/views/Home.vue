@@ -1,7 +1,7 @@
 <template>
   <Hero />
   <div class="container mx-auto">
-    <div class="flex mt-96 h-full">
+    <div class="flex mt-20 h-full">
       <div class="w-2/3">
         <img class="px-20 drop-shadow-lg bg" src="../assets/screen_shot.png" alt="screen_shot" />
       </div>
