@@ -3,7 +3,7 @@
     <video autoPlay loop muted id="video">
       <source src="../assets/header-bg.mp4" type="video/mp4" />
     </video>
-    <div class="z-10 flex flex-col">
+    <div class="z-10 flex flex-col mt-12">
       <span class="text-gray-50 font-bold text-5xl mt-40"> Trade on NevDEX Faster, Cheaper </span>
       <span class="text-gray-50 font-bold text-5xl"> and more Stable. </span>
       <span class="text-gray-400 hover: text-xl mt-10"> NevDEX brings the speed and convenience of centralized exchanges to DeFi </span>

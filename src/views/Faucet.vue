@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-900 w-screen flex flex-col h-full">
+  <div class="bg-gray-900 w-screen flex flex-col h-full pt-12">
     <div>
       <h1 class="bg-[#008000] pt-5 font-bold text-2xl text-white text-center bg-transparent">NevDEX Authenticated Faucet</h1>
     </div>
