@@ -71,6 +71,8 @@ import { getTokenAddress, formatNumber } from '../utils/token'
 import { getVaultBalance } from '../contract'
 const { walletGlobal } = UseWallet()
 import { mapActions, mapGetters } from 'vuex'
+import { lockedBalance } from '../api/api.js'
+
 export default {
   components: {
     Deposit,
@@ -109,8 +111,14 @@ export default {
         // console.log(` ==> quote:${tokenAddress}, balance:${balance}`)
         this.quoteAmount = balance
       }
+
+      console.log('locked balance')
+      await lockedBalance({
+        marketID: newVal,
+        address: this.account,
+      })
     },
-    account: async function (newVal, oldVal) {
+    account: async function () {
       this.isConnected = true
       let arr = this.market.split('-')
       this.baseToken = arr[0]

@@ -55,3 +55,11 @@ export function marketHistory(data) {
         data
     })
 }
+
+export function lockedBalance(data) {
+    return request({
+        url: '/lockedBalance',
+        method: 'post',
+        data
+    })
+}

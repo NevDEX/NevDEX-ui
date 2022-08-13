@@ -20,7 +20,7 @@
       <div class="mt-2 mb-2 text-green-400 text-center text-xs" v-if="spread > 0">
         {{ spread }}
       </div>
-      <div v-for="bid in bidToDisplay" :key="bid.price" @click="onAskClick(ask)" class="w-full mt-0.5 relative bg-green-500 text-white h-5 flex text-left text-xs items-center">
+      <div v-for="bid in bidToDisplay" :key="bid.price" @click="onBidClick(bid)" class="w-full mt-0.5 relative bg-green-500 text-white h-5 flex text-left text-xs items-center">
         <span class="ml-0 bg-gray-900 h-5 text-white text-left text-xs items-center flex" :style="{ width: 100 - bid.sizePercent + '%' }">{{ bid.size }}</span>
         <span class="absolute right-0.5">{{ bid.price }}</span>
       </div>

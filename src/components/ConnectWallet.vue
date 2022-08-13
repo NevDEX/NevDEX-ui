@@ -27,9 +27,9 @@ export default {
   created() {},
   watch: {
     $route(to, from) {
-      this.showBtn = false
-      if (to.fullPath === '/trade') {
-        this.showBtn = true
+      this.showBtn = true
+      if (to.fullPath === '/') {
+        this.showBtn = false
       }
     },
   },

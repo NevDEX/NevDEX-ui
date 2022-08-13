@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-800">
+  <div class="bg-gradient-to-b from-gray-900 to-gray-800">
     <div class="container m-auto">
       <div class="grid grid-cols-2 gap-8 py-6 px-6 md:grid-cols-4">
         <div>

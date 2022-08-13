@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col text-center mass-header z-10  h-screen relative">
+  <div class="flex flex-col text-center mass-header z-10 h-screen relative">
     <video autoPlay loop muted id="video">
       <source src="../assets/header-bg.mp4" type="video/mp4" />
     </video>
@@ -26,7 +26,7 @@ export default {}
 #video {
   position: absolute;
   width: 100%;
-  height: 94.5%;
+  height: 100%;
   object-fit: cover;
   z-index: -1;
 }

@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex justify-between items-center bg-transparent px-4 absolute z-10">
+  <nav class="flex justify-between items-center px-4 absolute z-40 h-12">
     <div class="w-12" style="">
       <img src="../assets/logo.png" />
     </div>
@@ -40,7 +40,6 @@ export default {
   methods: {
     async onConnectWallet() {
       await connect()
-      console.log(walletGlobal.account)
       this.btnTxt = walletGlobal.account
     },
     tab(index) {

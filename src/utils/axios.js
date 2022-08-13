@@ -1,6 +1,8 @@
 import axios from 'axios'
-const BaseUrl = "https://testnet.nevdex.tech/api/"
-// const BaseUrl = 'http://127.0.0.1:5000/api/'
+import { createToast } from 'mosha-vue-toastify'
+
+// const BaseUrl = "https://testnet.nevdex.tech/api/"
+const BaseUrl = 'http://127.0.0.1:5000/api/'
 
 // create an axios instance
 const service = axios.create({
@@ -34,7 +36,17 @@ service.interceptors.response.use(
     }
   },
   (error) => {
-    console.error('err' + error) // for debug
+    console.error('response err' + error) // for debug
+    // createToast(
+    //   { title: 'http', description: " " + error },
+    //   {
+    //     type: 'danger',
+    //     showIcon: true,
+    //     position: 'top-center',
+    //     timeout: 8000,
+    //   }
+    // )
+
     return Promise.reject(error)
   }
 )

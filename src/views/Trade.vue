@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col w-full h-full">
+  <div class="flex flex-col w-full h-full pt-12">
     <TradeBar />
     <div class="flex flex-1 bg-gray-900">
       <div class="w-1/5 border-black border-r">
@@ -39,12 +39,7 @@
                 <div>Vol</div>
                 <div>0 USDT</div>
               </div>
-              <!-- <div class="flex justify-between mt-2 mb-2 px-1 text-gray-50 text-xs">
-                <div>Fee:</div>
-                <div>
-                  Taker 0.10 % , Maker: 0.10 %
-                </div>
-              </div> -->
+
               <div class="mt-2 flex justify-center items-center">
                 <button class="py-2 w-full bg-gray-800 hover:bg-gray-600 text-gray-50" @click="onMarketTrade">{{ opBtnTxt }}</button>
               </div>
@@ -87,6 +82,8 @@ import { ethers } from 'ethers'
 import UseWallet from '../wallet'
 const { walletGlobal } = UseWallet()
 import { mapActions, mapGetters } from 'vuex'
+import { createToast } from 'mosha-vue-toastify'
+
 export default {
   name: 'Trade',
   components: { TradingView, TradeTab, RangeSlider, DropDown, OrderBook, TradeFooter, WalletModal, Volume, Assets, TradeBar },
@@ -127,6 +124,16 @@ export default {
       console.log('account', walletGlobal.account)
       if (this.price == 0 || this.amount == 0) {
         console.log('price or amount 0')
+
+        createToast(
+          { title: 'insufficient!', description: 'insufficient of token' },
+          {
+            type: 'danger',
+            showIcon: true,
+            position: 'top-center',
+            timeout: 5000,
+          }
+        )
         return
       }
 
@@ -163,10 +170,8 @@ export default {
     onMarketTrade() {
       // console.log('market order :price', this.price, 'amount', this.amount)
       if (this.tab == 'buy') {
-        console.log('BUY')
         this.trade('buy', 'market')
       } else {
-        console.log('SELL')
         this.trade('sell', 'market')
       }
     },
