@@ -31,12 +31,12 @@ export default {
     transform: translateX(0vw);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-900%);
   }
 }
 
 .marquee-content {
-  animation: marqueeAnim 50s linear 0s infinite;
+  animation: marqueeAnim 250s linear 0s infinite;
 }
 
 .marquee-root {
