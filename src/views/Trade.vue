@@ -61,7 +61,7 @@
         <TradeTab :market="market" class="flex-1" />
       </div>
     </div>
-    <Wallet v-if="showWallet" @close="showWallet = false" />
+ 
     <TradeFooter />
   </div>
 </template>
