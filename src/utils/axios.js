@@ -26,10 +26,17 @@ service.interceptors.request.use(
 service.interceptors.response.use(
   (response) => {
     const res = response.data
-    // console.log("http return ", res)
     if (res.code !== 20000) {
-      if (res.code === 50008 || res.code === 50012 || res.code === 50014) {
-      }
+      console.log("http return ", res)
+      createToast(
+        { title: 'http', description: res.desc },
+        {
+          type: 'danger',
+          showIcon: true,
+          position: 'top-center',
+          timeout: 8000,
+        }
+      )
       return Promise.reject(new Error(res.message || 'Error'))
     } else {
       return res.data
@@ -37,16 +44,6 @@ service.interceptors.response.use(
   },
   (error) => {
     console.error('response err' + error) // for debug
-    // createToast(
-    //   { title: 'http', description: " " + error },
-    //   {
-    //     type: 'danger',
-    //     showIcon: true,
-    //     position: 'top-center',
-    //     timeout: 8000,
-    //   }
-    // )
-
     return Promise.reject(error)
   }
 )
