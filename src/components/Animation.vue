@@ -1,5 +1,5 @@
 <template>
-  <div id="partners" class="mb-12 lg:mb-20">
+  <div class="mb-12 lg:mb-20">
     <div class="container lg:p-20 mt-6 overflow-hidden p-12 relative">
       <div class="flex animate absolute left-0">
         <div class="logo" v-for="crypto in getCrypto.slice(0, 100)" :key="crypto.id">
