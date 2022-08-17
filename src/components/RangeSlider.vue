@@ -23,11 +23,7 @@
 export default {
   data: function () {
     return {
-      position: 0,
-      dragging: false,
-      width: null,
-      offset: null,
-      displayProgress: 'none',
+   
     }
   },
 }
