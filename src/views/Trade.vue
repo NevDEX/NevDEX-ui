@@ -33,7 +33,7 @@
                 <div class="mt-3 flex items-center rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
                   <span class="w-3/12 text-gray-200 border border-gray-600 bg-transparent border-transparent py-2 sm:text-sm rounded-l text-center"> Size </span>
                   <div class="relative w-9/12 flex items-center">
-                    <input type="number" name="price" id="price" class="w-full absolute block pr-12 -top-4.5 border sm:text-sm text-gray-50 border-gray-500 text-center bg-gray-800" step="0.001" v-model="price" :min="0" oninput="if(value<0)value=0" />
+                    <input type="number" class="w-full absolute block pr-12 -top-4.5 border sm:text-sm text-gray-50 border-gray-500 text-center bg-gray-800" step="0.001" v-model="amount" :min="0" oninput="if(value<0)value=0" />
                     <div class="absolute -top-2.5 right-2 text-gray-400 text-sm">{{ quoteToken.name }}</div>
                   </div>
                 </div>
@@ -45,14 +45,14 @@
                 <div class="mt-3 flex items-center rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
                   <span class="w-3/12 text-gray-200 border border-gray-600 bg-transparent border-transparent py-2 sm:text-sm rounded-l text-center"> Price </span>
                   <div class="relative w-9/12 flex items-center">
-                    <input type="number" name="price" id="price" class="w-full absolute block pr-12 -top-4.5 border sm:text-sm text-gray-50 border-gray-500 text-center bg-gray-800" step="0.001" v-model="price" :min="0" oninput="if(value<0)value=0" />
+                    <input type="number" class="w-full absolute block pr-12 -top-4.5 border sm:text-sm text-gray-50 border-gray-500 text-center bg-gray-800" step="0.001" v-model="price" :min="0" oninput="if(value<0)value=0" />
                     <div class="absolute -top-2.5 right-2 text-gray-400 text-sm">{{ quoteToken.name }}</div>
                   </div>
                 </div>
                 <div class="mt-3 flex items-center rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
                   <span class="w-3/12 text-gray-200 border border-gray-600 bg-transparent border-transparent py-2 sm:text-sm rounded-l text-center"> Size </span>
                   <div class="relative w-9/12 flex items-center">
-                    <input type="number" name="price" id="price" class="w-full absolute block pr-12 -top-4.5 border sm:text-sm text-gray-50 border-gray-500 text-center bg-gray-800" step="0.001" v-model="amount" :min="0" oninput="if(value<0)value=0" />
+                    <input type="number" class="w-full absolute block pr-12 -top-4.5 border sm:text-sm text-gray-50 border-gray-500 text-center bg-gray-800" step="0.001" v-model="amount" :min="0" oninput="if(value<0)value=0" />
                     <div class="absolute -top-2.5 right-2 text-gray-400 text-sm">{{ baseToken.name }}</div>
                   </div>
                 </div>
@@ -69,11 +69,8 @@
               </div>
 
               <div class="mt-2 flex justify-center items-center">
-                <button class="py-2 w-full bg-gray-800 hover:bg-gray-600 text-gray-50" @click="onMarketTrade">{{ opBtnTxt }}</button>
+                <button class="py-2 w-full bg-gray-800 hover:bg-gray-600 text-gray-50" @click="onTrade">{{ opBtnTxt }}</button>
               </div>
-              <!-- <div class="mt-3 flex justify-center items-center">
-                <button class="py-2 w-full bg-gray-800 hover:bg-gray-600 text-gray-50" @click="onLimitTrade">{{ limitBtnTxt }}</button>
-              </div> -->
               <Assets />
             </div>
           </div>
@@ -138,7 +135,6 @@ export default {
         walletBalance: 0,
         unsettledBalance: 0,
       },
-      showWallet: false,
     }
   },
   watch: {
@@ -150,7 +146,14 @@ export default {
   },
   methods: {
     trade(side, orderType) {
-      console.log('account', walletGlobal.account)
+      console.log('account:', walletGlobal.account, side, orderType)
+
+      if (orderType === 'market') {
+        console.log('market trade')
+        this.price = 1
+      }
+      console.log('price:', this.price, 'amount:', this.amount)
+
       if (this.price == 0 || this.amount == 0) {
         console.log('price or amount 0')
 
@@ -191,25 +194,23 @@ export default {
             orderID: resp.id,
             signature: orderSignature,
           })
-            .then((ret) => console.log('==> placeOrder', ret))
+            .then((ret) =>
+              createToast('Order placed!', {
+                type: 'success',
+                position: 'top-center',
+                showIcon: true,
+                timeout: 5000,
+              })
+            )
             .catch((err) => console.error('==> placeOrder', err))
         })
         .catch((err) => console.error(err))
     },
-    onMarketTrade() {
-      // console.log('market order :price', this.price, 'amount', this.amount)
+    onTrade() {
       if (this.tab == 'buy') {
-        this.trade('buy', 'market')
+        this.trade('buy', this.orderType)
       } else {
-        this.trade('sell', 'market')
-      }
-    },
-    onLimitTrade() {
-      // console.log('limit order :price', this.price, 'amount', this.amount)
-      if (this.tab == 'buy') {
-        this.trade('buy', 'limit')
-      } else {
-        this.trade('sell', 'limit')
+        this.trade('sell', this.orderType)
       }
     },
     toggleTabs(tab) {
@@ -249,13 +250,4 @@ export default {
   async created() {},
 }
 </script>
-<style scoped>
-.tradingView {
-  /* margin-top: -1px; */
-  height: 55vh;
-}
-
-.chart {
-  margin-top: -2px;
-}
-</style>
+<style scoped></style>

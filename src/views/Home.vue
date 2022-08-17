@@ -1,7 +1,7 @@
 <template>
   <Hero />
   <div class="bg-gradient-to-b from-gray-900 to-gray-800 pb-20">
-    <div class="container mx-auto pt-20">
+    <div class="container mx-auto pt-40">
       <div class="flex h-full">
         <div class="w-2/3">
           <img class="px-20" src="../assets/screen_shot.png" alt="screen_shot" />
@@ -14,8 +14,8 @@
         </div>
       </div>
       <!-- middle -->
-      <div>
-        <div class="pb-10 h-5/6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-4 mt-20 max-w-6xl mx-auto">
+      <div class="mt-40">
+        <div class="pb-10 h-5/6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-4 mt-40 max-w-6xl mx-auto">
           <div class="p-6 max-w-sm bg-gray-800 rounded-lg border border-gray-900 shadow-md h-80">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
               <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
