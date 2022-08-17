@@ -2,7 +2,7 @@
   <div class="flex flex-col w-full h-full pt-12">
     <TradeBar />
     <div class="flex flex-1 bg-gray-900">
-      <div class="w-1/5 md:w-1/6 border-black border-r">
+      <div class="w-1/5 lg:w-1/6 border-black border-r">
         <div class="flex flex-col px-0.5 h-full">
           <div class="bg-gray-900 h-full">
             <div class="p-2 bg-gray-900 h-full">
@@ -80,11 +80,11 @@
         </div>
       </div>
 
-      <div class="w-1/5 md:w-1/6 border-black border-r">
+      <div class="w-1/5 lg:w-1/6 border-black border-r">
         <OrderBook @updateBid="onBidUpdate" @updateAsk="onAskUpdate" :baseToken="baseToken.name" :quoteToken="quoteToken.name" :market="market" />
       </div>
 
-      <div class="flex flex-col w-3/5 md:w-4/6 h-full">
+      <div class="flex flex-col w-3/5 lg:w-4/6 h-full">
         <TradingView :market="market" class="" />
         <TradeTab :market="market" class="flex-1" />
       </div>
