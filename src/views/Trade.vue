@@ -15,23 +15,51 @@
                 </li>
               </ul>
 
-              <div class="mt-3 flex items-center rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                <span class="w-3/12 text-gray-200 border border-gray-600 bg-transparent border-transparent py-2 sm:text-sm rounded-l text-center"> Price </span>
-                <div class="relative w-9/12 flex items-center">
-                  <input type="number" name="price" id="price" class="w-full absolute block pr-12 -top-4.5 border sm:text-sm text-gray-50 border-gray-500 text-center bg-gray-800" step="0.001" v-model="price" :min="0" oninput="if(value<0)value=0" />
-                  <div class="absolute -top-2.5 right-2 text-gray-400 text-sm">{{ quoteToken.name }}</div>
+              <!-- order type -->
+              <div class="pt-2 text-sm font-medium text-center text-gray-500 border-b border-gray-600">
+                <ul class="flex flex-wrap -mb-px">
+                  <li class="mr-2">
+                    <a href="#" class="inline-block p-2 rounded-t-lg border-b-2 hover:text-gray-600 hover:border-gray-300" @click="tabOrderType('market')">Market</a>
+                  </li>
+                  <li class="mr-2">
+                    <a href="#" class="inline-block p-2 text-gray-300 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300" @click="tabOrderType('limit')">Limit</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- order type -->
+
+              <!-- market order tab  -->
+              <div v-if="orderType === 'market'">
+                <div class="mt-3 flex items-center rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                  <span class="w-3/12 text-gray-200 border border-gray-600 bg-transparent border-transparent py-2 sm:text-sm rounded-l text-center"> Size </span>
+                  <div class="relative w-9/12 flex items-center">
+                    <input type="number" name="price" id="price" class="w-full absolute block pr-12 -top-4.5 border sm:text-sm text-gray-50 border-gray-500 text-center bg-gray-800" step="0.001" v-model="price" :min="0" oninput="if(value<0)value=0" />
+                    <div class="absolute -top-2.5 right-2 text-gray-400 text-sm">{{ quoteToken.name }}</div>
+                  </div>
                 </div>
               </div>
+              <!-- market order tab  -->
 
-              <div class="mt-3 flex items-center rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                <span class="w-3/12 text-gray-200 border border-gray-600 bg-transparent border-transparent py-2 sm:text-sm rounded-l text-center"> Size </span>
-                <div class="relative w-9/12 flex items-center">
-                  <input type="number" name="price" id="price" class="w-full absolute block pr-12 -top-4.5 border sm:text-sm text-gray-50 border-gray-500 text-center bg-gray-800" step="0.001" v-model="amount" :min="0" oninput="if(value<0)value=0" />
-                  <div class="absolute -top-2.5 right-2 text-gray-400 text-sm">{{ baseToken.name }}</div>
+              <!-- limit order tab  -->
+              <div v-if="orderType === 'limit'">
+                <div class="mt-3 flex items-center rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                  <span class="w-3/12 text-gray-200 border border-gray-600 bg-transparent border-transparent py-2 sm:text-sm rounded-l text-center"> Price </span>
+                  <div class="relative w-9/12 flex items-center">
+                    <input type="number" name="price" id="price" class="w-full absolute block pr-12 -top-4.5 border sm:text-sm text-gray-50 border-gray-500 text-center bg-gray-800" step="0.001" v-model="price" :min="0" oninput="if(value<0)value=0" />
+                    <div class="absolute -top-2.5 right-2 text-gray-400 text-sm">{{ quoteToken.name }}</div>
+                  </div>
+                </div>
+                <div class="mt-3 flex items-center rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                  <span class="w-3/12 text-gray-200 border border-gray-600 bg-transparent border-transparent py-2 sm:text-sm rounded-l text-center"> Size </span>
+                  <div class="relative w-9/12 flex items-center">
+                    <input type="number" name="price" id="price" class="w-full absolute block pr-12 -top-4.5 border sm:text-sm text-gray-50 border-gray-500 text-center bg-gray-800" step="0.001" v-model="amount" :min="0" oninput="if(value<0)value=0" />
+                    <div class="absolute -top-2.5 right-2 text-gray-400 text-sm">{{ baseToken.name }}</div>
+                  </div>
                 </div>
               </div>
+              <!-- limit order tab  -->
 
-              <div class="flex justify-center mt-3 mb-2">
+              <div class="flex justify-center px-2">
                 <RangeSlider />
               </div>
 
@@ -43,9 +71,9 @@
               <div class="mt-2 flex justify-center items-center">
                 <button class="py-2 w-full bg-gray-800 hover:bg-gray-600 text-gray-50" @click="onMarketTrade">{{ opBtnTxt }}</button>
               </div>
-              <div class="mt-3 flex justify-center items-center">
+              <!-- <div class="mt-3 flex justify-center items-center">
                 <button class="py-2 w-full bg-gray-800 hover:bg-gray-600 text-gray-50" @click="onLimitTrade">{{ limitBtnTxt }}</button>
-              </div>
+              </div> -->
               <Assets />
             </div>
           </div>
@@ -61,7 +89,7 @@
         <TradeTab :market="market" class="flex-1" />
       </div>
     </div>
- 
+
     <TradeFooter />
   </div>
 </template>
@@ -98,6 +126,7 @@ export default {
       limitBtnTxt: 'LIMIT BUY',
       price: 0,
       amount: 0,
+      orderType: 'market',
       timer: '',
       baseToken: {
         name: '',
@@ -211,6 +240,10 @@ export default {
       // console.log('onAskUpdate', ask)
       this.price = ask.price
       this.amount = ask.size
+    },
+    tabOrderType(orderType) {
+      this.orderType = orderType
+      console.log('tabOrderType:', orderType)
     },
   },
   async created() {},
