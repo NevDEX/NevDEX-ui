@@ -59,11 +59,11 @@
               </div>
               <!-- limit order tab  -->
 
-              <div class="flex justify-center px-2">
+              <div class="flex justify-center mt-5">
                 <RangeSlider />
               </div>
 
-              <div class="flex justify-between mt-2 mb-2 px-2 text-gray-50 text-xs">
+              <div class="flex justify-between mt-5 mb-2 px-2 text-gray-50 text-xs">
                 <div>Vol</div>
                 <div>0 USDT</div>
               </div>

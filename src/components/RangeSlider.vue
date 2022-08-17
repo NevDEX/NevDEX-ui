@@ -2,20 +2,20 @@
   <div class="slider" @click="barClick">
     <div class="">
       <div class="relative">
-        <input style="z-index: -1; width: 100%" id="small-range" type="range" value="0" class="mb-4 h-1 bg-gray-600 rounded-lg appearance-none cursor-pointer range-sm" />
-        <span style="left: 21%; top: 35%; z-index: -10" class="h-2 w-2 bg-gray-600 rounded-lg absolute"></span>
-        <span style="left: 47%; top: 35%; z-index: -10" class="h-2 w-2 bg-gray-600 rounded-lg absolute"></span>
+        <input style="z-index: -1; width: 100%" min="1" max="5" step="1" type="range" value="0" class="mb-4 h-1 bg-gray-600 rounded-lg appearance-none cursor-pointer range-sm" />
+        <span style="left: 25%; top: 35%; z-index: -10" class="h-2 w-2 bg-gray-600 rounded-lg absolute"></span>
+        <span style="left: 50%; top: 35%; z-index: -10" class="h-2 w-2 bg-gray-600 rounded-lg absolute"></span>
         <span style="left: 73%; top: 35%; z-index: -10" class="h-2 w-2 bg-gray-600 rounded-lg absolute"></span>
         <span style="right: 0.3px; top: 35%; z-index: -10" class="h-2 w-2 bg-gray-600 rounded-lg absolute"></span>
       </div>
     </div>
-    <div class="w-full flex justify-between text-xs">
-      <span class="text-white">0%</span>
-      <span class="text-white">25%</span>
-      <span class="text-white">50%</span>
-      <span class="text-white">75%</span>
-      <span class="text-white">100%</span>
-    </div>
+    <ul class="flex justify-between w-full text-xs mb-3 px-2">
+      <li class="flex justify-center relative"><span class="absolute text-white">0%</span></li>
+      <li class="flex justify-center relative"><span class="absolute text-white">25%</span></li>
+      <li class="flex justify-center relative"><span class="absolute text-white">50%</span></li>
+      <li class="flex justify-center relative"><span class="absolute text-white">75%</span></li>
+      <li class="flex justify-center relative"><span class="absolute text-white">100%</span></li>
+    </ul>
   </div>
 </template>
 
@@ -95,8 +95,7 @@ export default {
 <style scoped>
 .slider {
   z-index: 1;
-  width: 100%;
-  padding: 10px 0;
+  width: 140%;
 }
 
 .slider-bar {
