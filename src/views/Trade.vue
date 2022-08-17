@@ -19,10 +19,10 @@
               <div class="pt-2 text-sm font-medium text-center text-gray-500 border-b border-gray-600">
                 <ul class="flex flex-wrap -mb-px">
                   <li class="mr-2">
-                    <a href="#" class="inline-block p-2 rounded-t-lg border-b-2 hover:text-gray-600 hover:border-gray-300" @click="tabOrderType('market')">Market</a>
+                    <a href="#" class="inline-block p-2 rounded-t-lg border-b-2 border-transparent hover:text-gray-300 hover:border-gray-300" @click="tabOrderType('market')" v-bind:class="{ 'border-gray-300 text-gray-300': orderType === 'market' }">Market</a>
                   </li>
                   <li class="mr-2">
-                    <a href="#" class="inline-block p-2 text-gray-300 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300" @click="tabOrderType('limit')">Limit</a>
+                    <a href="#" class="inline-block p-2 rounded-t-lg border-b-2 border-transparent hover:text-gray-300 hover:border-gray-300" @click="tabOrderType('limit')" v-bind:class="{ 'border-gray-300 text-gray-300': orderType === 'limit' }">Limit</a>
                   </li>
                 </ul>
               </div>
