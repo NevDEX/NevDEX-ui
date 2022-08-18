@@ -136,6 +136,7 @@ const { connect, web3, walletGlobal } = UseWallet()
 import { cancelOrder } from '../api/api.js'
 import { mapGetters } from 'vuex'
 import { formatNumber } from '../utils/token'
+import { createToast } from 'mosha-vue-toastify'
 
 export default {
   name: 'UserTrade',
@@ -205,10 +206,22 @@ export default {
     onCancelOrder(order) {
       let { Id, MarketId } = order
       console.log('onCancelOrder', order, MarketId)
-      cancelOrder({
-        marketID: MarketId,
-        orderID: Id,
-      })
+      try {
+        cancelOrder({
+          marketID: MarketId,
+          orderID: Id,
+        })
+
+        createToast(
+          { title: '', description: 'Order canceled' },
+          {
+            type: 'success',
+            showIcon: true,
+            position: 'top-center',
+            timeout: 8000,
+          }
+        )
+      } catch (error) {}
     },
     format(val) {
       return formatNumber(val, 5)

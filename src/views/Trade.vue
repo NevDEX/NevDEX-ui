@@ -31,10 +31,18 @@
               <!-- market order tab  -->
               <div v-if="orderType === 'market'">
                 <div class="mt-3 flex items-center rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                  <span class="w-3/12 text-gray-200 border border-gray-600 bg-transparent border-transparent py-2 sm:text-sm rounded-l text-center"> Price </span>
+                  <div class="relative w-9/12 flex items-center">
+                    <input type="text" class="w-full absolute block pr-12 -top-4.5 border sm:text-sm text-gray-50 border-gray-500 text-center bg-gray-800" placeholder="Market Price" />
+                    <div class="absolute -top-2.5 right-2 text-gray-400 text-sm">{{ quoteToken.name }}</div>
+                  </div>
+                </div>
+
+                <div class="mt-3 flex items-center rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
                   <span class="w-3/12 text-gray-200 border border-gray-600 bg-transparent border-transparent py-2 sm:text-sm rounded-l text-center"> Size </span>
                   <div class="relative w-9/12 flex items-center">
                     <input type="number" class="w-full absolute block pr-12 -top-4.5 border sm:text-sm text-gray-50 border-gray-500 text-center bg-gray-800" step="0.001" v-model="amount" :min="0" oninput="if(value<0)value=0" />
-                    <div class="absolute -top-2.5 right-2 text-gray-400 text-sm">{{ quoteToken.name }}</div>
+                    <div class="absolute -top-2.5 right-2 text-gray-400 text-sm">{{ baseToken.name }}</div>
                   </div>
                 </div>
               </div>
@@ -86,7 +94,7 @@
         <TradeTab :market="market" class="flex-1" />
       </div>
     </div>
-
+    <CreateOrderModal v-if="showCreateOrder" @close="showCreateModal = false" />
     <TradeFooter />
   </div>
 </template>
@@ -108,10 +116,11 @@ import UseWallet from '../wallet'
 const { walletGlobal } = UseWallet()
 import { mapActions, mapGetters } from 'vuex'
 import { createToast } from 'mosha-vue-toastify'
+import CreateOrderModal from '../components/CreateOrderModal.vue'
 
 export default {
   name: 'Trade',
-  components: { TradingView, TradeTab, RangeSlider, DropDown, OrderBook, TradeFooter, WalletModal, Volume, Assets, TradeBar },
+  components: { TradingView, TradeTab, RangeSlider, DropDown, OrderBook, TradeFooter, WalletModal, Volume, Assets, TradeBar, CreateOrderModal },
   computed: {
     ...mapGetters(['market']),
   },
@@ -135,6 +144,7 @@ export default {
         walletBalance: 0,
         unsettledBalance: 0,
       },
+      showCreateOrder: false,
     }
   },
   watch: {
@@ -146,6 +156,8 @@ export default {
   },
   methods: {
     trade(side, orderType) {
+      // this.showCreateOrder = true
+      // return
       console.log('account:', walletGlobal.account, side, orderType)
 
       if (orderType === 'market') {
@@ -158,7 +170,7 @@ export default {
         console.log('price or amount 0')
 
         createToast(
-          { title: 'insufficient!', description: 'insufficient of token' },
+          { title: '', description: 'Please input amount' },
           {
             type: 'danger',
             showIcon: true,
@@ -195,7 +207,7 @@ export default {
             signature: orderSignature,
           })
             .then((ret) =>
-              createToast('Order placed!', {
+              createToast('Order placed', {
                 type: 'success',
                 position: 'top-center',
                 showIcon: true,
