@@ -9,13 +9,13 @@
         <span style="right: 0.3px; top: 35%; z-index: -10" class="h-2 w-2 bg-gray-600 rounded-lg absolute"></span>
       </div>
     </div>
-    <ul class="flex justify-between w-full text-xs mb-3 px-2">
-      <li class="flex justify-center relative"><span class="absolute text-white">0%</span></li>
-      <li class="flex justify-center relative"><span class="absolute text-white">25%</span></li>
-      <li class="flex justify-center relative"><span class="absolute text-white">50%</span></li>
-      <li class="flex justify-center relative"><span class="absolute text-white">75%</span></li>
-      <li class="flex justify-center relative"><span class="absolute text-white">100%</span></li>
-    </ul>
+    <div class="w-full flex justify-between text-xs">
+      <span class="text-white">0%</span>
+      <span class="text-white">25%</span>
+      <span class="text-white">50%</span>
+      <span class="text-white">75%</span>
+      <span class="text-white">100%</span>
+    </div>
   </div>
 </template>
 
