@@ -35,7 +35,7 @@
                     <span>{{ order.MarketId }}</span>
                   </div>
                   <div class="flex items-center w-24 h-6">
-                    <span>market</span>
+                    <span>market-sell</span>
                   </div>
                   <div class="flex items-center flex-grow w-0 h-6">
                     <span>{{ order.Amount }}</span>
