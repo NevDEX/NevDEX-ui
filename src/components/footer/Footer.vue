@@ -42,7 +42,7 @@
               <a href="https://twitter.com/NevDEX_" target="_blank" class="hover:underline">Twitter</a>
             </li>
             <li class="mb-4">
-              <a href="https://discord.gg/wBAHdkQUj7" target="_blank" class="hover:underline">Discord</a>
+              <a href="https://discord.gg/U5S86gJePS" target="_blank" class="hover:underline">Discord</a>
             </li>
           </ul>
         </div>
