@@ -4,8 +4,8 @@
       <img class="h-6 mr-2" :src="getTokenLogo(selectedOption.name)" alt="" />
       {{ selectedOption.name }}
       <span class="caret"></span>
-    </li>  
- 
+    </li>
+
     <li @click="toggleMenu()" class="dropdown-toggle dropdown-toggle-placeholder" v-if="selectedOption.name === undefined">
       {{ placeholderText }}
       <span class="caret"></span>
@@ -119,46 +119,14 @@ export default {
 }
 
 .dropdown-toggle {
- 
 }
 
 .dropdown-toggle:hover {
- background-color: aquamarine;
+  background-color: rgb(27, 29, 28);
 }
 
 .dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
   z-index: 1000;
-  float: left;
-  min-width: 160px;
-  width: 100%;
-  padding: 5px 0px;
-  margin: 2px 0 0;
-  list-style: none;
-  font-size: 14px;
-  text-align: left;
-  /* background-color: rgb(66, 45, 45); */
-  /* border: 1px solid rgb(66, 45, 45); */
-  border-radius: 4px;
-  box-shadow: 0 6px 12px rgba(119, 36, 36, 0.175);
-  background-clip: padding-box;
-}
-
-.dropdown-menu > li > a {
-  padding: 10px 60px;
-  display: block;
-  clear: both;
-  font-weight: normal;
-  line-height: 1.6;
-  color: #333333;
-  white-space: nowrap;
-  text-decoration: none;
-}
-.dropdown-menu > li > a:hover {
-  background:  red;
-  color: #282727;
 }
 
 .dropdown-menu > li {

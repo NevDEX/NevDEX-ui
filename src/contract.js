@@ -1,13 +1,9 @@
-// import Web3 from 'web3';
 import { ethers, Contract, utils } from 'ethers';
-import tokenAbi from "./abi/token.json"
-import vaultAbi from "./abi/vault.json"
 import { getPermitSignature } from "./utils/sign"
 import { CONFIG } from "./config/config"
-// const ERC20Token = require("./abi/ERC20Token.json")
-// const Vault = require("./abi/vault.json")
-
-// const web3 = new Web3(window.web3.currentProvider);
+import ERC20Token from "./abi/ERC20Token.json"
+import Vault from "./abi/vault.json"
+import tokenAbi from "./abi/token.json"
 
 async function approve(tokenAddress, amount, account) {
     // const tokenContract = new web3.eth.Contract(tokenAbi, tokenAddress);
@@ -18,32 +14,40 @@ async function approve(tokenAddress, amount, account) {
 }
 
 async function getBalance(tokenAddress, account) {
-    // const tokenContract = new web3.eth.Contract(tokenAbi, tokenAddress);
-    // let amount = await tokenContract.methods.balanceOf(account).call()
-    // console.log('==> getBalance tokenAddress:', tokenAddress, "account:", account, 'amount:', amount)
-    // return web3.utils.fromWei(amount, 'ether');
+    const { ethereum } = window
+    const provider = new ethers.providers.Web3Provider(ethereum)
+    const signer = provider.getSigner()
+    console.log(signer, account, tokenAbi)
+    const tokenContract = new ethers.Contract(tokenAddress, tokenAbi, signer);
+    let amount = await tokenContract.balanceOf(account)
+    console.log('==> getBalance tokenAddress:', tokenAddress, "account:", account, 'amount:', amount.toString())
+    return ethers.utils.formatEther(amount)
 }
 
 async function getVaultBalance(tokenAddress, account) {
-    // const vaultContract = new web3.eth.Contract(vaultAbi, CONFIG.VaultAddress);
-    // let amount = await vaultContract.methods.balances(tokenAddress, account).call()
-    // console.log('==> getVaultBalance tokenAddress:', tokenAddress, "account:", account, 'amount:', amount)
-    // return web3.utils.fromWei(amount, 'ether');
+    const { ethereum } = window
+    const provider = new ethers.providers.Web3Provider(ethereum)
+    const signer = provider.getSigner()
+    const vaultContract = new ethers.Contract(CONFIG.VaultAddress, Vault, signer);
+    let amount = await vaultContract.balances(tokenAddress, account)
+    return amount / 10 ** 18
 }
 
 async function deposit(tokenAddress, amount, account) {
-    // const vaultContract = new web3.eth.Contract(vaultAbi, CONFIG.VaultAddress);
-    // await vaultContract.methods.deposit(tokenAddress, web3.utils.toWei(amount, 'ether')).send({
-    //     from: account,
-    // })
+    const { ethereum } = window
+    const provider = new ethers.providers.Web3Provider(ethereum)
+    const signer = provider.getSigner()
+    const vaultContract = new ethers.Contract(CONFIG.VaultAddress, Vault, signer);
+    await vaultContract.methods.deposit(tokenAddress, web3.utils.toWei(amount * 10 ** 18, 'ether'))
 }
 
 async function mint(tokenAddress, account, amount) {
-    console.log('mint', tokenAddress, account, amount)
-    // const tokenContract = new web3.eth.Contract(tokenAbi, tokenAddress);
-    // await tokenContract.methods.mint(account, web3.utils.toWei(amount, 'ether')).send({
-    //     from: account,
-    // })
+    const { ethereum } = window
+    const provider = new ethers.providers.Web3Provider(ethereum)
+    const signer = provider.getSigner()
+    console.log('mint tokenAddress', tokenAddress)
+    const tokenContract = new ethers.Contract(tokenAddress, ERC20Token.abi, signer);
+    await tokenContract.mint(account, ethers.utils.parseEther(amount))
 }
 
 async function onAttemptToApprove(amount, erc20Address, deadline, account) {
@@ -52,28 +56,28 @@ async function onAttemptToApprove(amount, erc20Address, deadline, account) {
     const provider = new ethers.providers.Web3Provider(ethereum)
     const signer = provider.getSigner()
 
-    const vaultAddress = CONFIG.VaultAddress
     const token = new ethers.Contract(erc20Address, ERC20Token.abi, signer);
     // console.log("token address:", token.address,"vault address:", vault.address)
-    const vault = new ethers.Contract(vaultAddress, Vault, signer);
-    amount = web3.utils.toWei(amount, 'ether')
+    const vaultContract = new ethers.Contract(CONFIG.VaultAddress, Vault, signer);
+    amount = ethers.utils.parseEther(amount)
     const { v, r, s } = await getPermitSignature(
         signer,
         account,
         token,
-        vault.address,
+        vaultContract.address,
         amount,
         deadline
     )
     // console.log("depositWithPermit:", amount, deadline, v, r, s)
-    await vault.depositWithPermit(token.address, amount, deadline, v, r, s)
+    await vaultContract.depositWithPermit(token.address, amount, deadline, v, r, s)
 }
 
-async function withdraw(tokenAddress, amount, account) {
-    // const vaultContract = new web3.eth.Contract(vaultAbi, CONFIG.VaultAddress);
-    // await vaultContract.methods.withdraw(tokenAddress, web3.utils.toWei(amount, 'ether')).send({
-    //     from: account,
-    // })
+async function withdraw(tokenAddress, amount) {
+    const { ethereum } = window
+    const provider = new ethers.providers.Web3Provider(ethereum)
+    const signer = provider.getSigner()
+    const vaultContract = new ethers.Contract(CONFIG.VaultAddress, Vault, signer);
+    await vaultContract.withdraw(tokenAddress, ethers.utils.parseEther(amount))
 }
 
 export {

@@ -73,7 +73,6 @@ async function connectWithEther() {
 export default function UseWallet() {
     return {
         connect,
-        // web3,
         walletGlobal,
         connectWithEther,
     }

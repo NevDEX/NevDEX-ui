@@ -31,7 +31,7 @@
               <!-- market order tab  -->
               <div v-if="orderType === 'market'">
                 <div class="mt-3 flex items-center rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                  <span class="w-3/12 text-gray-200 border border-gray-600 bg-transparent border-transparent py-2 sm:text-sm rounded-l text-center"> Price </span>
+                  <span class="w-3/12 text-gray-200 border border-gray-600 py-2 sm:text-sm rounded-l text-center"> Price </span>
                   <div class="relative w-9/12 flex items-center">
                     <input type="text" class="w-full absolute block pr-12 -top-4.5 border sm:text-sm text-gray-50 border-gray-500 text-center bg-gray-800" placeholder="Market Price" />
                     <div class="absolute -top-2.5 right-2 text-gray-400 text-sm">{{ quoteToken.name }}</div>
@@ -39,7 +39,7 @@
                 </div>
 
                 <div class="mt-3 flex items-center rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                  <span class="w-3/12 text-gray-200 border border-gray-600 bg-transparent border-transparent py-2 sm:text-sm rounded-l text-center"> Size </span>
+                  <span class="w-3/12 text-gray-200 border border-gray-600 py-2 sm:text-sm rounded-l text-center"> Size </span>
                   <div class="relative w-9/12 flex items-center">
                     <input type="number" class="w-full absolute block pr-12 -top-4.5 border sm:text-sm text-gray-50 border-gray-500 text-center bg-gray-800" step="0.001" v-model="amount" :min="0" oninput="if(value<0)value=0" />
                     <div class="absolute -top-2.5 right-2 text-gray-400 text-sm">{{ baseToken.name }}</div>
@@ -51,14 +51,14 @@
               <!-- limit order tab  -->
               <div v-if="orderType === 'limit'">
                 <div class="mt-3 flex items-center rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                  <span class="w-3/12 text-gray-200 border border-gray-600 bg-transparent border-transparent py-2 sm:text-sm rounded-l text-center"> Price </span>
+                  <span class="w-3/12 text-gray-200 border border-gray-600 py-2 sm:text-sm rounded-l text-center"> Price </span>
                   <div class="relative w-9/12 flex items-center">
                     <input type="number" class="w-full absolute block pr-12 -top-4.5 border sm:text-sm text-gray-50 border-gray-500 text-center bg-gray-800" step="0.001" v-model="price" :min="0" oninput="if(value<0)value=0" />
                     <div class="absolute -top-2.5 right-2 text-gray-400 text-sm">{{ quoteToken.name }}</div>
                   </div>
                 </div>
                 <div class="mt-3 flex items-center rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                  <span class="w-3/12 text-gray-200 border border-gray-600 bg-transparent border-transparent py-2 sm:text-sm rounded-l text-center"> Size </span>
+                  <span class="w-3/12 text-gray-200 border border-gray-600 py-2 sm:text-sm rounded-l text-center"> Size </span>
                   <div class="relative w-9/12 flex items-center">
                     <input type="number" class="w-full absolute block pr-12 -top-4.5 border sm:text-sm text-gray-50 border-gray-500 text-center bg-gray-800" step="0.001" v-model="amount" :min="0" oninput="if(value<0)value=0" />
                     <div class="absolute -top-2.5 right-2 text-gray-400 text-sm">{{ baseToken.name }}</div>
