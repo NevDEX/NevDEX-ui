@@ -1,6 +1,6 @@
 <template>
   <div class="px-1 pt-1 bg-gray-900 h-full">
-    <div class="flex flex-col px-2 bg-gray-900 h-full" style="height: 35vh;">
+    <div class="flex flex-col px-2 bg-gray-900 h-full" style="height: 35vh">
       <div class="text-sm font-medium text-center text-gray-500 border-b border-gray-600">
         <ul class="flex -mb-px">
           <li class="mr-2">
@@ -14,13 +14,14 @@
           </li>
         </ul>
       </div>
-      <div class="flex flex-1 flex-col min-w-0 break-words w-full shadow-lg h-full" style="height: 80%;">
+      <div class="flex flex-1 flex-col min-w-0 break-words w-full shadow-lg h-full" style="height: 80%">
         <div class="tab-content tab-space h-full">
           <div v-bind:class="{ hidden: openTab !== 1, block: openTab === 1 }" class="h-full">
             <!-- Component Start  -->
             <div class="flex flex-col w-full text-left h-full">
               <div class="flex flex-shrink-0 text-gray-400 uppercase text-xs">
-                <div class="flex items-center flex-grow w-0 h-6"><span>Market</span></div>
+                <div class="flex items-center w-24 h-6"><span>Market</span></div>
+                <div class="flex items-center w-24 h-6"><span>Type</span></div>
                 <div class="flex items-center flex-grow w-0 h-6"><span>Size</span></div>
                 <div class="flex items-center flex-grow w-0 h-6"><span>Filled </span></div>
                 <div class="flex items-center flex-grow w-0 h-6"><span>Price </span></div>
@@ -30,8 +31,11 @@
               <div class="overflow-auto flex-1">
                 <div v-if="openOrders.length == 0" class="text-gray-400 items-center text-center mt-5 text-xs">No Open Orders</div>
                 <div v-for="order in openOrders" :key="order.Id" class="flex flex-shrink-0 text-xs text-gray-100">
-                  <div class="flex items-center flex-grow w-0 h-6">
+                  <div class="flex items-center w-24 h-6">
                     <span>{{ order.MarketId }}</span>
+                  </div>
+                  <div class="flex items-center w-24 h-6">
+                    <span>market</span>
                   </div>
                   <div class="flex items-center flex-grow w-0 h-6">
                     <span>{{ order.Amount }}</span>
@@ -45,7 +49,7 @@
                   <div class="flex items-center flex-grow w-0 h-6">
                     <span>{{ order.CreatedAt }}</span>
                   </div>
-                  <div class="flex items-center flex-grow w-0 h-6"><button class="font-medium text-xs text-blue-600 hover:text-blue-200" @click="onCancelOrder(order)">Cancel</button></div>
+                  <div class="flex items-center flex-grow w-0 h-6"><button class="ml-1 font-medium text-xs text-blue-600 hover:text-blue-200" @click="onCancelOrder(order)">Cancel</button></div>
                 </div>
               </div>
             </div>
