@@ -29,7 +29,7 @@ service.interceptors.response.use(
     if (res.code !== 20000) {
       console.log("http return ", res)
       createToast(
-        { title: 'http', description: res.desc },
+        { title: '', description: res.desc },
         {
           type: 'danger',
           showIcon: true,

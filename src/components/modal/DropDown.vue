@@ -4,8 +4,8 @@
       <img class="h-6 mr-2" :src="getTokenLogo(selectedOption.name)" alt="" />
       {{ selectedOption.name }}
       <span class="caret"></span>
-    </li>
-
+    </li>  
+ 
     <li @click="toggleMenu()" class="dropdown-toggle dropdown-toggle-placeholder" v-if="selectedOption.name === undefined">
       {{ placeholderText }}
       <span class="caret"></span>
@@ -119,31 +119,11 @@ export default {
 }
 
 .dropdown-toggle {
-  color: #636b6f;
-  /* min-width: 160px; */
-  padding: 10px 20px 10px 10px;
-  text-transform: none;
-  font-weight: 300;
-  margin-bottom: 7px;
-  border: 0;
-  background-color: #333333;
-  /* background-image: linear-gradient(#009688, #009688), linear-gradient(#d2d2d2, #d2d2d2); */
-  /* background-size: 0 2px, 100% 1px; */
-  /* background-repeat: no-repeat; */
-  background-position: center bottom, center calc(100% - 1px);
-  background-color: transparent;
-  transition: background 0s ease-out;
-  float: none;
-  box-shadow: none;
-  border-radius: 0;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+ 
 }
 
 .dropdown-toggle:hover {
-  background: #e1e1e1;
-  cursor: pointer;
+ background-color: aquamarine;
 }
 
 .dropdown-menu {
@@ -162,7 +142,7 @@ export default {
   /* background-color: rgb(66, 45, 45); */
   /* border: 1px solid rgb(66, 45, 45); */
   border-radius: 4px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(119, 36, 36, 0.175);
   background-clip: padding-box;
 }
 
@@ -177,7 +157,7 @@ export default {
   text-decoration: none;
 }
 .dropdown-menu > li > a:hover {
-  background: #282727;
+  background:  red;
   color: #282727;
 }
 

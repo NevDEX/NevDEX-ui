@@ -102,13 +102,14 @@ export default {
       this.baseToken = arr[0]
       this.quoteToken = arr[1]
       let tokenAddress = getTokenAddress(this.baseToken)
+
       let balance = formatNumber(await getVaultBalance(tokenAddress, walletGlobal.account), 4)
-      // console.log(` ==> base:${tokenAddress}, balance:${balance}`)
+      console.log(` ==> base:${tokenAddress}, balance:${balance}`)
       this.baseAmount = balance
       {
         let tokenAddress = getTokenAddress(this.quoteToken)
         let balance = formatNumber(await getVaultBalance(tokenAddress, walletGlobal.account), 4)
-        // console.log(` ==> quote:${tokenAddress}, balance:${balance}`)
+        console.log(` ==> quote:${tokenAddress}, balance:${balance}`)
         this.quoteAmount = balance
       }
 

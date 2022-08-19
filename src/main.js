@@ -10,4 +10,4 @@ createApp(App)
   .use(FloatingVue)
   .use(store)
   .use(router)
-  .mount('#app');
+   .mount(document.body)

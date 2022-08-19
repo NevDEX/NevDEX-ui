@@ -1,49 +1,49 @@
-import Web3 from 'web3';
+// import Web3 from 'web3';
 import { ethers, Contract, utils } from 'ethers';
 import tokenAbi from "./abi/token.json"
 import vaultAbi from "./abi/vault.json"
 import { getPermitSignature } from "./utils/sign"
 import { CONFIG } from "./config/config"
-const ERC20Token = require("./abi/ERC20Token.json")
-const Vault = require("./abi/vault.json")
+// const ERC20Token = require("./abi/ERC20Token.json")
+// const Vault = require("./abi/vault.json")
 
-const web3 = new Web3(window.web3.currentProvider);
+// const web3 = new Web3(window.web3.currentProvider);
 
 async function approve(tokenAddress, amount, account) {
-    const tokenContract = new web3.eth.Contract(tokenAbi, tokenAddress);
-    console.log('approve', CONFIG.VaultAddress, web3.utils.toWei(amount, 'ether'), account)
-    await tokenContract.methods.approve(CONFIG.VaultAddress, web3.utils.toWei(amount, 'ether')).send({
-        from: account,
-    })
+    // const tokenContract = new web3.eth.Contract(tokenAbi, tokenAddress);
+    // console.log('approve', CONFIG.VaultAddress, web3.utils.toWei(amount, 'ether'), account)
+    // await tokenContract.methods.approve(CONFIG.VaultAddress, web3.utils.toWei(amount, 'ether')).send({
+    //     from: account,
+    // })
 }
 
 async function getBalance(tokenAddress, account) {
-    const tokenContract = new web3.eth.Contract(tokenAbi, tokenAddress);
-    let amount = await tokenContract.methods.balanceOf(account).call()
-    console.log('==> getBalance tokenAddress:', tokenAddress, "account:", account, 'amount:', amount)
-    return web3.utils.fromWei(amount, 'ether');
+    // const tokenContract = new web3.eth.Contract(tokenAbi, tokenAddress);
+    // let amount = await tokenContract.methods.balanceOf(account).call()
+    // console.log('==> getBalance tokenAddress:', tokenAddress, "account:", account, 'amount:', amount)
+    // return web3.utils.fromWei(amount, 'ether');
 }
 
 async function getVaultBalance(tokenAddress, account) {
-    const vaultContract = new web3.eth.Contract(vaultAbi, CONFIG.VaultAddress);
-    let amount = await vaultContract.methods.balances(tokenAddress, account).call()
-    console.log('==> getVaultBalance tokenAddress:', tokenAddress, "account:", account, 'amount:', amount)
-    return web3.utils.fromWei(amount, 'ether');
+    // const vaultContract = new web3.eth.Contract(vaultAbi, CONFIG.VaultAddress);
+    // let amount = await vaultContract.methods.balances(tokenAddress, account).call()
+    // console.log('==> getVaultBalance tokenAddress:', tokenAddress, "account:", account, 'amount:', amount)
+    // return web3.utils.fromWei(amount, 'ether');
 }
 
 async function deposit(tokenAddress, amount, account) {
-    const vaultContract = new web3.eth.Contract(vaultAbi, CONFIG.VaultAddress);
-    await vaultContract.methods.deposit(tokenAddress, web3.utils.toWei(amount, 'ether')).send({
-        from: account,
-    })
+    // const vaultContract = new web3.eth.Contract(vaultAbi, CONFIG.VaultAddress);
+    // await vaultContract.methods.deposit(tokenAddress, web3.utils.toWei(amount, 'ether')).send({
+    //     from: account,
+    // })
 }
 
 async function mint(tokenAddress, account, amount) {
     console.log('mint', tokenAddress, account, amount)
-    const tokenContract = new web3.eth.Contract(tokenAbi, tokenAddress);
-    await tokenContract.methods.mint(account, web3.utils.toWei(amount, 'ether')).send({
-        from: account,
-    })
+    // const tokenContract = new web3.eth.Contract(tokenAbi, tokenAddress);
+    // await tokenContract.methods.mint(account, web3.utils.toWei(amount, 'ether')).send({
+    //     from: account,
+    // })
 }
 
 async function onAttemptToApprove(amount, erc20Address, deadline, account) {
@@ -70,10 +70,10 @@ async function onAttemptToApprove(amount, erc20Address, deadline, account) {
 }
 
 async function withdraw(tokenAddress, amount, account) {
-    const vaultContract = new web3.eth.Contract(vaultAbi, CONFIG.VaultAddress);
-    await vaultContract.methods.withdraw(tokenAddress, web3.utils.toWei(amount, 'ether')).send({
-        from: account,
-    })
+    // const vaultContract = new web3.eth.Contract(vaultAbi, CONFIG.VaultAddress);
+    // await vaultContract.methods.withdraw(tokenAddress, web3.utils.toWei(amount, 'ether')).send({
+    //     from: account,
+    // })
 }
 
 export {
