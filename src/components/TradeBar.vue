@@ -1,7 +1,7 @@
 <template>
-  <div class="bg-gray-900 flex border-black border-b border-t">
-    <div class="w-1/5 mt-0.5">
-      <DropDown class=" " @selectMarket="updateSelectMarket" />
+  <div class="flex border-black border-b border-t w-full">
+    <div class="w-1/4 2xl:w-1/5 mt-0.5">
+      <DropDown class="" @selectMarket="updateSelectMarket" />
     </div>
     <div class="w-full">
       <Volume :baseToken="BTC" class="" />

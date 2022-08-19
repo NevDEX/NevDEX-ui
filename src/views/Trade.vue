@@ -103,7 +103,6 @@
 import TradingView from '../components/TradingView.vue'
 import TradeTab from '../components/UserTrade.vue'
 import RangeSlider from '../components/RangeSlider.vue'
-import DropDown from '../components/DropDown.vue'
 import OrderBook from '../components/OrderBook.vue'
 import TradeFooter from '../components/footer/TradeFooter.vue'
 import WalletModal from '../components/WalletModal.vue'
@@ -120,7 +119,7 @@ import CreateOrderModal from '../components/CreateOrderModal.vue'
 
 export default {
   name: 'Trade',
-  components: { TradingView, TradeTab, RangeSlider, DropDown, OrderBook, TradeFooter, WalletModal, Volume, Assets, TradeBar, CreateOrderModal },
+  components: { TradingView, TradeTab, RangeSlider, OrderBook, TradeFooter, WalletModal, Volume, Assets, TradeBar, CreateOrderModal },
   computed: {
     ...mapGetters(['market']),
   },
