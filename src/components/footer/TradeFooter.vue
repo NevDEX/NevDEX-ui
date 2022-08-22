@@ -9,7 +9,7 @@
           <a href="https://discord.gg/U5S86gJePS" target="_blank" class="mr-4 hover:underline md:mr-6">Discord</a>
         </li>
         <li>
-          <a href="https://docs.nevdex.tech/" target="_blank" class="mr-4 hover:underline md:mr-6">Docs </a>
+          <a href="https://docs.nevdex.tech/" target="_blank" class="mr-4 hover:underline md:mr-6">FAQ </a>
         </li>
         <li>
           <a href="https://www.nervos.org/" target="_blank" class="mr-4 hover:underline md:mr-6">Nervos Network </a>

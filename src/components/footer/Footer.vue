@@ -3,13 +3,14 @@
     <div class="container m-auto">
       <div class="grid grid-cols-2 gap-8 py-6 px-6 md:grid-cols-4">
         <div>
-          <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase">About</h2>
-          <ul class="text-gray-300">
-            <li class="mb-4">
-              <a href="#" class="hover:underline">About</a>
-            </li>
-          </ul>
+          <div class="w-[80px] ml-20 -mt-2" style="">
+            <img src="../../assets/logo.png" />
+          </div>
+
+          <p class="text-gray-400 text-sm w-30 flex-wrap">A decentralized exchange platform built</p>
+          <p class="text-gray-400 text-sm w-30 flex-wrap">built on Nervos Blockchain</p>
         </div>
+
         <div>
           <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase">PRODUCTS</h2>
           <ul class="text-gray-300">

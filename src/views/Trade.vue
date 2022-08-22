@@ -116,6 +116,7 @@ const { walletGlobal } = UseWallet()
 import { mapActions, mapGetters } from 'vuex'
 import { createToast } from 'mosha-vue-toastify'
 import CreateOrderModal from '../components/CreateOrderModal.vue'
+import { getMarketPrice } from '../utils/token'
 
 export default {
   name: 'Trade',
@@ -128,7 +129,6 @@ export default {
       tab: 'buy',
       pools: [],
       opBtnTxt: 'BUY',
-      limitBtnTxt: 'LIMIT BUY',
       price: 0,
       amount: 0,
       orderType: 'market',
@@ -154,30 +154,55 @@ export default {
     },
   },
   methods: {
-    trade(side, orderType) {
+    async trade(side, orderType) {
       // this.showCreateOrder = true
       // return
       console.log('account:', walletGlobal.account, side, orderType)
-
-      if (orderType === 'market') {
-        console.log('market trade')
-        this.price = 1
-      }
       console.log('price:', this.price, 'amount:', this.amount)
 
-      if (this.price == 0 || this.amount == 0) {
-        console.log('price or amount 0')
+      if (orderType === 'market') {
+        if (this.amount == 0) {
+          console.log('amount 0')
+          createToast(
+            { title: '', description: 'Please input amount' },
+            {
+              type: 'danger',
+              showIcon: true,
+              position: 'top-center',
+              timeout: 5000,
+            }
+          )
+          return
+        }
 
-        createToast(
-          { title: '', description: 'Please input amount' },
-          {
-            type: 'danger',
-            showIcon: true,
-            position: 'top-center',
-            timeout: 5000,
-          }
-        )
-        return
+        this.price = await getMarketPrice(this.baseToken.name)
+        console.log('market price:', this.price)
+      } else {
+        if (this.price == 0) {
+          createToast(
+            { title: '', description: 'Please input amount' },
+            {
+              type: 'danger',
+              showIcon: true,
+              position: 'top-center',
+              timeout: 5000,
+            }
+          )
+          return
+        }
+
+        if (this.amount == 0) {
+          createToast(
+            { title: '', description: 'Please input price' },
+            {
+              type: 'danger',
+              showIcon: true,
+              position: 'top-center',
+              timeout: 5000,
+            }
+          )
+          return
+        }
       }
 
       buildOrder({
@@ -218,28 +243,22 @@ export default {
         .catch((err) => console.error(err))
     },
     onTrade() {
-      if (this.tab == 'buy') {
-        this.trade('buy', this.orderType)
-      } else {
-        this.trade('sell', this.orderType)
-      }
+      this.trade(this.tab, this.orderType)
     },
     toggleTabs(tab) {
       this.tab = tab
+      this.price = 0
+      this.amount = 0
       if (tab == 'buy') {
         this.opBtnTxt = 'BUY'
-        this.limitBtnTxt = 'LIMIT BUY'
       } else {
         this.opBtnTxt = 'SELL'
-        this.limitBtnTxt = 'LIMIT SELL'
       }
     },
     updateSelectMarket(market) {
       // console.log('updateSelectMarket', market)
       this.market = market
       let tokens = market.split('-')
-      console.log(tokens)
-
       this.baseToken.name = tokens[0]
       this.quoteToken.name = tokens[1]
     },
@@ -255,7 +274,6 @@ export default {
     },
     tabOrderType(orderType) {
       this.orderType = orderType
-      console.log('tabOrderType:', orderType)
     },
   },
   async created() {},
