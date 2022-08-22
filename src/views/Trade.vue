@@ -135,13 +135,9 @@ export default {
       timer: '',
       baseToken: {
         name: '',
-        walletBalance: 0,
-        unsettledBalance: 0,
       },
       quoteToken: {
         name: '',
-        walletBalance: 0,
-        unsettledBalance: 0,
       },
       showCreateOrder: false,
     }
@@ -162,7 +158,6 @@ export default {
 
       if (orderType === 'market') {
         if (this.amount == 0) {
-          console.log('amount 0')
           createToast(
             { title: '', description: 'Please input amount' },
             {
@@ -180,7 +175,7 @@ export default {
       } else {
         if (this.price == 0) {
           createToast(
-            { title: '', description: 'Please input amount' },
+            { title: '', description: 'Please input price' },
             {
               type: 'danger',
               showIcon: true,
@@ -216,7 +211,7 @@ export default {
       })
         .then(async (resp) => {
           let { id } = resp
-          console.log('id', id)
+          console.log('order id:', id)
           // Create a wallet to sign the message with
           const { ethereum } = window
           const provider = new ethers.providers.Web3Provider(ethereum)
