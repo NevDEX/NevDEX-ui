@@ -1,4 +1,6 @@
 import axios from 'axios'
+import { createToast } from 'mosha-vue-toastify'
+
 const BaseUrl = "https://testnet.nevdex.tech/api/"
 // const BaseUrl = 'http://127.0.0.1:5000/api/'
 
@@ -24,17 +26,24 @@ service.interceptors.request.use(
 service.interceptors.response.use(
   (response) => {
     const res = response.data
-    // console.log("http return ", res)
     if (res.code !== 20000) {
-      if (res.code === 50008 || res.code === 50012 || res.code === 50014) {
-      }
+      console.error("http return ", res)
+      createToast(
+        { title: '', description: res.desc },
+        {
+          type: 'danger',
+          showIcon: true,
+          position: 'top-center',
+          timeout: 8000,
+        }
+      )
       return Promise.reject(new Error(res.message || 'Error'))
     } else {
       return res.data
     }
   },
   (error) => {
-    console.error('err' + error) // for debug
+    console.error('response err' + error) // for debug
     return Promise.reject(error)
   }
 )

@@ -7,9 +7,13 @@
       <div class="ml-10 hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-4">
         <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 font-bold">
           <li v-for="item in navItems" :key="item.label">
-            <router-link :to="item.link">
+            <router-link v-if="item.link !== ''" :to="item.link">
               <a class="block py-2 pr-4 pl-3 text-gray-50 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">{{ item.label }}</a>
             </router-link>
+            <VTooltip v-if="item.link === ''">
+              <a class="text-gray-50 border-gray-100 cursor-pointer">{{ item.label }}</a>
+              <template #popper>Coming soon ! </template>
+            </VTooltip>
           </li>
         </ul>
       </div>

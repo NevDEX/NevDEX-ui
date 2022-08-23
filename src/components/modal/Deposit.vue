@@ -121,17 +121,6 @@ export default {
 
 <style scoped>
 .my-dropdown-toggle {
-  border-radius: 5px;
-
-  width: 100%;
-  ::v-deep .dropdown-toggle {
-    color: tomato;
-    font-size: 25px;
-    font-weight: 800;
-  }
-
-  ::v-deep .dropdown-toggle-placeholder {
-    /* color: #c4c4c4; */
-  }
+  
 }
 </style>

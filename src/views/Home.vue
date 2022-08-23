@@ -1,11 +1,11 @@
 <template>
   <Hero />
-  <div class="container mx-auto md:p-0 p-5">
-    <div class="flex md:flex-row flex-col md:mt-40 2xl:mt-96 mt-24 h-full">
+  <div class="bg-[#131a29]">
+    <div class="container flex md:flex-row flex-col md:mt-40 2xl:mt-96 mt-24 h-full mx-auto">
       <div class="md:w-2/3">
         <img class="md:px-20 drop-shadow-lg bg" src="../assets/screen_shot.png" alt="screen_shot" />
       </div>
-      <div class="md:w-1/3 md:mt-0 mt-12 text-white my-auto">
+      <div class="container md:w-1/3 md:mt-0 mt-12 text-white my-auto">
         <div class="space-y-6">
           <div class="text-3xl text-center md:text-left">Unlock the full potential of on-chain trading</div>
           <div class="text-gray-500 text-center md:text-left">NevDEX strives to meet the demands of both professional and newbie traders by combining the best of CeFi and DeFi in a single product.</div>
@@ -51,7 +51,7 @@
     </div>
     <Animation />
     <!-- middle end -->
-    <div class="flex justify-center mb-20 mt-20 flex-col items-center">
+    <div class="flex justify-center pt-20 pb-28 flex-col items-center">
       <span class="text-gray-50 font-bold text-3xl"> Our partners </span>
       <div class="mt-10">
         <img class="h-20 rounded-md" src="../assets/nervos_logo.jpg" alt="nervos_logo" />

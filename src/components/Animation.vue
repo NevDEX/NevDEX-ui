@@ -1,5 +1,5 @@
 <template>
-  <div className="marquee-root mt-20 mb-42">
+  <div className="marquee-root mt-20 pb-42">
     <div className="marquee-content flex flex-row">
       <div v-for="crypto in getCrypto.slice(0, 100)" :key="crypto.id">
         <a href="#" class="ml-5 block p-6 w-60 bg-gray-800 rounded-lg shadow-md">
@@ -28,15 +28,15 @@ export default {
 <style scoped>
 @keyframes marqueeAnim {
   0% {
-    transform: translateX(10vw);
+    transform: translateX(0vw);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-900%);
   }
 }
 
 .marquee-content {
-  animation: marqueeAnim 50s linear 0s infinite;
+  animation: marqueeAnim 250s linear 0s infinite;
 }
 
 .marquee-root {

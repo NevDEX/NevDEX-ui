@@ -43,7 +43,7 @@ export default {}
 .mass-header:before {
   display: block;
   content: '';
-  background: rgb(17 24 39);
+  background: #161e2d;
   position: absolute;
   left: 0;
   top: 0;

@@ -1,16 +1,16 @@
 <template>
   <div class="px-1 pt-1 bg-gray-900 h-full">
-    <div class="flex flex-col px-2 bg-gray-900 h-full trade-list">
-      <div class="h-10 border-b border-gray-600">
-        <ul class="flex">
+    <div class="flex flex-col px-2 bg-gray-900 h-full" style="height: 35vh">
+      <div class="text-sm font-medium text-center text-gray-500 border-b border-gray-600">
+        <ul class="flex -mb-px">
           <li class="mr-2">
-            <a href="#" class="inline-block py-2 text-sm font-medium text-center border-b-2 border-transparent" @click="toggleTabs(1)" v-bind:class="{ 'font-bold text-bold text-gray-50 border-gray-50 ': openTab === 1, 'text-gray-500': openTab !== 1 }">Open Orders</a>
+            <a href="#" class="inline-block p-2 rounded-t-lg border-b-2 hover:text-gray-300 hover:border-gray-300 border-transparent" @click="toggleTabs(1)" v-bind:class="{ 'text-bold text-gray-300 border-gray-300 ': openTab === 1 }">Open Orders</a>
           </li>
           <li class="mr-2">
-            <a href="#" class="ml-3 inline-block py-2 text-sm font-medium text-center border-b-2 border-transparent" @click="toggleTabs(2)" v-bind:class="{ 'font-bold text-bold text-gray-50 border-gray-50 ': openTab === 2, 'text-gray-500': openTab !== 2 }">Recent Trade History</a>
+            <a href="#" class="inline-block p-2 rounded-t-lg border-b-2 hover:text-gray-300 hover:border-gray-300 border-transparent" @click="toggleTabs(2)" v-bind:class="{ 'text-bold text-gray-300 border-gray-300 ': openTab === 2 }">Recent Trade History</a>
           </li>
           <li class="mr-2">
-            <a href="#" class="ml-3 inline-block py-2 text-sm font-medium text-center border-b-2 border-transparent" @click="toggleTabs(3)" v-bind:class="{ 'font-bold text-bold text-gray-50 border-gray-50 ': openTab === 3, 'text-gray-500': openTab !== 3 }">Fee Discount</a>
+            <a href="#" class="inline-block p-2 rounded-t-lg border-b-2 hover:text-gray-300 hover:border-gray-300 border-transparent" @click="toggleTabs(3)" v-bind:class="{ 'text-bold text-gray-300 border-gray-300 ': openTab === 3 }">Fee Discount</a>
           </li>
         </ul>
       </div>
@@ -136,6 +136,7 @@ const { walletGlobal } = UseWallet()
 import { cancelOrder } from '../api/api.js'
 import { mapGetters } from 'vuex'
 import { formatNumber } from '../utils/token'
+import { createToast } from 'mosha-vue-toastify'
 
 export default {
   name: 'UserTrade',
@@ -205,10 +206,22 @@ export default {
     onCancelOrder(order) {
       let { Id, MarketId } = order
       console.log('onCancelOrder', order, MarketId)
-      cancelOrder({
-        marketID: MarketId,
-        orderID: Id,
-      })
+      try {
+        cancelOrder({
+          marketID: MarketId,
+          orderID: Id,
+        })
+
+        createToast(
+          { title: '', description: 'Order canceled' },
+          {
+            type: 'success',
+            showIcon: true,
+            position: 'top-center',
+            timeout: 8000,
+          }
+        )
+      } catch (error) {}
     },
     format(val) {
       return formatNumber(val, 5)
