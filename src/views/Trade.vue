@@ -1,17 +1,17 @@
 <template>
   <div class="flex flex-col w-full h-full">
     <TradeBar />
-    <div class="flex flex-1 bg-gray-900">
-      <div class="w-1/5 border-black border-r">
+    <div class="flex flex-1 bg-gray-900 md:flex-row flex-col-reverse md:gap-0 gap-12">
+      <div class="md:w-1/5 w-full border-black border-r">
         <div class="flex flex-col px-0.5 h-full">
           <div class="bg-gray-900 h-full">
             <div class="p-2 bg-gray-900 h-full">
               <ul class="flex rounded-lg divide-gray-200 shadow sm:flex">
                 <li class="w-full">
-                  <a href="#" class="inline-block relative py-2 px-4 w-full text-sm font-medium text-center text-gray-50 bg-gray-800 hover:text-gray-700 hover:bg-gray-600 focus:bg-green-300" @click="toggleTabs('buy')" v-bind:class="{ 'bg-green-300': tab === 'buy' }">BUY</a>
+                  <button class="inline-block relative py-2 px-4 w-full text-sm font-medium text-center text-gray-50 bg-gray-800 hover:text-gray-700 hover:bg-gray-600 focus:bg-green-300" @click="toggleTabs('buy')" v-bind:class="{ 'bg-green-300': tab === 'buy' }">BUY</button>
                 </li>
                 <li class="w-full">
-                  <a href="#" class="inline-block relative py-2 px-4 w-full text-sm font-medium text-center text-gray-50 bg-gray-800 hover:text-gray-700 hover:bg-gray-600 focus:bg-red-400" @click="toggleTabs('sell')" v-bind:class="{ 'bg-red-400': tab === 'sell' }">SELL</a>
+                  <button class="inline-block relative py-2 px-4 w-full text-sm font-medium text-center text-gray-50 bg-gray-800 hover:text-gray-700 hover:bg-gray-600 focus:bg-red-400" @click="toggleTabs('sell')" v-bind:class="{ 'bg-red-400': tab === 'sell' }">SELL</button>
                 </li>
               </ul>
 
@@ -57,11 +57,11 @@
         </div>
       </div>
 
-      <div class="w-1/5 border-black border-r">
+      <div class="md:w-1/5 w-full border-black border-r">
         <OrderBook @updateBid="onBidUpdate" @updateAsk="onAskUpdate" :baseToken="baseToken.name" :quoteToken="quoteToken.name" :market="market" />
       </div>
 
-      <div class="flex flex-col w-3/5 h-full">
+      <div class="flex flex-col md:w-3/5 w-full h-full">
         <TradingView :market="market" class="" />
         <TradeTab :market="market" class="flex-1" />
       </div>

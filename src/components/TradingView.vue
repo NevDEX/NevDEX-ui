@@ -1,5 +1,5 @@
 <template>
-  <div :id="container_id" class="px-1 h-full"></div>
+  <div :id="container_id" class="px-1 md:h-full h-80"></div>
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 <template>
   <div v-if="account !== 'Connect Wallet'">
-    <div class="mt-20">
+    <div class="md:mt-20 mt-10">
       <h2 class="text-center">
         <span class="bg-gray-900 text-gray-400 font-semibold"> Balance </span>
       </h2>

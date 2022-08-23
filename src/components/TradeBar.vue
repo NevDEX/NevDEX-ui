@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-gray-900 flex border-black border-b border-t">
-    <div class="w-1/5 mt-0.5">
+  <div class="flex sm:flex-row flex-col bg-gray-900 flex border-black border-b border-t md:py-0 pb-3">
+    <div class="md:w-1/5 sm:w-1/2 w-full mt-0.5">
       <DropDown class=" " @selectMarket="updateSelectMarket" />
     </div>
     <div class="w-full">

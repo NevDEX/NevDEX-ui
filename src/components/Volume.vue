@@ -1,7 +1,7 @@
 <template>
   <div class="mt-0.5 h-12 bg-gray-900">
-    <div class="flex flex-row p-1 items-center px-3">
-      <div class="w-2/3 flex flex-row">
+    <div class="flex flex-row sm:justify-start justify-center p-1 items-center px-3">
+      <div class="flex flex-row">
         <div class="flex flex-col text-white">
           <span class="text-gray-400 text-xs">Low Price</span> <span class="mt-1 text-xs">{{ low24h }}</span>
         </div>
@@ -15,7 +15,6 @@
           <span class="text-gray-400 text-xs">24h Volume ({{ baseToken }})</span><span class="mt-1 text-xs">{{ volume }}</span>
         </div>
       </div>
-      <div class="w-1/3"></div>
     </div>
   </div>
 </template>

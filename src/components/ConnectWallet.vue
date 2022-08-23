@@ -1,8 +1,8 @@
 <template>
   <div class="flex justify-items-center items-center">
-    <router-link to="" @click="onConnectWallet" v-if="showBtn"
-      ><span class="px-4 py-1 rounded mr-4 text-gray-50 hover:text-white hover:bg-gray-500 font-bold">{{ account }} </span></router-link
-    >
+    <router-link to="" @click="onConnectWallet" v-if="showBtn">
+      <span class="px-4 py-1 rounded mr-4 text-gray-50 hover:text-white hover:bg-gray-500 font-bold">{{ formatAddress(account) }}</span>
+    </router-link>
     <WalletModal v-if="showModal" @close="showModal = false" />
   </div>
 </template>
@@ -56,6 +56,12 @@ export default {
     //     ],
     //   })
     // },
+    formatAddress(address) {
+      if (address.includes('Connect')) {
+        return address
+      }
+      return `${address.substring(0, 5)}...${address.substring(address.length - 5)}`
+    },
     disConnect() {},
   },
 }
