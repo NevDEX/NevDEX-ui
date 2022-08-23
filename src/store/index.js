@@ -13,7 +13,7 @@ export default createStore({
     accountBalance: {
       base: 1,
       quote: 12,
-    }
+    },
   },
   actions: {
     async fetchCrypto({ commit }) {
@@ -57,7 +57,7 @@ export default createStore({
     setAccountBalance: (state, payload) => {
       // console.log('setAccountBalance', payload)
       state.accountBalance = payload
-    }
+    },
   },
   getters: {
     getCrypto: (state) => state.crypto,

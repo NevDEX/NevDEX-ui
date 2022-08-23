@@ -1,5 +1,4 @@
 import tokenList from "../config/tokenList.js"
-import axios from 'axios'
 
 function getTokenAddress(symbol) {
     // console.log('getTokenAddress symbol', symbol)
@@ -49,15 +48,8 @@ function formatNumber(num, decimal = 0) {
     return str
 }
 
-async function getMarketPrice(token) {
-    const response = await axios.get(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${getTokenCfg(token).id}`)
-    let { data } = response
-    return formatNumber(data[0].current_price, 4)
-}
-
 export {
     getTokenAddress,
     formatNumber,
-    getTokenCfg,
-    getMarketPrice
+    getTokenCfg
 }

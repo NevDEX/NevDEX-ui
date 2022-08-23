@@ -1,4 +1,4 @@
-import { cfg } from './config_Hardhat.js'
+import { cfg } from './config_Avax.js'
 export const CONFIG = {
   VaultAddress: cfg.VaultAddress,
 }

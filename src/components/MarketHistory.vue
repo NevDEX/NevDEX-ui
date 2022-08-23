@@ -12,9 +12,9 @@
           </thead>
           <tbody>
             <tr class="" v-for="item in history" :key="item.id">
-              <td class="text-xs text-red-400 whitespace-nowrap text-left" v-bind:class="{ 'text-green-400': item.TakerSide === 'buy' }">{{ item.PriceInDecimal }}</td>
-              <td class="text-xs text-white whitespace-nowrap text-center">{{ item.AmountInDecimal }}</td>
-              <td class="text-xs text-white whitespace-nowrap text-right">{{ dateTime(item.CreateTime) }}</td>
+              <td class="text-xs text-red-400 whitespace-nowrap text-left" v-bind:class="{ 'text-green-400': item.TakerSide === 'buy' }">{{ item.Price }}</td>
+              <td class="text-xs text-white whitespace-nowrap text-center">{{ item.Amount }}</td>
+              <td class="text-xs text-white whitespace-nowrap text-right">{{ '13:25' }}</td>
             </tr>
           </tbody>
         </table>
@@ -24,8 +24,6 @@
 </template>
 <script>
 import { marketHistory } from '../api/api.js'
-import moment from 'moment'
-
 export default {
   props: ['baseToken', 'quoteToken'],
   data() {
@@ -38,12 +36,9 @@ export default {
       marketHistory({
         marketID: `${this.baseToken}-${this.quoteToken}`,
       }).then((ret) => {
-        console.log('==> marketHistory ret:', ret)
         this.history = ret
+        console.log('==> marketHistory', this.history)
       })
-    },
-    dateTime(value) {
-      return moment(value).format('MM-DD HH:mm:ss')
     },
   },
   mounted() {

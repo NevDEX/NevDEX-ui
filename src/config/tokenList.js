@@ -1,3 +1,3 @@
-import tokenList from "./tokenList_Hardhat.json"
+import tokenList from "./tokenList_Avax.json"
 
 export default tokenList

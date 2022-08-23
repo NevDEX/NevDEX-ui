@@ -1,6 +1,6 @@
 <template>
   <div v-if="account !== 'Connect Wallet'">
-    <div class="mt-10">
+    <div class="md:mt-20 mt-10">
       <h2 class="text-center">
         <span class="bg-gray-900 text-gray-400 font-semibold"> Balance </span>
       </h2>
@@ -71,8 +71,6 @@ import { getTokenAddress, formatNumber } from '../utils/token'
 import { getVaultBalance } from '../contract'
 const { walletGlobal } = UseWallet()
 import { mapActions, mapGetters } from 'vuex'
-import { lockedBalance } from '../api/api.js'
-
 export default {
   components: {
     Deposit,
@@ -102,24 +100,17 @@ export default {
       this.baseToken = arr[0]
       this.quoteToken = arr[1]
       let tokenAddress = getTokenAddress(this.baseToken)
-
       let balance = formatNumber(await getVaultBalance(tokenAddress, walletGlobal.account), 4)
-      console.log(` ==> base:${tokenAddress}, balance:${balance}`)
+      // console.log(` ==> base:${tokenAddress}, balance:${balance}`)
       this.baseAmount = balance
       {
         let tokenAddress = getTokenAddress(this.quoteToken)
         let balance = formatNumber(await getVaultBalance(tokenAddress, walletGlobal.account), 4)
-        console.log(` ==> quote:${tokenAddress}, balance:${balance}`)
+        // console.log(` ==> quote:${tokenAddress}, balance:${balance}`)
         this.quoteAmount = balance
       }
-
-      console.log('locked balance')
-      await lockedBalance({
-        marketID: newVal,
-        address: this.account,
-      })
     },
-    account: async function () {
+    account: async function (newVal, oldVal) {
       this.isConnected = true
       let arr = this.market.split('-')
       this.baseToken = arr[0]

@@ -1,41 +1,37 @@
 <template>
   <div class="px-1 pt-1 bg-gray-900 h-full">
-    <div class="flex flex-col px-2 bg-gray-900 h-full" style="height: 35vh">
-      <div class="text-sm font-medium text-center text-gray-500 border-b border-gray-600">
-        <ul class="flex -mb-px">
+    <div class="flex flex-col px-2 bg-gray-900 h-full trade-list">
+      <div class="h-10 border-b border-gray-600">
+        <ul class="flex">
           <li class="mr-2">
-            <a href="#" class="inline-block p-2 rounded-t-lg border-b-2 hover:text-gray-300 hover:border-gray-300 border-transparent" @click="toggleTabs(1)" v-bind:class="{ 'text-bold text-gray-300 border-gray-300 ': openTab === 1 }">Open Orders</a>
+            <a href="#" class="inline-block py-2 text-sm font-medium text-center border-b-2 border-transparent" @click="toggleTabs(1)" v-bind:class="{ 'font-bold text-bold text-gray-50 border-gray-50 ': openTab === 1, 'text-gray-500': openTab !== 1 }">Open Orders</a>
           </li>
           <li class="mr-2">
-            <a href="#" class="inline-block p-2 rounded-t-lg border-b-2 hover:text-gray-300 hover:border-gray-300 border-transparent" @click="toggleTabs(2)" v-bind:class="{ 'text-bold text-gray-300 border-gray-300 ': openTab === 2 }">Recent Trade History</a>
+            <a href="#" class="ml-3 inline-block py-2 text-sm font-medium text-center border-b-2 border-transparent" @click="toggleTabs(2)" v-bind:class="{ 'font-bold text-bold text-gray-50 border-gray-50 ': openTab === 2, 'text-gray-500': openTab !== 2 }">Recent Trade History</a>
           </li>
           <li class="mr-2">
-            <a href="#" class="inline-block p-2 rounded-t-lg border-b-2 hover:text-gray-300 hover:border-gray-300 border-transparent" @click="toggleTabs(3)" v-bind:class="{ 'text-bold text-gray-300 border-gray-300 ': openTab === 3 }">Discount</a>
+            <a href="#" class="ml-3 inline-block py-2 text-sm font-medium text-center border-b-2 border-transparent" @click="toggleTabs(3)" v-bind:class="{ 'font-bold text-bold text-gray-50 border-gray-50 ': openTab === 3, 'text-gray-500': openTab !== 3 }">Fee Discount</a>
           </li>
         </ul>
       </div>
-      <div class="flex flex-1 flex-col min-w-0 break-words w-full shadow-lg h-full" style="height: 80%">
+      <div class="flex flex-1 flex-col min-w-0 break-words w-full shadow-lg h-full" style="height: 80%;">
         <div class="tab-content tab-space h-full">
           <div v-bind:class="{ hidden: openTab !== 1, block: openTab === 1 }" class="h-full">
             <!-- Component Start  -->
             <div class="flex flex-col w-full text-left h-full">
-              <div class="flex flex-shrink-0 text-gray-400 uppercase text-xs">
-                <div class="flex items-center w-24 h-6"><span>Market</span></div>
-                <div class="flex items-center w-24 h-6"><span>Type</span></div>
+              <div class="flex flex-shrink-0 text-gray-400 uppercase text-xs py-2">
+                <div class="flex items-center flex-grow w-0 h-6"><span>Market</span></div>
                 <div class="flex items-center flex-grow w-0 h-6"><span>Size</span></div>
                 <div class="flex items-center flex-grow w-0 h-6"><span>Filled </span></div>
                 <div class="flex items-center flex-grow w-0 h-6"><span>Price </span></div>
-                <div class="flex items-center flex-grow w-0 h-6"><span>Create Time</span></div>
+                <div class="flex items-center flex-grow w-0 h-6 px-5"><span>Create Time</span></div>
                 <div class="flex items-center flex-grow w-0 h-6"><span>Operation </span></div>
               </div>
               <div class="overflow-auto flex-1">
                 <div v-if="openOrders.length == 0" class="text-gray-400 items-center text-center mt-5 text-xs">No Open Orders</div>
-                <div v-for="order in openOrders" :key="order.Id" class="flex flex-shrink-0 text-xs text-gray-100">
-                  <div class="flex items-center w-24 h-6">
+                <div v-for="order in openOrders" :key="order.Id" class="flex flex-shrink-0 text-xs text-gray-100 py-5">
+                  <div class="flex items-center flex-grow w-0 h-6">
                     <span>{{ order.MarketId }}</span>
-                  </div>
-                  <div class="flex items-center w-24 h-6">
-                    <span>market-sell</span>
                   </div>
                   <div class="flex items-center flex-grow w-0 h-6">
                     <span>{{ order.Amount }}</span>
@@ -46,10 +42,10 @@
                   <div class="flex items-center flex-grow w-0 h-6">
                     <span>{{ order.Price }}</span>
                   </div>
-                  <div class="flex items-center flex-grow w-0 h-6">
-                    <span>{{ order.CreatedAt }}</span>
+                  <div class="flex items-center flex-grow w-0 h-6 px-5">
+                    <span class="">{{ order.CreatedAt }}</span>
                   </div>
-                  <div class="flex items-center flex-grow w-0 h-6"><button class="ml-1 font-medium text-xs text-blue-600 hover:text-blue-200" @click="onCancelOrder(order)">Cancel</button></div>
+                  <div class="flex items-center flex-grow w-0 h-6"><button class="font-medium text-xs text-blue-600 hover:text-blue-200" @click="onCancelOrder(order)">Cancel</button></div>
                 </div>
               </div>
             </div>
@@ -136,11 +132,10 @@
 <script>
 import { myOrders } from '../api/api'
 import UseWallet from '../wallet'
-const { connect, web3, walletGlobal } = UseWallet()
+const { walletGlobal } = UseWallet()
 import { cancelOrder } from '../api/api.js'
 import { mapGetters } from 'vuex'
 import { formatNumber } from '../utils/token'
-import { createToast } from 'mosha-vue-toastify'
 
 export default {
   name: 'UserTrade',
@@ -210,22 +205,10 @@ export default {
     onCancelOrder(order) {
       let { Id, MarketId } = order
       console.log('onCancelOrder', order, MarketId)
-      try {
-        cancelOrder({
-          marketID: MarketId,
-          orderID: Id,
-        })
-
-        createToast(
-          { title: '', description: 'Order canceled' },
-          {
-            type: 'success',
-            showIcon: true,
-            position: 'top-center',
-            timeout: 8000,
-          }
-        )
-      } catch (error) {}
+      cancelOrder({
+        marketID: MarketId,
+        orderID: Id,
+      })
     },
     format(val) {
       return formatNumber(val, 5)
@@ -261,5 +244,8 @@ export default {
   position: sticky;
   top: 0;
   background-color: black;
+}
+.trade-list {
+  height: 35vh;
 }
 </style>

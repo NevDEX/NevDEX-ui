@@ -106,8 +106,7 @@ export default {
       //   }
       // )
       let tokenAddress = getTokenAddress(this.selectedToken.name)
-      // console.log('withdraw', tokenAddress, this.$refs.depositInput.value)
-      await withdraw(tokenAddress, this.$refs.depositInput.value)
+      await withdraw(tokenAddress, this.$refs.depositInput.value, walletGlobal.account)
     },
     async onMax() {
       this.selectedToken.maxBalance = this.selectedToken.balance

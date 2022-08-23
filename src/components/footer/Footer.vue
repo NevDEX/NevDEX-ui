@@ -1,16 +1,15 @@
 <template>
-  <div class="bg-gradient-to-b from-gray-900 to-gray-800">
+  <div class="bg-gray-800">
     <div class="container m-auto">
       <div class="grid grid-cols-2 gap-8 py-6 px-6 md:grid-cols-4">
         <div>
-          <div class="w-[80px] ml-20 -mt-2" style="">
-            <img src="../../assets/logo.png" />
-          </div>
-
-          <p class="text-gray-400 text-sm w-30 flex-wrap">A decentralized exchange platform built</p>
-          <p class="text-gray-400 text-sm w-30 flex-wrap">built on Nervos Blockchain</p>
+          <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase">About</h2>
+          <ul class="text-gray-300">
+            <li class="mb-4">
+              <a href="#" class="hover:underline">About</a>
+            </li>
+          </ul>
         </div>
-
         <div>
           <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase">PRODUCTS</h2>
           <ul class="text-gray-300">
@@ -43,7 +42,7 @@
               <a href="https://twitter.com/NevDEX_" target="_blank" class="hover:underline">Twitter</a>
             </li>
             <li class="mb-4">
-              <a href="https://discord.gg/U5S86gJePS" target="_blank" class="hover:underline">Discord</a>
+              <a href="https://discord.gg/wBAHdkQUj7" target="_blank" class="hover:underline">Discord</a>
             </li>
           </ul>
         </div>

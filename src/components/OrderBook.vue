@@ -14,14 +14,14 @@
         </thead>
       </table>
       <div v-for="ask in askToDisplay" :key="ask.price" @click="onAskClick(ask)" class="w-full mt-0.5 relative bg-red-500 text-white h-5 flex text-left text-xs items-center">
-        <span class="ml-0 bg-gray-900 h-5 text-gray-300 text-left text-xs items-center flex" :style="{ width: 100 - ask.sizePercent + '%' }">{{ format(ask.size) }}</span>
+        <span class="ml-0 bg-gray-900 h-5 text-white text-left text-xs items-center flex" :style="{ width: 100 - ask.sizePercent + '%' }">{{ ask.size }}</span>
         <span class="absolute right-0.5">{{ ask.price }}</span>
       </div>
       <div class="mt-2 mb-2 text-green-400 text-center text-xs" v-if="spread > 0">
         {{ spread }}
       </div>
-      <div v-for="bid in bidToDisplay" :key="bid.price" @click="onBidClick(bid)" class="w-full mt-0.5 relative bg-green-500 text-white h-5 flex text-left text-xs items-center">
-        <span class="ml-0 bg-gray-900 h-5 text-gray-300 text-left text-xs items-center flex" :style="{ width: 100 - bid.sizePercent + '%' }">{{ format(bid.size) }}</span>
+      <div v-for="bid in bidToDisplay" :key="bid.price" @click="onAskClick(ask)" class="w-full mt-0.5 relative bg-green-500 text-white h-5 flex text-left text-xs items-center">
+        <span class="ml-0 bg-gray-900 h-5 text-white text-left text-xs items-center flex" :style="{ width: 100 - bid.sizePercent + '%' }">{{ bid.size }}</span>
         <span class="absolute right-0.5">{{ bid.price }}</span>
       </div>
     </div>
@@ -63,7 +63,7 @@ export default {
   },
   methods: {
     format(num) {
-      return formatNumber(num, 4)
+      return formatNumber(num)
     },
     tab(index) {
       this.num = index
