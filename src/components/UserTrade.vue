@@ -4,13 +4,13 @@
       <div class="text-sm font-medium text-center text-gray-500 border-b border-gray-600">
         <ul class="flex -mb-px">
           <li class="mr-2">
-            <a href="#" class="inline-block p-2 rounded-t-lg border-b-2 hover:text-gray-300 hover:border-gray-300 border-transparent" @click="toggleTabs(1)" v-bind:class="{ 'text-bold text-gray-300 border-gray-300 ': openTab === 1 }">Open Orders</a>
+            <a href="javascript:void(0)" class="inline-block p-2 rounded-t-lg border-b-2 hover:text-gray-300 hover:border-gray-300 border-transparent" @click="toggleTabs(1)" v-bind:class="{ 'text-bold text-gray-300 border-gray-300 ': openTab === 1 }">Open Orders</a>
           </li>
           <li class="mr-2">
-            <a href="#" class="inline-block p-2 rounded-t-lg border-b-2 hover:text-gray-300 hover:border-gray-300 border-transparent" @click="toggleTabs(2)" v-bind:class="{ 'text-bold text-gray-300 border-gray-300 ': openTab === 2 }">Recent Trade History</a>
+            <a href="javascript:void(0)" class="inline-block p-2 rounded-t-lg border-b-2 hover:text-gray-300 hover:border-gray-300 border-transparent" @click="toggleTabs(2)" v-bind:class="{ 'text-bold text-gray-300 border-gray-300 ': openTab === 2 }">Recent Trade History</a>
           </li>
           <li class="mr-2">
-            <a href="#" class="inline-block p-2 rounded-t-lg border-b-2 hover:text-gray-300 hover:border-gray-300 border-transparent" @click="toggleTabs(3)" v-bind:class="{ 'text-bold text-gray-300 border-gray-300 ': openTab === 3 }">Fee Discount</a>
+            <a href="javascript:void(0)" class="inline-block p-2 rounded-t-lg border-b-2 hover:text-gray-300 hover:border-gray-300 border-transparent" @click="toggleTabs(3)" v-bind:class="{ 'text-bold text-gray-300 border-gray-300 ': openTab === 3 }">Fee Discount</a>
           </li>
         </ul>
       </div>

@@ -2,7 +2,7 @@
   <div className="marquee-root mt-20 pb-42">
     <div className="marquee-content flex flex-row">
       <div v-for="crypto in getCrypto.slice(0, 100)" :key="crypto.id">
-        <a href="#" class="ml-5 block p-6 w-60 bg-gray-800 rounded-lg shadow-md">
+        <a href="javascript:void(0)" class="ml-5 block p-6 w-60 bg-gray-800 rounded-lg shadow-md">
           <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-400 uppercase">{{ crypto.symbol }}</h5>
           <p class="font-normal text-gray-200">Price ${{ crypto.current_price }}</p>
         </a>

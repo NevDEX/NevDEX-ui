@@ -1,10 +1,10 @@
 <template>
   <div v-if="account !== 'Connect Wallet'">
-    <div class="md:mt-20 mt-10">
+    <div class="md:mt-10 mt-10">
       <h2 class="text-center">
         <span class="bg-gray-900 text-gray-400 font-semibold"> Balance </span>
       </h2>
-      <div class="flex mt-5 text-gray-400 justify-between">
+      <div class="flex md:mt-5 text-gray-400 justify-between">
         <span class="text-gray-400 text-xs flex items-center">
           {{ baseToken }}
         </span>

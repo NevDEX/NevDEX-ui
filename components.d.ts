@@ -16,7 +16,6 @@ declare module '@vue/runtime-core' {
     DropDown: typeof import('./src/components/DropDown.vue')['default']
     Footer: typeof import('./src/components/footer/Footer.vue')['default']
     Hero: typeof import('./src/components/Hero.vue')['default']
-    'Hero copy': typeof import('./src/components/Hero copy.vue')['default']
     MarketHistory: typeof import('./src/components/MarketHistory.vue')['default']
     Navbar: typeof import('./src/components/Navbar.vue')['default']
     OrderBook: typeof import('./src/components/OrderBook.vue')['default']

@@ -4,7 +4,7 @@
       <div class="relative">
         <input style="z-index: -1; width: 100%;" type="range" value="0" class="mb-4 h-1 bg-gray-600 rounded-lg appearance-none cursor-pointer range-sm" id="slider" />
         <div id="selector">
-          <div id="selectBtn" class="-top-6 h-4 w-8 text-center rounded-sm bg-gray-800 absolute left-0 text-blue-600 text-xs m-auto cursor-none">{{ percent }}%</div>
+          <div id="selectBtn" class="-top-3 h-4 w-8 text-center rounded-sm bg-transparent absolute left-0 text-blue-600 text-xs m-auto cursor-none">{{ percent }}%</div>
         </div>
 
         <span style="left: 25%; top: 35%; z-index: -10;" class="h-2 w-2 bg-gray-600 rounded-lg absolute"></span>

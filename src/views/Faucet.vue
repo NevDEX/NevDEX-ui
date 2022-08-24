@@ -7,16 +7,16 @@
       <div class="">
         <ul class="flex flex-nowrap text-sm font-medium text-center text-gray-500 md:justify-content-center">
           <li class="mr-1">
-            <a href="#" class="w-20 inline-block p-4 hover:text-gray-50" v-bind:class="{ 'text-gray-200': tab === 'USDT' }" @click="onTab('USDT')">USDT</a>
+            <a href="javascript:void(0)" class="w-20 inline-block p-4 hover:text-gray-50" v-bind:class="{ 'text-gray-200': tab === 'USDT' }" @click="onTab('USDT')">USDT</a>
           </li>
           <li class="mr-1">
-            <a href="#" class="w-20 inline-block p-4 hover:text-gray-50" v-bind:class="{ 'text-gray-200': tab === 'BTC' }" @click="onTab('BTC')">BTC</a>
+            <a href="javascript:void(0)" class="w-20 inline-block p-4 hover:text-gray-50" v-bind:class="{ 'text-gray-200': tab === 'BTC' }" @click="onTab('BTC')">BTC</a>
           </li>
           <li class="mr-1">
-            <a href="#" class="w-20 inline-block p-4 hover:text-gray-50" v-bind:class="{ 'text-gray-200': tab === 'BNB' }" @click="onTab('BNB')">BNB</a>
+            <a href="javascript:void(0)" class="w-20 inline-block p-4 hover:text-gray-50" v-bind:class="{ 'text-gray-200': tab === 'BNB' }" @click="onTab('BNB')">BNB</a>
           </li>
           <li class="mr-1">
-            <a href="#" class="w-20 inline-block p-4 hover:text-gray-50" v-bind:class="{ ' text-gray-200': tab === 'CKB' }" @click="onTab('CKB')">CKB</a>
+            <a href="javascript:void(0)" class="w-20 inline-block p-4 hover:text-gray-50" v-bind:class="{ ' text-gray-200': tab === 'CKB' }" @click="onTab('CKB')">CKB</a>
           </li>
         </ul>
       </div>
