@@ -16,7 +16,7 @@
           <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase">PRODUCTS</h2>
           <ul class="text-gray-300">
             <li class="mb-4">
-              <a href="javascript:void(0)" class="hover:underline">Exchange</a>
+              <a href="https://docs.nevdex.tech/products/exchange" target="_blank" class="hover:underline">Exchange</a>
             </li>
             <li class="mb-4">
               <a href="javascript:void(0)" class="hover:underline">Farm</a>
