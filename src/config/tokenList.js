@@ -1,3 +1,3 @@
-import tokenList from "./tokenList_Avax.json"
+import tokenList from "./tokenList_Godwoken.json"
 
 export default tokenList

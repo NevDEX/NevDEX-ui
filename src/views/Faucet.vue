@@ -51,7 +51,7 @@ export default {
     async onFaucet() {
       let token = this.tab
       let tokenAddress = getTokenCfg(token).address
-      await mint(tokenAddress, walletGlobal.account, '100')
+      await mint(tokenAddress, walletGlobal.account, '10000')
     },
   },
 }

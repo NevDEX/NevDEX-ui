@@ -2,16 +2,16 @@
   "tokens": [
     {
       "chainId": 1,
-      "address": "0x48d1f4Fea60fE15f476643ea77e53eCba43B672e",
+      "address": "0x2A3A387398eef02A7356a6c373b398b1b7B0eF83",
       "name": "Bit Coin",
       "symbol": "BTC",
       "decimals": 18,
-      "logoURI": "https://raw.githubusercontent.com/compound-finance/token-list/master/assets/asset_ZRX.svg",
+      "logoURI": "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579",
       "id": "bitcoin"
     },
     {
       "chainId": 1,
-      "address": "0x48d1f4Fea60fE15f476643ea77e53eCba43B672e",
+      "address": "0x51Ab7B0cd5329acbb6524422843bB25200e07062",
       "name": "BSC Token",
       "symbol": "BNB",
       "decimals": 18,
@@ -20,20 +20,20 @@
     },
     {
       "chainId": 1,
-      "address": "0xc1cB78e38F125E2Ed53a269035f837b16aD0BBCA",
+      "address": "0xb294B3E843ad958C695edAf00DDDCEb5b38464d5",
       "name": "CKB",
       "symbol": "CKB",
       "decimals": 18,
-      "logoURI": "https://raw.githubusercontent.com/compound-finance/token-list/master/assets/ctoken_dai.svg",
+      "logoURI": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOAAAADgCAMAAAAt85rTAAAAQlBMVEX///8AAABfX19OTk7p6ekQEBDAwMDIyMgaGhotLS3f39/FxcXNzc0pKSk8PDy6urqJiYlJSUlXV1fx8fFgYGA3NzfP5EkpAAADFElEQVR4nO3d6XIaMRBFYclJABtwvPH+r5rKbmCW7pnbKvXU+R6grVOkI8r64VIAAAAAAAAAAAAAAAAAAAAAAABw5bt+5Mvrl1EX/Y+bUXfykQ91gvynzamPJ/XIzgLreS8e2VtgreLC/gIP2j3sL7A+Sgs7DKwH5b/SHgNrfdKN7DNQuId9Bgr3sNNA3R72Gii7D/sNPBwlI/sNrM+Swo4DNXvYc6BkD/sOFNyHfQcK7sPOA+th7be23gNX72H/gSv3sP/AlXuYIHDdfZghcNUe5gg8L/9tYo7AFXuYJHD5HmYJXLyHeQIX3od5Ahe+WyQKXPZukSlw0R7mClywh7kCF9yHyQL992G2QPe7Rb5A5x7mC3TuYcJA3x5mDHTdhzkDHe8WOQMd7xZJA+17mDXQvId5A433Yd5A432YOND2bpE50LSHuQMNe5go8Nu9epn9PU2ewLf3rwPe50bmCfxYNjJP4MOykQQ2RaAfgU0R6PexncDhLwJv2wk8XQa/zW0nsOwOkzX5A8t+64HlyfkZhgfdWhtYdo8bD3TuYXDOvfWBvj2MrRkgCCx7x2cYGjNEEViOzxsPLEfzZxiYMkwTaN/DuJIRokDzHoaFjFEFWu/DqI5RskDjfRiUMU4XWJ62Hmjaw5CIKcpAyx5GNEySBhr2MCBhmjZw/j7UF8wQB5b9eeOB5TS9h+rzz5IHzuyh+Pjz9IHTe6g9vUFA4OR9KD28RUTg1H2oPLtJSGA5jf5fKjy6TUzg+B7qTm4UFDi6h7KDW0UFju2h6txmYYEj96Ho2HZxgcN7qDm1Q2Dg4LuF5NAekYFDe6g4s0to4MAeCo7sExt4v4frRzoFB97dh4KRPtGBt+8WipEu4YE37xaSkR7xgdd7qBnp0CDwag9FI+1aBH6+D1UjzZoEfroPZSOt2gT+f7fQjTRqFPhvD4UjbVoF/t1D5UiTZoF/9lA60qJd4O/7UDvSoGHgr3cL8ch5LQN/vluoR85qGlh27QMv43864fVF/+MC/voDAAAAAAAAAAAAAAAAAAAAAABAbj8AkRAgVygATuYAAAAASUVORK5CYII=",
       "id": "nervos-network"
     },
     {
       "chainId": 1,
-      "address": "0x1BC82d9c5767Bea66fa6078b46E60866e22aed57",
+      "address": "0xC84ab95759a4659D4C55F79489be8f55898b51b7",
       "name": "USDT",
       "symbol": "USDT",
       "decimals": 18,
-      "logoURI": "https://raw.githubusercontent.com/compound-finance/token-list/master/assets/ctoken_dai.svg"
+      "logoURI": "https://assets.coingecko.com/coins/images/325/large/Tether-logo.png?1598003707"
     }
   ]
 }
