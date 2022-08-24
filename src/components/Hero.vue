@@ -15,7 +15,7 @@
       <div class="flex justify-center items-start">
         <button class="text-gray-50 md:mt-36 mt-36 px-10 py-5 font-bold bg-gray-800 hover:bg-gray-500 rounded-md" @click="$router.push('/trade')">Trade Now</button>
       </div>
-      <div class="flex justify-center text-gray-200 text-xl items-center">
+      <div class="flex justify-center text-gray-200 text-xl items-center mt-2">
         <div class="text-left text-[17px] text-gray-500">Powered by</div>
         <div class="flex flex-row items-center"><img class="h-[3.5rem]" src="../assets/godwoken.png" alt="logo" /> <span class="-ml-2">Nervos Godwoken</span></div>
       </div>
