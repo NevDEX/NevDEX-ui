@@ -62,7 +62,7 @@
       </div>
 
       <div class="flex flex-col md:w-3/5 w-full h-full">
-        <TradingView :market="market" class="" />
+        <TradingView v-if="!!symbolInfo.symbol" :market="market" :symbolInfo="symbolInfo" class="" />
         <TradeTab :market="market" class="flex-1" />
       </div>
     </div>
@@ -87,6 +87,8 @@ import { ethers } from 'ethers'
 import UseWallet from '../wallet'
 const { walletGlobal } = UseWallet()
 import { mapActions, mapGetters } from 'vuex'
+import { apiGet } from '../api'
+
 export default {
   name: 'Trade',
   components: { TradingView, TradeTab, RangeSlider, DropDown, OrderBook, TradeFooter, WalletModal, Volume, Assets, TradeBar },
@@ -113,6 +115,10 @@ export default {
         unsettledBalance: 0,
       },
       showWallet: false,
+
+      symbol: 'mdsusdt',
+      symbolInfo: {},
+      symbolList: [],
     }
   },
   watch: {
@@ -207,8 +213,32 @@ export default {
       this.price = ask.price
       this.amount = ask.size
     },
+    fetchSymbolList() {
+      apiGet('common_symbols').then((res) => {
+        if (!res || !res.data) {
+          return
+        }
+
+        console.log('111111111111111')
+        const list = []
+        for (let i = 0; i < res.data.length; i++) {
+          if (res.data[i]['quote-currency'] === 'usdt') {
+            list.push(res.data[i])
+          }
+        }
+        const symbol = list.length ? list[0].symbol : ''
+        this.symbol = symbol
+        console.log('symbol', symbol)
+        this.symbolInfo = list[0]
+        console.log('symbolInfo', this.symbolInfo)
+
+        this.symbolList = list
+      })
+    },
   },
-  async created() {},
+  async created() {
+    this.fetchSymbolList()
+  },
 }
 </script>
 <style scoped>

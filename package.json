@@ -25,7 +25,10 @@
     "vue-router": "^4.0.0-0",
     "vue-tradingview-widgets": "^1.0.2",
     "vuex": "^4.0.2",
-    "web3": "^1.7.4"
+    "web3": "^1.7.4",
+    "events": "^3.2.0",
+    "pako": "^2.0.2",
+    "tradingview-api": "^1.0.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
