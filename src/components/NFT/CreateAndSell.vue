@@ -7,7 +7,8 @@
     <div class="container p-[5rem] bg-[#232835] mx-auto rounded">
       <div class="ellipse"></div>
       <div class="content flex gap-[3rem]">
-        <div v-for="(section, index) in sections" :key="{ index }" class="createAndSell p-[2rem] bg-[#ffffff34] space-y-6 rounded-md ">
+        <div v-for="(section, index) in sections" :key="{ index }"
+          class="createAndSell p-[2rem] bg-[#ffffff34] space-y-6 rounded-md ">
           <div className="image">
             <!-- <img src="{image}" alt="create and sell" /> -->
           </div>
@@ -50,7 +51,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .createAndSell {
   gap: 1rem;
 }

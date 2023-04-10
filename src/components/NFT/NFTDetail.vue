@@ -404,7 +404,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .container {
     max-width: 1280px;
     padding-left: 40px;
