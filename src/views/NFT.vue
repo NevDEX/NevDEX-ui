@@ -1,5 +1,5 @@
 <template>
-  <div class="container h-80 flex flex-row mx-auto mt-36 my-40">
+  <div class="container max-h-full   flex flex-row mx-auto mt-36 my-40">
     <div class="absolute inset-x-0 md:top-10 min-h-0 pl-20 py-24 flex overflow-hidden z-0"><span
         class="block bg-[#ef233c] w-72 h-72 rounded-full mix-blend-multiply filter blur-3xl opacity-10 lg:w-96 lg:h-96"></span><span
         class="block bg-[#04868b] w-72 h-72 -ml-20 mt-40 rounded-full mix-blend-multiply filter blur-3xl opacity-10 lg:w-96 lg:h-96 nc-animation-delay-2000"></span>
@@ -10,7 +10,7 @@
         <span> NFT Marketplace</span>
         <span> on Nervos Godwoken</span>
       </div>
-      <p class="ml-14 mt-5 text-base xl:text-lg text-gray-400 max-w-lg">Mint & Trade the most outstanding NTFs in all
+      <p class=" mt-5 text-base xl:text-lg text-gray-400 max-w-lg">Mint & Trade the most outstanding NTFs in all
         topics of
         life with $NDX</p>
     </div>
