@@ -63,3 +63,27 @@ export function lockedBalance(data) {
         data
     })
 }
+
+export function getBalance(data) {
+    return request({
+        url: '/getAssetBalance',
+        method: 'post',
+        data
+    })
+}
+
+export function marketVolume(data) {
+    return request({
+        url: '/marketVolume',
+        method: 'post',
+        data
+    })
+}
+
+export function orderbookMarketPrice(data) {
+    return request({
+        url: '/marketPrice',
+        method: 'post',
+        data
+    })
+}

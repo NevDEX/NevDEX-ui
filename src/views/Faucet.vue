@@ -24,7 +24,7 @@
         <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
         <div class="relative">
           <input type="search" id="default-search" class="block p-4 pl-5 w-full text-sm text-gray-900 bg-gray-50 border border-gray-300 focus:ring-blue-500" placeholder="Please paste your account address" required />
-          <button class="float-right text-white md:absolute relative md:right-2.5 bottom-2.5 md:mt-0 mt-3 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 bg-gray-800 hover:bg-gray-600 focus:ring-blue-800" @click="onFaucet">Give me Token</button>
+          <button class="float-right text-white md:absolute relative md:right-2.5 bottom-2.5 md:mt-0 mt-3 focus:outline-none font-medium rounded-sm text-sm px-4 py-2 bg-gray-800 hover:bg-gray-600 focus:ring-blue-800" @click="onFaucet">Give me Token</button>
         </div>
       </div>
     </div>
@@ -33,15 +33,16 @@
 <script>
 import { mint } from '../contract'
 import { getTokenCfg } from '../utils/token'
-import UseWallet from '../wallet'
-const { walletGlobal } = UseWallet()
-
+import { mapGetters } from 'vuex'
 export default {
   name: 'faucet',
   data() {
     return {
       tab: 'USDT',
     }
+  },
+  computed: {
+    ...mapGetters(['account']),
   },
   methods: {
     onTab(tab) {
@@ -51,7 +52,7 @@ export default {
     async onFaucet() {
       let token = this.tab
       let tokenAddress = getTokenCfg(token).address
-      await mint(tokenAddress, walletGlobal.account, '10000')
+      await mint(tokenAddress, this.account, '10000')
     },
   },
 }

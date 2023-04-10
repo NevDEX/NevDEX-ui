@@ -46,11 +46,14 @@
             <li class="mb-4">
               <a href="https://discord.gg/U5S86gJePS" target="_blank" class="hover:underline">Discord</a>
             </li>
+            <li class="mb-4">
+              <a href="https://medium.com/@NevDEX" target="_blank" class="hover:underline">Medium</a>
+            </li>
           </ul>
         </div>
       </div>
       <div class="py-4 px-4 bg-transparent md:flex md:items-center md:justify-between">
-        <span class="text-sm text-gray-300 sm:text-center">© 2022 <a href="#">NevDEX™</a>. All Rights Reserved. </span>
+        <span class="text-sm text-gray-300 sm:text-center">© {{ this.year }} <a href="#">NevDEX™</a>. All Rights Reserved. </span>
         <div class="flex mt-4 space-x-6 sm:justify-center md:mt-0">
           <a href="https://twitter.com/NevDEX_" target="_blank" class="text-gray-500 hover:text-gray-900">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -85,6 +88,14 @@
 <script>
 export default {
   name: 'Footer',
+  data() {
+    return {
+      year: '',
+    }
+  },
+  mounted() {
+    this.year = new Date().getFullYear()
+  },
 }
 </script>
 

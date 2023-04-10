@@ -15,7 +15,7 @@
       "name": "BSC Token",
       "symbol": "BNB",
       "decimals": 18,
-      "logoURI": "https://trade.mango.markets/assets/icons/bnb.svg",
+      "logoURI": "BNB.svg",
       "id": "binancecoin"
     },
     {
@@ -24,8 +24,26 @@
       "name": "CKB",
       "symbol": "CKB",
       "decimals": 18,
-      "logoURI": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOAAAADgCAMAAAAt85rTAAAAQlBMVEX///8AAABfX19OTk7p6ekQEBDAwMDIyMgaGhotLS3f39/FxcXNzc0pKSk8PDy6urqJiYlJSUlXV1fx8fFgYGA3NzfP5EkpAAADFElEQVR4nO3d6XIaMRBFYclJABtwvPH+r5rKbmCW7pnbKvXU+R6grVOkI8r64VIAAAAAAAAAAAAAAAAAAAAAAABw5bt+5Mvrl1EX/Y+bUXfykQ91gvynzamPJ/XIzgLreS8e2VtgreLC/gIP2j3sL7A+Sgs7DKwH5b/SHgNrfdKN7DNQuId9Bgr3sNNA3R72Gii7D/sNPBwlI/sNrM+Swo4DNXvYc6BkD/sOFNyHfQcK7sPOA+th7be23gNX72H/gSv3sP/AlXuYIHDdfZghcNUe5gg8L/9tYo7AFXuYJHD5HmYJXLyHeQIX3od5Ahe+WyQKXPZukSlw0R7mClywh7kCF9yHyQL992G2QPe7Rb5A5x7mC3TuYcJA3x5mDHTdhzkDHe8WOQMd7xZJA+17mDXQvId5A433Yd5A432YOND2bpE50LSHuQMNe5go8Nu9epn9PU2ewLf3rwPe50bmCfxYNjJP4MOykQQ2RaAfgU0R6PexncDhLwJv2wk8XQa/zW0nsOwOkzX5A8t+64HlyfkZhgfdWhtYdo8bD3TuYXDOvfWBvj2MrRkgCCx7x2cYGjNEEViOzxsPLEfzZxiYMkwTaN/DuJIRokDzHoaFjFEFWu/DqI5RskDjfRiUMU4XWJ62Hmjaw5CIKcpAyx5GNEySBhr2MCBhmjZw/j7UF8wQB5b9eeOB5TS9h+rzz5IHzuyh+Pjz9IHTe6g9vUFA4OR9KD28RUTg1H2oPLtJSGA5jf5fKjy6TUzg+B7qTm4UFDi6h7KDW0UFju2h6txmYYEj96Ho2HZxgcN7qDm1Q2Dg4LuF5NAekYFDe6g4s0to4MAeCo7sExt4v4frRzoFB97dh4KRPtGBt+8WipEu4YE37xaSkR7xgdd7qBnp0CDwag9FI+1aBH6+D1UjzZoEfroPZSOt2gT+f7fQjTRqFPhvD4UjbVoF/t1D5UiTZoF/9lA60qJd4O/7UDvSoGHgr3cL8ch5LQN/vluoR85qGlh27QMv43864fVF/+MC/voDAAAAAAAAAAAAAAAAAAAAAABAbj8AkRAgVygATuYAAAAASUVORK5CYII=",
+      "logoURI": "CKB.svg",
       "id": "nervos-network"
+    },
+    {
+      "chainId": 1,
+      "address": "0x129001cb3421b5a710f7F25dc480D3F0cda726bf",
+      "name": "YokaiSwap Token",
+      "symbol": "YOK",
+      "decimals": 18,
+      "logoURI": "YOK.png",
+      "godwoken": true
+    },
+    {
+      "chainId": 1,
+      "address": "0x23543a003Ad301dd2ECfBDE4af6833da146d7793",
+      "name": "Brainiac Finance",
+      "symbol": "BRN",
+      "decimals": 18,
+      "logoURI": "BRN.svg",
+      "godwoken": true
     },
     {
       "chainId": 1,
@@ -34,6 +52,14 @@
       "symbol": "USDT",
       "decimals": 18,
       "logoURI": "https://assets.coingecko.com/coins/images/325/large/Tether-logo.png?1598003707"
+    },
+    {
+      "chainId": 1,
+      "address": "0x7455b2B6a77079F37F1b265dBd39C5aB4D0DfB7b",
+      "name": "NDX",
+      "symbol": "NDX",
+      "decimals": 18,
+      "logoURI": "NDX.png"
     }
   ]
 }

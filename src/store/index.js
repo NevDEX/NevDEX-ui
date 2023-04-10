@@ -1,9 +1,14 @@
 import axios from 'axios'
 import { createStore } from 'vuex'
+import { getBalance } from '../api/api.js'
+import farm from "./farm";
+
+import { getVaultBalance, getBalance as getDexBalance } from "../contract"
 
 export default createStore({
   state: {
     crypto: [],
+    assetBalance: {},
     market: '',
     account: 'Connect Wallet',
     walletBalance: {
@@ -14,6 +19,12 @@ export default createStore({
       base: 1,
       quote: 12,
     },
+    marketVolume: '',
+    balance: {
+      "address": { "wallet": 0, "account": 1 }
+    },
+    orderType: '',
+    signer: null,
   },
   actions: {
     async fetchCrypto({ commit }) {
@@ -25,6 +36,20 @@ export default createStore({
         console.log(error)
       }
     },
+    async fetchBalance({ commit }, account) {
+      if (account === "Connect Wallet") {
+        return
+      }
+      try {
+        const resp = await getBalance({
+          address: account
+        })
+        commit('setAssetBalance', resp)
+      } catch (error) {
+        console.log(error)
+      }
+    },
+
     async updateMarket({ commit }, payload) {
       commit('setMarket', payload)
     },
@@ -37,34 +62,69 @@ export default createStore({
     async updateAccountBalance({ commit }, payload) {
       commit('setAccountBalance', payload)
     },
+    async updateAccountBalance({ commit }, payload) {
+      commit('setAccountBalance', payload)
+    },
+    async updateMarketVolume({ commit }, payload) {
+      commit('setMarketVolume', payload)
+    },
+    async updateBalance({ commit, state }, address) {
+      let account = await getVaultBalance(address, state.account)
+      let wallet = await getDexBalance(address, state.account)
+      commit('setBalance', { "address": address, "wallet": wallet, "account": account })
+    },
+    async updateOrderType({ commit }, payload) {
+      commit('setOrderType', payload)
+    },
+    async updateSinger({ commit }, payload) {
+      commit('setSigner', payload)
+    },
   },
   mutations: {
     setCrypto: (state, payload) => {
       state.crypto = payload
     },
-    setMarket: (state, payload) => {
-      // console.log('setMarket', payload)
-      state.market = payload
+    setAssetBalance: (state, payload) => {
+      state.assetBalance = payload
     },
     setAccount: (state, payload) => {
-      // console.log('setAccount', payload)
       state.account = payload
     },
     setWalletBalance: (state, payload) => {
-      // console.log('setWalletBalance', payload)
       state.walletBalance = payload
     },
     setAccountBalance: (state, payload) => {
-      // console.log('setAccountBalance', payload)
       state.accountBalance = payload
+    },
+    setMarket: (state, payload) => {
+      state.market = payload
+    },
+    setMarketVolume: (state, payload) => {
+      state.marketVolume = payload
+    },
+    setBalance: (state, payload) => {
+      state.balance = payload
+    },
+    setOrderType: (state, payload) => {
+      state.orderType = payload
+    },
+    setSigner: (state, payload) => {
+      state.signer = payload
     },
   },
   getters: {
     getCrypto: (state) => state.crypto,
+    assetBalance: (state) => state.assetBalance,
     market: (state) => state.market,
     account: (state) => state.account,
     accountBalance: (state) => state.accountBalance,
     walletBalance: (state) => state.walletBalance,
+    marketVolume: (state) => state.marketVolume,
+    balance: (state) => state.balance,
+    orderType: (state) => state.orderType,
+    signer: (state) => state.signer,
   },
-  modules: {},
+  modules: {
+    farm,
+  },
 })

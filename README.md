@@ -1,7 +1,5 @@
 # NevDEX-ui
 
-NEVDEX NDX
-
 ## Project setup
 ```
 yarn

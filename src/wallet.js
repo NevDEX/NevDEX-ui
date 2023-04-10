@@ -1,58 +1,11 @@
- 
-import { ethers, Contract, utils } from 'ethers';
 
-// const web3 = new Web3(window.web3.currentProvider);
+import { providers, ethers } from 'ethers';
+import { CONFIG } from "./config/config"
 
 var walletGlobal = {
-    account: "",
-}
-
-async function connect() {
-    if (window.ethereum) {
-        window.web3 = new Web3(window.ethereum);
-        console.log("new web3")
-        try {
-            await window.ethereum.enable();
-        } catch (error) {
-            console.error("User denied account access...")
-        }
-    }
-    else if (window.web3) {
-        window.web3 = new Web3(web3.currentProvider);
-    }
-    else {
-        console.log("Non-Ethereum browser detected. You should consider trying MetaMask!");
-    }
-
-    let chainId = await web3.eth.getChainId();
-    // if (chainId != 43113) {
-    //     window.ethereum.request({
-    //         method: 'wallet_addEthereumChain',
-    //         params: [
-    //             {
-    //                 chainId: '0xa869',
-    //                 chainName: 'Avalanche Fuji Testnet',
-    //                 rpcUrls: ['https://api.avax-test.network/ext/bc/C/rpc'],
-    //                 iconUrls: [''],
-    //                 blockExplorerUrls: ['https://testnet.snowtrace.io'],
-    //                 nativeCurrency: {
-    //                     name: 'AAVX',
-    //                     symbol: 'AAVX',
-    //                     decimals: 18,
-    //                 },
-    //             },
-    //         ],
-    //     })
-    // }
-
-    const accounts = await web3.eth.getAccounts()
-    walletGlobal.account = accounts[0]
-    window.ethereum.on("accountsChanged", async ([selectedAccount]) => {
-        const accounts = await web3.eth.getAccounts();
-        console.log("updateAccount", accounts)
-        // walletGlobal.account = accounts[0]
-        // store.dispatch('updateLoginAccount', { account: walletGlobal.account })
-    });
+    signer: null,
+    provider: null,
+    wallet: "",
 }
 
 async function connectWithEther() {
@@ -61,19 +14,74 @@ async function connectWithEther() {
         alert('Must connect to MetaMask!')
         return
     }
-    const account = await ethereum.request({ method: 'eth_requestAccounts' })
-    console.log('connectWithEther Connected: ', account[0])
-    walletGlobal.account = account[0]
+
     const provider = new ethers.providers.Web3Provider(ethereum)
     const { chainId } = await provider.getNetwork();
-    walletGlobal.chainId = chainId
-    console.log('connectWithEther', account, chainId)
+    console.log('connectWithEther chainId', chainId)
+    // check network    
+    if (chainId != CONFIG.ChainId) {
+        ethereum.request({
+            method: "wallet_addEthereumChain",
+            params: [{
+                chainId: '0x116e9',
+                rpcUrls: ["https://godwoken-testnet-v1.ckbapp.dev"],
+                chainName: "Godwoken Testnet v1",
+                nativeCurrency: {
+                    name: "pCKB",
+                    symbol: "pCKB",
+                    decimals: 18
+                },
+                blockExplorerUrls: ["https://gw-testnet-explorer.nervosdao.community"]
+            }]
+        });
+    }
+
+    const address = (await ethereum.request({ method: 'eth_requestAccounts' }))[0]
+    let signer = provider.getSigner()
+    walletGlobal.signer = signer
+    walletGlobal.provider = provider
+    walletGlobal.wallet = "MetaMask"
+
+    return address
+}
+
+async function connectWalletconnect() {
+    var provider = new WalletConnectProvider.default({
+        rpc: {
+            71401: "https://v1.testnet.godwoken.io/rpc",
+        },
+    })
+    await provider.enable()
+    const web3Provider = new providers.Web3Provider(provider)
+    const signer = await web3Provider.getSigner()
+    const address = await signer.getAddress()
+
+    walletGlobal.signer = signer
+    walletGlobal.provider = provider
+    walletGlobal.wallet = "WalletConnect"
+
+    provider.on('accountsChanged', (accounts) => {
+        // console.log(accounts)
+    })
+
+    // Subscribe to chainId change
+    provider.on('chainChanged', (chainId) => {
+        // console.log(chainId)
+    })
+
+    // Subscribe to session disconnection
+    provider.on('disconnect', (code, reason) => {
+        // console.log(code, reason)
+        location.reload()
+    })
+
+    return address
 }
 
 export default function UseWallet() {
     return {
-        connect,
         walletGlobal,
         connectWithEther,
+        connectWalletconnect,
     }
 }

@@ -35,6 +35,7 @@
           </a>
           <p class="mb-2 font-normal text-gray-500">Fast API</p>
           <p class="mb-2 font-normal text-gray-500">Trade To Earn</p>
+          <p class="mb-2 font-normal text-gray-500"><br /></p>
         </div>
         <div class="p-6 max-w-sm bg-gray-800 rounded-lg border border-gray-900 shadow-md mx-auto my-0 w-full">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
@@ -53,8 +54,9 @@
     <!-- middle end -->
     <div class="flex justify-center pt-20 pb-28 flex-col items-center">
       <span class="text-gray-50 font-bold text-3xl"> Our partners </span>
-      <div class="mt-10">
+      <div class="mt-10 flex flex-row space-x-6 items-center">
         <img class="h-20 rounded-md" src="../assets/nervos_logo.jpg" alt="nervos_logo" />
+        <img class="h-16 rounded-md" src="../assets/Celer.png" alt="celer_logo" />
       </div>
     </div>
   </div>

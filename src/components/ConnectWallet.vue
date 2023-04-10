@@ -1,25 +1,30 @@
 <template>
   <div class="flex justify-items-center items-center">
-    <router-link to="" @click="onConnectWallet" v-if="showBtn">
+    <router-link to="" @click="onClick" v-if="showBtn">
       <span class="px-4 py-1 rounded mr-4 text-gray-50 hover:text-white hover:bg-gray-500 font-bold">{{ formatAddress(account) }}</span>
     </router-link>
-    <WalletModal v-if="showModal" @close="showModal = false" />
+    <WalletModal :showWallet="showConnect" @close="showConnect = false" />
+    <WalletDisconnectModal :show="showDisconnect" @close="showDisconnect = false" />
   </div>
 </template>
 <script>
 import { mapGetters } from 'vuex'
 import WalletModal from './WalletModal.vue'
+import WalletDisconnectModal from './WalletDisconnectModal.vue'
+
 export default {
   name: 'ConnectWallet',
   data() {
     return {
       showBtn: true,
       btnTxt: 'Connect Wallet',
-      showModal: false,
+      showConnect: false,
+      showDisconnect: false,
     }
   },
   components: {
     WalletModal,
+    WalletDisconnectModal,
   },
   computed: {
     ...mapGetters(['isConnected', 'account']),
@@ -34,28 +39,13 @@ export default {
     },
   },
   methods: {
-    onConnectWallet() {
-      this.showModal = true
+    onClick() {
+      if (this.account == 'Connect Wallet') {
+        this.showConnect = true
+      } else {
+        this.showDisconnect = true
+      }
     },
-    // async connectWallet() {
-    //   window.ethereum.request({
-    //     method: 'wallet_addEthereumChain',
-    //     params: [
-    //       {
-    //         chainId: '0xa869',
-    //         chainName: 'AVAX Fuji Testnet',
-    //         rpcUrls: ['https://api.avax-test.network/ext/bc/C/rpc'],
-    //         iconUrls: [''],
-    //         blockExplorerUrls: ['https://testnet.snowtrace.io'],
-    //         nativeCurrency: {
-    //           name: 'AAVX',
-    //           symbol: 'AAVX',
-    //           decimals: 18,
-    //         },
-    //       },
-    //     ],
-    //   })
-    // },
     formatAddress(address) {
       if (address.includes('Connect')) {
         return address

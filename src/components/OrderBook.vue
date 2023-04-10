@@ -1,10 +1,10 @@
 <template>
-  <div class="flex flex-col bg-gray-900 px-3 py-1 h-full">
+  <div class="flex flex-col bg-gray-900 px-3 py-1 h-[80vh] 2xl:h-[86vh] w-full">
     <div class="flex justify-between">
       <span v-bind:class="[option === 'orderbook' ? activeClass : inActiveClass]" @click="onOrderbook"> Order Book</span>
       <span v-bind:class="[option === 'trades' ? activeClass : inActiveClass]" @click="onMarketTrades"> Market Trades</span>
     </div>
-    <div v-if="option === 'orderbook'">
+    <div v-if="option === 'orderbook'" class="overflow-auto" style="">
       <table class="table-auto w-full">
         <thead class="bg-gray-900">
           <tr class="text-right">
@@ -13,19 +13,18 @@
           </tr>
         </thead>
       </table>
-      <div v-for="ask in askToDisplay" :key="ask.price" @click="onAskClick(ask)" class="w-full mt-0.5 relative bg-red-500 text-white h-5 flex text-left text-xs items-center">
-        <span class="ml-0 bg-gray-900 h-5 text-white text-left text-xs items-center flex" :style="{ width: 100 - ask.sizePercent + '%' }">{{ format(ask.size) }}</span>
-        <span class="absolute right-0.5">{{ ask.price }}</span>
+
+      <div v-for="(ask, index) in askToDisplay" :key="index" @click="onAskClick(ask)" class="w-full mt-0.5 h-[18px] relative bg-red-600 text-white flex text-left text-xs items-center">
+        <OrderRow :row="ask" :color="red" :ref="`row${index}`" />
       </div>
-      <div class="mt-2 mb-2 text-green-400 text-center text-xs" v-if="spread > 0">
+      <div class="mt-2 mb-2 text-[#61F3AE] text-center text-xs" v-if="spread > 0">
         {{ spread }}
       </div>
-      <div v-for="bid in bidToDisplay" :key="bid.price" @click="onAskClick(ask)" class="w-full mt-0.5 relative bg-green-500 text-white h-5 flex text-left text-xs items-center">
-        <span class="ml-0 bg-gray-900 h-5 text-white text-left text-xs items-center flex" :style="{ width: 100 - bid.sizePercent + '%' }">{{ format(bid.size) }}</span>
-        <span class="absolute right-0.5">{{ bid.price }}</span>
+      <div v-for="bid in bidToDisplay" :key="bid.price" @click="onBidClick(bid)" class="w-full mt-0.5 relative bg-green-500 text-white h-[18px] flex text-left text-xs items-center">
+        <OrderRow :row="bid" :color="green" :ref="`row${index}`" />
       </div>
     </div>
-    <div v-else>
+    <div v-else style="" class="overflow-y-auto h-full w-full">
       <MarketHistory :baseToken="orderbookMarket.split('-')[0]" :quoteToken="orderbookMarket.split('-')[1]" />
     </div>
   </div>
@@ -33,8 +32,8 @@
 
 <script>
 import { orderbook } from '../api/api.js'
-import { formatNumber } from '../utils/token.js'
 import MarketHistory from './MarketHistory.vue'
+import OrderRow from './OrderRow.vue'
 export default {
   data() {
     return {
@@ -51,7 +50,7 @@ export default {
     }
   },
   props: ['baseToken', 'quoteToken', 'market'],
-  components: { MarketHistory },
+  components: { MarketHistory, OrderRow },
   watch: {
     market: function (newVal, oldVal) {
       this.bidToDisplay = []
@@ -62,9 +61,6 @@ export default {
     },
   },
   methods: {
-    format(num) {
-      return formatNumber(num, 4)
-    },
     tab(index) {
       this.num = index
     },
@@ -87,9 +83,22 @@ export default {
           let totalSize = bids.reduce(mySum, 0) + asks.reduce(mySum, 0)
           let bidToDisplay = this.getCumulativeOrderbookSide(bids, totalSize, false)
           this.bidToDisplay = bidToDisplay
+          let before = JSON.parse(JSON.stringify(this.askToDisplay))
+          // console.log('before', before)
           let askToDisplay = this.getCumulativeOrderbookSide(asks, totalSize, true)
           this.askToDisplay = askToDisplay
-          this.spread = formatNumber(askToDisplay[askToDisplay.length - 1]?.price - bidToDisplay[0]?.price, 4)
+          this.spread = this.$format(askToDisplay[askToDisplay.length - 1]?.price - bidToDisplay[0]?.price, 4)
+
+          if (JSON.stringify(before) != JSON.stringify(this.askToDisplay)) {
+            let cnt = askToDisplay.length > before.length ? askToDisplay.length : before.length
+            for (let i = 0; i < cnt; i++) {
+              if (before[i].size != this.askToDisplay[i].size) {
+                // console.log('orderRow update', i, JSON.stringify(before[i]), JSON.stringify(this.askToDisplay[i]))
+                this.$refs[`row${i}`][0].update()
+              }
+            }
+          }
+          // console.log('after', this.askToDisplay)
         })
         .catch((e) => console.error(e))
     },
@@ -126,21 +135,16 @@ export default {
 </script>
 
 <style scoped>
-.background {
-  width: 100%;
-
-  background-color: gray;
-  z-index: 2;
+::-webkit-scrollbar {
+  width: 6px;
+  height: 1px;
+  background-color: transparent;
 }
 
-.content {
-  position: relative;
-  z-index: 1;
-  right: 0%;
-  width: 100%;
-  background-color: red;
-  text-align: center;
-  font-weight: bold;
-  font-family: Arial, sans-serif;
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset000pxrgba(240, 240, 240, 0.5);
+  background-color: rgba(240, 240, 240, 0.5);
+  background-color: transparent;
 }
 </style>

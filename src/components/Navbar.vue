@@ -6,9 +6,9 @@
       </div>
       <div class="ml-10 hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-4">
         <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 font-bold">
-          <li v-for="item in navItems" :key="item.label">
+          <li v-for="(item, index) in navItems" :key="index">
             <router-link v-if="item.link !== ''" :to="item.link">
-              <a class="block py-2 pr-4 pl-3 text-gray-50 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">{{ item.label }}</a>
+              <a class="block py-2 pr-4 pl-3 text-gray-50 hover:bg-gray-50 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 border-b-2 border-transparent" v-bind:class="{ ['border-blue-600 border-b-2']: index === selected }" @click="selected = index">{{ item.label }}</a>
             </router-link>
             <VTooltip v-if="item.link === ''">
               <a class="text-gray-50 border-gray-100 cursor-pointer">{{ item.label }}</a>
@@ -17,7 +17,7 @@
           </li>
         </ul>
       </div>
-      <span class="ml-3 self-center text-2xl font-semibold whitespace-nowrap text-gray-50 cursor-pointer" @click="$router.push('/')">NevDEX</span>
+      <span class="ml-3 self-center text-2xl font-semibold whitespace-nowrap text-gray-50 cursor-pointer   text-transparent   bg-clip-text bg-gradient-to-r from-blue-400 to-blue-900" @click="$router.push('/');selected=-1">NevDEX</span>
     </div>
     <ConnectWallet />
     <div class="md:hidden flex items-center pr-3">
@@ -40,21 +40,20 @@
 </template>
 
 <script>
-import UseWallet from '../wallet'
-const { connect, walletGlobal } = UseWallet()
 import ConnectWallet from './ConnectWallet.vue'
 export default {
   data() {
     return {
-      btnTxt: 'Connect Wallet',
       isVisible: false,
       menuVisible: false,
       navItems: [
         { label: 'Trade', link: '/trade' },
-        { label: 'Farm', link: '' },
-        { label: 'NFT', link: '' },
+        { label: 'Farm', link: '/farm' },
+        { label: 'NFT', link: '/nft' },
+        { label: 'Asset', link: '/asset' },
         { label: 'Faucet', link: '/faucet' },
       ],
+      selected: '',
     }
   },
   components: {
@@ -62,16 +61,18 @@ export default {
   },
   created() {},
   methods: {
-    async onConnectWallet() {
-      await connect()
-      console.log(walletGlobal.account)
-      this.btnTxt = walletGlobal.account
-    },
     tab(index) {
       this.num = index
     },
     toggleMenu() {
       this.menuVisible = !this.menuVisible
+    },
+  },
+  watch: {
+    $route(to, _) {
+      if (to.fullPath === '/trade') {
+        this.selected = 0
+      }
     },
   },
 }

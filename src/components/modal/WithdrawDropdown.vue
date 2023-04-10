@@ -1,6 +1,6 @@
 <template>
   <div class="btn-group w-full">
-    <li @click="toggleMenu()" class="dropdown-toggle flex flex-row" v-if="selectedOption.name !== undefined">
+    <li @click="toggleMenu()" class="p-2 flex flex-row items-center text-gray-500 hover:bg-gray-600" v-if="selectedOption.name !== undefined">
       <img class="h-6 mr-2" :src="getTokenLogo(selectedOption.name)" alt="" />
       {{ selectedOption.name }}
       <span class="caret"></span>
@@ -20,8 +20,8 @@
           </div>
           <div>
             <span>{{ getTokenBalance(option.name) }}</span>
-          </div>
-        </a>
+          </div> </a
+        >
       </div>
     </ul>
   </div>
@@ -83,7 +83,7 @@ export default {
           this.options.map(async (item) => {
             let tokenAddress = getTokenAddress(item.name)
             let balance = await getVaultBalance(tokenAddress, this.account)
-            this.balances.set(item.name, balance)
+            this.balances.set(item.name, this.$format(balance, 4))
           })
         )
       }
@@ -119,14 +119,14 @@ export default {
 }
 
 .dropdown-toggle {
-  color: #636b6f;
+  /* color: #636b6f; */
   /* min-width: 160px; */
   padding: 10px 20px 10px 10px;
   text-transform: none;
   font-weight: 300;
   margin-bottom: 7px;
   border: 0;
-  background-color: #333333;
+  background-color: #4b5563;
   /* background-image: linear-gradient(#009688, #009688), linear-gradient(#d2d2d2, #d2d2d2); */
   /* background-size: 0 2px, 100% 1px; */
   /* background-repeat: no-repeat; */
@@ -172,13 +172,13 @@ export default {
   clear: both;
   font-weight: normal;
   line-height: 1.6;
-  color: #333333;
+  color: #4b5563;
   white-space: nowrap;
   text-decoration: none;
 }
 .dropdown-menu > li > a:hover {
-  background: #282727;
-  color: #282727;
+  background: #4b5563;
+  color: #4b5563;
 }
 
 .dropdown-menu > li {

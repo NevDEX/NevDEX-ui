@@ -1,6 +1,6 @@
 <template>
   <div class="btn-group w-full">
-    <li @click="toggleMenu()" class="dropdown-toggle flex flex-row" v-if="selectedOption.name !== undefined">
+    <li @click="toggleMenu()" class="p-2 flex flex-row items-center text-gray-500 hover:bg-gray-600" v-if="selectedOption.name !== undefined">
       <img class="h-6 mr-2" :src="getTokenLogo(selectedOption.name)" alt="" />
       {{ selectedOption.name }}
       <span class="caret"></span>
@@ -13,10 +13,10 @@
 
     <ul class="dropdown-menu bg-gray-800" v-if="showMenu">
       <div v-for="(option, idx) in options" :key="idx" class="text-gray-50">
-        <a href="javascript:void(0)" class="flex py-2 px-2 hover:bg-gray-500 justify-between" @click="updateOption(option)">
-          <div class="flex flex-row">
+        <a href="javascript:void(0)" class="flex py-2 px-2 hover:bg-gray-500 justify-between items-center" @click="updateOption(option)">
+          <div class="flex flex-row justify-center items-center">
             <img class="h-6 mr-2" :src="getTokenLogo(option.name)" alt="" />
-            {{ option.name }}
+            <span>{{ option.name }}</span>
           </div>
           <div>
             <span>{{ getTokenBalance(option.name) }}</span>
@@ -55,7 +55,7 @@ export default {
     },
   },
   computed: {
-    ...mapGetters(['isConnected', 'account']),
+    ...mapGetters(['isConnected', 'account', 'assetBalance']),
   },
   mounted() {
     this.selectedOption = this.selected
@@ -81,9 +81,9 @@ export default {
         this.balances = []
         Promise.all(
           this.options.map(async (item) => {
-            let tokenAddress = getTokenAddress(item.name)
-            let balance = await getBalance(tokenAddress, this.account)
-            this.balances[item.name] = balance
+              let tokenAddress = getTokenAddress(item.name)
+              let balance = this.$format(await getBalance(tokenAddress, this.account), 4)
+              this.balances[item.name] = balance
           })
         )
       }
@@ -116,9 +116,6 @@ export default {
 }
 .btn-group a:hover {
   text-decoration: none;
-}
-
-.dropdown-toggle {
 }
 
 .dropdown-toggle:hover {
