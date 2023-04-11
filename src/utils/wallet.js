@@ -18,7 +18,7 @@ async function connectWithEther() {
 
     const provider = new ethers.providers.Web3Provider(ethereum)
     const { chainId } = await provider.getNetwork();
-    if (chainId != CONFIG.ChainId) {
+    if (chainId != networks['GodwokenTestnet'].chainId) {
         await ethereum.request({
             method: "wallet_addEthereumChain",
             params: [
