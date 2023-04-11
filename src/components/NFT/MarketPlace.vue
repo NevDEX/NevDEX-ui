@@ -76,7 +76,6 @@ export default {
     onItemClick() {
       // this.$router.push({ name: 'nft_collection', params: { id: 1 } })
       this.$router.push({ name: 'nft_detail', params: { id: 1 } })
-
       console.log('onItemClick')
     },
   },

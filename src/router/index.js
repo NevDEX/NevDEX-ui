@@ -10,6 +10,7 @@ import Asset from '../views/Asset.vue';
 import NFT from '../views/NFT.vue';
 import NFTCollection from '../components/NFT/NFTCollection.vue';
 import NFTDetail from '../components/NFT/NFTDetail.vue';
+import CreateCollection from '../components/NFT/CreateCollection.vue';
 
 const routes = [{
   path: '/',
@@ -50,6 +51,11 @@ const routes = [{
   path: '/nft/detail',
   name: 'nft_detail',
   component: NFTDetail
+},
+{
+  path: '/nft/create_collection',
+  name: 'create_collection',
+  component: CreateCollection
 },
 ];
 

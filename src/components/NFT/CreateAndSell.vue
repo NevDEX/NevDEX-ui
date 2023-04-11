@@ -1,7 +1,7 @@
 <template>
-  <div class="section bg-gray-900 mx-0  ">
-    <div class="title  ">
-      <h2 class="mb-[4rem] text-center text-[3rem] text-white mt-[30rem] py-20">Create and Sell Your NFTs</h2>
+  <div class="section bg-gray-900">
+    <div class="title text-white">
+      <h2 class="mb-[4rem] text-center text-[3rem] mt-[30rem] py-20 font-bold">Create and Sell Your NFTs</h2>
     </div>
 
     <div class="container p-[5rem] bg-[#232835] mx-auto rounded">
@@ -12,10 +12,9 @@
           <div className="image">
             <!-- <img src="{image}" alt="create and sell" /> -->
           </div>
-          <h3>{{ section.title }}</h3>
+          <h3 class="text-white font-bold">{{ section.title }}</h3>
           <p>{{ section.description }}</p>
-
-          <button class="bg-white px-[2rem] py-[1rem] border-none rounded-md" />
+          <Button :text="section.buttonText" @click="onClick(section.buttonText)"></Button>
         </div>
       </div>
     </div>
@@ -23,7 +22,9 @@
 </template>
 
 <script>
+import Button from "./Button.vue"
 export default {
+  components: { Button },
   data() {
     return {
       sections: [
@@ -48,14 +49,26 @@ export default {
       ],
     }
   },
+  methods: {
+    onClick(button) {
+      console.log('onclick', button)
+      switch (button) {
+        case "Create": this.$router.push({ name: 'create_collection', params: { id: 1 } })
+        case "Add NFT":
+        case "Sell Now":
+      }
+    }
+  }
 }
 </script>
 
-<style scoped>
 
-.section{
+
+<style scoped>
+.section {
   margin-top: 100px;
 }
+
 .createAndSell {
   gap: 1rem;
 }
