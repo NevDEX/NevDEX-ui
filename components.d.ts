@@ -14,6 +14,7 @@ declare module '@vue/runtime-core' {
     ConnectWallet: typeof import('./src/components/ConnectWallet.vue')['default']
     CreateAndSell: typeof import('./src/components/NFT/CreateAndSell.vue')['default']
     CreateCollection: typeof import('./src/components/NFT/CreateCollection.vue')['default']
+    CreateNFT: typeof import('./src/components/NFT/CreateNFT.vue')['default']
     CreateOrderModal: typeof import('./src/components/CreateOrderModal.vue')['default']
     Dialog: typeof import('@headlessui/vue')['Dialog']
     DialogDeposit: typeof import('./src/components/modal/DialogDeposit.vue')['default']

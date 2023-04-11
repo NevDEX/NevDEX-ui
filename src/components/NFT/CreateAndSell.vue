@@ -52,8 +52,12 @@ export default {
     onClick(button) {
       console.log('onclick', button)
       switch (button) {
-        case "Create": this.$router.push({ name: 'create_collection', params: { id: 1 } })
+        case "Create":
+          this.$router.push({ name: 'create_collection', params: { id: 1 } })
+          break
         case "Add NFT":
+          this.$router.push({ name: 'create_nft', params: { id: 1 } })
+          break
         case "Sell Now":
       }
     }

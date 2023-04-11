@@ -11,6 +11,7 @@ import NFT from '../views/NFT.vue';
 import NFTCollection from '../components/NFT/NFTCollection.vue';
 import NFTDetail from '../components/NFT/NFTDetail.vue';
 import CreateCollection from '../components/NFT/CreateCollection.vue';
+import CreateNFT from '../components/NFT/CreateNFT.vue';
 
 const routes = [{
   path: '/',
@@ -56,6 +57,11 @@ const routes = [{
   path: '/nft/create_collection',
   name: 'create_collection',
   component: CreateCollection
+},
+{
+  path: '/nft/create',
+  name: 'create_nft',
+  component: CreateNFT
 },
 ];
 
