@@ -24,7 +24,8 @@
 
     <div class="mt-[40px] flex justify-between w-full space-x-3">
       <div class="button w-1/2">
-        <button class="py-1 bg-transparent border-gray-600 border text-white text-sm w-full" @click="depositQuote">Deposit</button>
+        <button class="py-1 bg-transparent border-gray-600 border text-white text-sm w-full"
+          @click="depositQuote">Deposit</button>
       </div>
       <div class="button w-1/2">
         <button class="py-1 border-gray-600 border text-white text-sm w-full" @click="withdrawQuote">Withdraw</button>
@@ -36,7 +37,12 @@
   </div>
   <div v-else class="text-gray-50 bg-gray-900 text-center py-3 flex flex-col mt-10 justify-center items-center">
     <div class="mb-1 h-6 w-6 text-th-primary">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+        aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1">
+        </path>
+      </svg>
     </div>
     Connect Wallet
     <div>
@@ -186,5 +192,4 @@ h2 {
 
 h2 span {
   padding: 0 10px;
-}
-</style>
+}</style>
