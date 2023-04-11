@@ -31,7 +31,7 @@
   </div>
 </template>
 <script>
-import { mint } from '../contract'
+import { mint } from '../contract/contract'
 import { getTokenCfg } from '../utils/token'
 import { mapGetters } from 'vuex'
 export default {

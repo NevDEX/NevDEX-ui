@@ -64,7 +64,7 @@ import tokenList from '../config/tokenList'
 import { getTokenAddress, getTokenCfg } from '../utils/token'
 import { lockedBalance } from '../api/api'
 import { mapGetters } from 'vuex'
-import { getVaultBalance } from '../contract'
+import { getVaultBalance } from '../contract/contract'
 
 export default {
   data() {

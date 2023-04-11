@@ -50,7 +50,7 @@
 <script>
 import { TransitionRoot, TransitionChild, Dialog, DialogPanel, DialogTitle } from '@headlessui/vue'
 import { mapGetters } from 'vuex'
-import { getGovToken, getLPAmount, depositPool } from '../../farm'
+import { getGovToken, getLPAmount, depositPool } from '../../contract/farm'
 import SpinnerButtonCls from '../SpinnerButtonCls.vue'
 export default {
   name: 'StakeLP',

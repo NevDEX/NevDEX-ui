@@ -62,7 +62,7 @@
 <script>
 import { TransitionRoot, TransitionChild, Dialog, DialogPanel, DialogTitle } from '@headlessui/vue'
 import { mapGetters } from 'vuex'
-import { withdrawLP, getPoolUserInfo, withdrawFeePercent } from '../../farm'
+import { withdrawLP, getPoolUserInfo, withdrawFeePercent } from '../../contract/farm'
 import SpinnerButtonCls from '../SpinnerButtonCls.vue'
 import { BigNumber } from '@ethersproject/bignumber'
 import { ethers } from 'ethers';

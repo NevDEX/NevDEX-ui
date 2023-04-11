@@ -154,9 +154,9 @@
   
 <script>
 import { createCollection } from "../../contract/NFT"
-import { upload } from "../../file_upload";
-import { pinFileToIPFS, pinJSONToIPFS } from "../../pinfile";
-import UseWallet from "../../wallet";
+import { upload } from "../../utils/file_upload";
+import { pinFileToIPFS, pinJSONToIPFS } from "../../utils/pinfile";
+import UseWallet from "../../utils/wallet";
 const { walletGlobal } = UseWallet();
 const STATUS_INITIAL = 0,
     STATUS_SAVING = 1,

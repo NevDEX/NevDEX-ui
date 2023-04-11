@@ -2,8 +2,7 @@ import axios from 'axios'
 import { createStore } from 'vuex'
 import { getBalance } from '../api/api.js'
 import farm from "./farm";
-
-import { getVaultBalance, getBalance as getDexBalance } from "../contract"
+import { getVaultBalance, getBalance as getDexBalance } from "../contract/contract"
 
 export default createStore({
   state: {
@@ -13,7 +12,7 @@ export default createStore({
     account: 'Connect Wallet',
     walletBalance: {
       base: 1,
-      quote: 12,
+      quote: 12
     },
     accountBalance: {
       base: 1,

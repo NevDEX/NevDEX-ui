@@ -142,7 +142,7 @@ import { mapActions, mapGetters } from 'vuex'
 import { createToast } from 'mosha-vue-toastify'
 import CreateOrderModal from '../components/CreateOrderModal.vue'
 import { getTokenAddress } from '../utils/token'
-import { getVaultBalance } from '../contract'
+import { getVaultBalance } from '../contract/contract'
 import { orderbookMarketPrice } from '../api/api.js'
 
 export default {

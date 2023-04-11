@@ -49,7 +49,7 @@
 <script>
 import WalletModal from './WalletModal.vue'
 import { getTokenAddress } from '../utils/token'
-import { getBalance, getVaultBalance } from '../contract'
+import { getBalance, getVaultBalance } from '../contract/contract'
 import { mapActions, mapGetters } from 'vuex'
 import { lockedBalance } from '../api/api.js'
 import DialogDeposit from './modal/DialogDeposit.vue'

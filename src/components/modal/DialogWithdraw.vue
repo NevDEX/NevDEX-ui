@@ -45,7 +45,7 @@
 
 <script>
 import { TransitionRoot, TransitionChild, Dialog, DialogPanel, DialogTitle } from '@headlessui/vue'
-import { getVaultBalance, withdraw } from '../../contract'
+import { getVaultBalance, withdraw } from '../../contract/contract'
 import tokenList from '../../config/tokenList.js'
 import { mapGetters } from 'vuex'
 import dropdown from './WithdrawDropdown.vue'

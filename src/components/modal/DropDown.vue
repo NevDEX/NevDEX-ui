@@ -29,7 +29,7 @@
 
 <script>
 import { getTokenAddress, getTokenCfg } from '../../utils/token'
-import { getBalance } from '../../contract'
+import { getBalance } from '../../contract/contract'
 import { mapGetters } from 'vuex'
 
 export default {

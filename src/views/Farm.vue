@@ -100,7 +100,7 @@
 import FarmDisclosure from '../components/FarmDisclosure.vue'
 import TradeFooter from '../components/footer/TradeFooter.vue'
 import { CONFIG } from '../config/config'
-import { getNDXAmount, claimReward, claimRewards } from '../farm'
+import { getNDXAmount, claimReward, claimRewards } from '../contract/farm'
 import { ethers } from 'ethers'
 import { Contract, Provider, setMulticallAddress } from 'ethers-multicall'
 import { mapGetters } from 'vuex'

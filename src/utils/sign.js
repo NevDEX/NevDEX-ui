@@ -1,4 +1,4 @@
-import UseWallet from '../wallet'
+import UseWallet from './wallet'
 const { walletGlobal } = UseWallet()
 
 async function getPermitSignature(signer, singerAddress, token, spender, value, deadline) {

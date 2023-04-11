@@ -137,7 +137,7 @@
 </template>
 <script>
 import { mapActions, mapGetters } from 'vuex'
-import UseWallet from '../wallet'
+import UseWallet from '../utils/wallet'
 import { TransitionRoot, TransitionChild, Dialog, DialogPanel, DialogTitle } from '@headlessui/vue'
 const { walletGlobal, connectWithEther, connectWalletconnect } = UseWallet()
 

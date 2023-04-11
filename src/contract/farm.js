@@ -1,13 +1,13 @@
 import { ethers, utils } from 'ethers';
 import BigNumber from 'bignumber.js'
-import { CONFIG } from "./config/config"
-import MasterGardener from "./abi/MasterGardener.json"
-import NDX from "./abi/NDX.json"
-import LP from "./abi/LP.json"
-import IYokaiPair from "./abi/IYokaiPair.json"
-import { getMarketPrice } from './utils/token'
+import { CONFIG } from "../config/config"
+import MasterGardener from "../abi/MasterGardener.json"
+import NDX from "../abi/NDX.json"
+import LP from "../abi/LP.json"
+import IYokaiPair from "../abi/IYokaiPair.json"
+import { getMarketPrice } from '../utils/token'
 import { Contract, Provider, setMulticallAddress } from 'ethers-multicall'
-import { timestamp } from './utils/time'
+import { timestamp } from '../utils/time'
 
 async function approveMaster(lpAddress, account, amount) {
     const { ethereum } = window

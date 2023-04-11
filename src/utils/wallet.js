@@ -1,6 +1,6 @@
 
 import { providers, ethers } from 'ethers';
-import { CONFIG } from "./config/config"
+import { CONFIG } from "../config/config"
 
 var walletGlobal = {
     signer: null,

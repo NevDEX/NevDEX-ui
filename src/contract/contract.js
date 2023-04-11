@@ -1,10 +1,10 @@
 import { ethers, Contract, utils } from 'ethers';
-import { getPermitSignature } from "./utils/sign"
-import { CONFIG } from "./config/config"
-import IERC20 from "./abi/IERC20.json"
-import Vault from "./abi/vault.json"
-import FaucetToken from "./abi/faucet_token.json"
-import UseWallet from './wallet'
+import { getPermitSignature } from "../utils/sign"
+import { CONFIG } from "../config/config"
+import IERC20 from "../abi/IERC20.json"
+import Vault from "../abi/vault.json"
+import FaucetToken from "../abi/faucet_token.json"
+import UseWallet from '../utils/wallet'
 
 async function approve(tokenAddress, amount) {
     // console.log('approve', tokenAddress, amount, ethers.utils.parseEther(amount))

@@ -1,6 +1,6 @@
 import { ethers } from 'ethers';
 import { CONFIG } from '../config/config'
-import { getMasterAllowAllowance, getPoolUserInfo, pendingReward, getPoolInfo, getNDXAmount } from '../farm'
+import { getMasterAllowAllowance, getPoolUserInfo, pendingReward, getPoolInfo, getNDXAmount } from '../contract/farm'
 
 const state = {
     farms: [],

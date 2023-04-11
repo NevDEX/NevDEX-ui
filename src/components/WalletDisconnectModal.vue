@@ -44,7 +44,7 @@
 <script>
 import { mapActions } from 'vuex'
 import { TransitionRoot, TransitionChild, Dialog, DialogPanel, DialogTitle } from '@headlessui/vue'
-import UseWallet from '../wallet'
+import UseWallet from '../utils/wallet'
 const { walletGlobal } = UseWallet()
 export default {
   components: {

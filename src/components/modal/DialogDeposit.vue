@@ -52,7 +52,7 @@ import { mapGetters } from 'vuex'
 import tokenList from '../../config/tokenList'
 import dropdown from './DropDown.vue'
 import { getTokenAddress } from '../../utils/token'
-import { getBalance, onAttemptToApprove, approve, deposit, allowance } from '../../contract'
+import { getBalance, onAttemptToApprove, approve, deposit, allowance } from '../../contract/contract'
 import SpinnerButtonCls from '../SpinnerButtonCls.vue'
 import { createToast } from 'mosha-vue-toastify'
 
