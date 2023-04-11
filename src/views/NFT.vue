@@ -5,7 +5,7 @@
         class="block bg-[#04868b] w-72 h-72 -ml-20 mt-40 rounded-full mix-blend-multiply filter blur-3xl opacity-10 lg:w-96 lg:h-96 nc-animation-delay-2000"></span>
     </div>
     <div class="text-white h-full items-center justify-center flex flex-col my-auto ">
-      <div class="text-3xl font-semibold md:text-4xl xl:text-5xl text-neutral-100 pt-10 flex flex-col space-y-2">
+      <div class="text-3xl font-semibold md:text-4xl xl:text-5xl text-neutral-100   flex flex-col space-y-2">
         <span> The leading</span>
         <span> NFT Marketplace</span>
         <span> on Nervos Godwoken</span>
@@ -15,7 +15,7 @@
         life with $NDX</p>
     </div>
 
-    <div class="mx-auto pt-10"><img class="w-full" src="../assets/about-hero-right.png" alt="" /></div>
+    <div class="mx-auto "><img class="w-full" src="../assets/about-hero-right.png" alt="" /></div>
   </div>
   <CreateAndSell />
   <MarketPlace />

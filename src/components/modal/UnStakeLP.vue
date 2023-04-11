@@ -64,7 +64,6 @@ import { TransitionRoot, TransitionChild, Dialog, DialogPanel, DialogTitle } fro
 import { mapGetters } from 'vuex'
 import { withdrawLP, getPoolUserInfo, withdrawFeePercent } from '../../contract/farm'
 import SpinnerButtonCls from '../SpinnerButtonCls.vue'
-import { BigNumber } from '@ethersproject/bignumber'
 import { ethers } from 'ethers';
 
 export default {
@@ -116,7 +115,7 @@ export default {
     async onConfirm() {
       try {
         this.$refs.unStakeButton.isLoading = true
-        console.log('withdraw lp', this.farm.pid, this.amount)
+        // console.log('withdraw lp', this.farm.pid, this.amount)
         await withdrawLP(this.farm.pid, this.amount, this.account)
         this.$refs.unStakeButton.isLoading = false
       } catch (error) {

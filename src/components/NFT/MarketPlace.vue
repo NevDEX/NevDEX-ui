@@ -14,26 +14,31 @@
     </div>
 
     <div class="marketPlaces mx-auto grid grid-cols-4 gap-y-10">
-      <div v-for="(nft, index) in marketPlaceData" :key="index" class="mx-auto my-auto" @click="onItemClick">
+      <div v-for="(nft, index) in marketPlaceData" :key="index" class="mx-auto my-auto">
         <div class="image">
-          <img :src="nft.image" alt="marketplace" />
+          <img :src="nft.image" alt="marketplace" @click="onItemClick" />
         </div>
         <div class="name">
           <h4>{{ nft.name }}</h4>
           <!-- <BsThreeDots /> -->
         </div>
         <h6 class="username">@koolkishansheth</h6>
-        <div class="price-container">
-          <h5 class="price">5.5ETH</h5>
+        <div class="price-container flex flex-row justify-between">
+          <h5 class="price">5.5 NDX</h5>
           <!-- <FaEthereum /> -->
+          <button @click="onBuy">buy</button>
         </div>
       </div>
     </div>
   </div>
+
+  <BuyNFT v-if="showBuyNFT" :isOpen="showBuyNFT" :farm="farm" @close="showBuyNFT = false" ref="buyNFT" />
 </template>
 
 <script>
+import BuyNFT from "./modal/BuyNFT.vue"
 export default {
+  components: { BuyNFT },
   data() {
     return {
       marketPlaceData: [
@@ -70,6 +75,7 @@ export default {
           name: 'Joshua-jay',
         },
       ],
+      showBuyNFT: false,
     }
   },
   methods: {
@@ -78,9 +84,12 @@ export default {
       this.$router.push({ name: 'nft_detail', params: { id: 1 } })
       console.log('onItemClick')
     },
+    onBuy() {
+      console.log('onBuy')
+      this.showBuyNFT = true
+    }
   },
 }
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
