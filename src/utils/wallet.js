@@ -1,6 +1,7 @@
 
 import { providers, ethers } from 'ethers';
 import { CONFIG } from "../config/config"
+import { networks } from '../config/network';
 
 var walletGlobal = {
     signer: null,
@@ -17,22 +18,14 @@ async function connectWithEther() {
 
     const provider = new ethers.providers.Web3Provider(ethereum)
     const { chainId } = await provider.getNetwork();
-    console.log('connectWithEther chainId', chainId)
-    // check network    
     if (chainId != CONFIG.ChainId) {
-        ethereum.request({
+        await ethereum.request({
             method: "wallet_addEthereumChain",
-            params: [{
-                chainId: '0x116e9',
-                rpcUrls: ["https://godwoken-testnet-v1.ckbapp.dev"],
-                chainName: "Godwoken Testnet v1",
-                nativeCurrency: {
-                    name: "pCKB",
-                    symbol: "pCKB",
-                    decimals: 18
-                },
-                blockExplorerUrls: ["https://gw-testnet-explorer.nervosdao.community"]
-            }]
+            params: [
+                {
+                    ...networks['GodwokenTestnet']
+                }
+            ]
         });
     }
 

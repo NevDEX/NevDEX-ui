@@ -4,7 +4,7 @@ function cfgAddress(env) {
   switch (env) {
     case "testnet":
       return {
-        ChainId: 71401,
+        ChainId: `0x${Number(71401).toString(16)}`,
         VaultAddress: "0xf62045B84AB3f5401bC342C14dF625d913Ce5923",
         MasterGardener: "0xd6aAF3ffd434Bf3C14abe060A81580BBbC92242E",
         NDXAddress: "0x7455b2B6a77079F37F1b265dBd39C5aB4D0DfB7b",
