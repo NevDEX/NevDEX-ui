@@ -9,7 +9,7 @@
       <Button v-for="(txt, index) in tags" :key="index" :text="txt"></Button>
     </div>
 
-    <div class="marketPlaces mx-auto grid grid-cols-4 gap-y-10">
+    <div class="marketPlaces mx-auto grid grid-cols-1 md:grid-cols-4 gap-y-10">
       <div v-for="(nft, index) in marketPlaceData" :key="index"
         class="mx-auto my-auto border-[0.5px] border-stone-600 rounded-xl">
 

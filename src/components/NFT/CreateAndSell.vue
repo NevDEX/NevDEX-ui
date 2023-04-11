@@ -6,9 +6,8 @@
 
     <div class="container p-[5rem] bg-[#0e131f] mx-auto rounded ">
       <div class="ellipse"></div>
-      <div class="content flex gap-[3rem]">
-        <div v-for="(section, index) in sections" :key="{ index }"
-          class="createAndSell p-[2rem] bg-gray-900 space-y-6 rounded-md ">
+      <div class="content gap-[3rem] grid grid-cols-1 md:grid-cols-3 ">
+        <div v-for="(section, index) in sections" :key="{ index }" class=" p-[2rem] bg-gray-900 space-y-6 rounded-md ">
           <div className="image">
             <!-- <img src="{image}" alt="create and sell" /> -->
           </div>
