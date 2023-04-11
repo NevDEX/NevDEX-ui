@@ -1,14 +1,14 @@
 <template>
-  <div class="section bg-gray-900">
+  <div class="section bg-gray-900 pb-40">
     <div class="title text-white">
       <h2 class="mb-[4rem] text-center text-[3rem] mt-[30rem] py-20 font-bold">Create and Sell Your NFTs</h2>
     </div>
 
-    <div class="container p-[5rem] bg-[#232835] mx-auto rounded">
+    <div class="container p-[5rem] bg-[#0e131f] mx-auto rounded ">
       <div class="ellipse"></div>
       <div class="content flex gap-[3rem]">
         <div v-for="(section, index) in sections" :key="{ index }"
-          class="createAndSell p-[2rem] bg-[#ffffff34] space-y-6 rounded-md ">
+          class="createAndSell p-[2rem] bg-gray-900 space-y-6 rounded-md ">
           <div className="image">
             <!-- <img src="{image}" alt="create and sell" /> -->
           </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="section bg-gray-900 px-20 my-[6pem] text-white py-20">
+  <div class="container mx-auto bg-[#131a29] px-20 my-[6pem] text-white py-40">
     <div class="title">
       <h2 class="text-center text-[3rem]">NFT Marketplace</h2>
       <p class="text-center">Explore the NFTs in the most featured categories.</p>
