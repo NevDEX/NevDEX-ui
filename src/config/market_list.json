@@ -1,26 +1,4 @@
 {
-  "USDC": [
-    {
-      "chainId": 1,
-      "market": "BTC-USDC"
-    },
-    {
-      "chainId": 1,
-      "market": "BNB-USDC"
-    },
-    {
-      "chainId": 1,
-      "market": "CKB-USDC"
-    },
-    {
-      "chainId": 1,
-      "market": "YOK-USDC"
-    },
-    {
-      "chainId": 1,
-      "market": "BRN-USDC"
-    }
-  ],
   "USDT": [
     {
       "chainId": 1,
@@ -45,6 +23,28 @@
     {
       "chainId": 1,
       "market": "NDX-USDT"
+    }
+  ],
+  "USDC": [
+    {
+      "chainId": 1,
+      "market": "BTC-USDC"
+    },
+    {
+      "chainId": 1,
+      "market": "BNB-USDC"
+    },
+    {
+      "chainId": 1,
+      "market": "CKB-USDC"
+    },
+    {
+      "chainId": 1,
+      "market": "YOK-USDC"
+    },
+    {
+      "chainId": 1,
+      "market": "BRN-USDC"
     }
   ]
 }
