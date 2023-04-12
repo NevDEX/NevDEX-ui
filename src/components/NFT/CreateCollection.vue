@@ -4,10 +4,10 @@
             <div class="md:col-span-1"></div>
             <div class="mt-5 md:mt-0 md:col-span-2">
                 <div class="shadow sm:rounded-md sm:overflow-hidden">
-                    <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
+                    <div class="px-4 py-5 space-y-6 sm:p-6">
                         <div class="grid grid-cols-3 gap-6">
                             <div class="col-span-3 sm:col-span-2">
-                                <label for="company-website" class="block text-sm font-medium text-gray-700">
+                                <label for="company-website" class="block text-2xl font-medium text-gray-700">
                                     Name
                                     <span class="text-red-500">*</span>
                                 </label>
@@ -20,7 +20,7 @@
                         </div>
                         <div class="grid grid-cols-3 gap-6">
                             <div class="col-span-3 sm:col-span-2">
-                                <label for="company-website" class="block text-sm font-medium text-gray-700">
+                                <label for="company-website" class="block text-2xl font-medium text-gray-700">
                                     Symbol
                                     <span class="text-red-500">*</span>
                                 </label>
@@ -33,7 +33,7 @@
                         </div>
                         <div class="grid grid-cols-3 gap-6">
                             <div class="col-span-3 sm:col-span-2">
-                                <label for="company-website" class="block text-sm font-medium text-gray-700">
+                                <label for="company-website" class="block text-2xlfont-medium text-gray-700">
                                     Title
                                     <span class="text-red-500">*</span>
                                 </label>
@@ -139,9 +139,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+                    <div class="px-4 py-3 text-right sm:px-6 w-full">
                         <button
-                            class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-400 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                            class="inline-flex w-full justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-400 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                             @click="onCreate">
                             Create
                         </button>
