@@ -24,12 +24,12 @@
       <div class="mx-auto mt-28 md:mt-0 ">
         <BannerGroup />
 
-        <div class="h-[5px] mt-2 flex justify-center space-x-3">
-          <span class="bg-gray-300 h-full w-5 rounded block"></span>
-          <span class="bg-gray-300 h-full w-5 rounded block"></span>
-          <span class="bg-gray-300 h-full w-5 rounded block"></span>
-          <span class="bg-gray-300 h-full w-5 rounded block"></span>
-          <span class="bg-gray-300 h-full w-5 rounded block"></span>
+        <div class="h-[5px] mt-3 flex justify-center space-x-3">
+          <span class="bg-gray-600 h-full w-5 rounded block"></span>
+          <span class="bg-gray-600 h-full w-5 rounded block"></span>
+          <span class="bg-gray-600 h-full w-5 rounded block"></span>
+          <span class="bg-gray-600 h-full w-5 rounded block"></span>
+          <span class="bg-gray-600 h-full w-5 rounded block"></span>
           
         </div>
         <!-- <img class="w-full" src="../assets/about-hero-right.png" alt="" /> -->
