@@ -47,6 +47,9 @@ export default {
         }
     },
     mounted() {
+        this.imgArr = this.imgArr.sort(function () {
+            return .5 - Math.random();
+        });
         this.fun()
     }
 }
