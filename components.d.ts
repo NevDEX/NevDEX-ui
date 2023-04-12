@@ -9,9 +9,12 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Animation: typeof import('./src/components/Animation.vue')['default']
     Assets: typeof import('./src/components/Assets.vue')['default']
+    Banner: typeof import('./src/components/NFT/Banner.vue')['default']
+    BannerGroup: typeof import('./src/components/NFT/BannerGroup.vue')['default']
     Button: typeof import('./src/components/NFT/Button.vue')['default']
     BuyNFT: typeof import('./src/components/NFT/modal/BuyNFT.vue')['default']
     ConnectWallet: typeof import('./src/components/ConnectWallet.vue')['default']
+    copy: typeof import('./src/components/NFT/Banner copy.vue')['default']
     CreateAndSell: typeof import('./src/components/NFT/CreateAndSell.vue')['default']
     CreateCollection: typeof import('./src/components/NFT/CreateCollection.vue')['default']
     CreateNFT: typeof import('./src/components/NFT/CreateNFT.vue')['default']
