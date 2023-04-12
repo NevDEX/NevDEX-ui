@@ -11,6 +11,7 @@ declare module '@vue/runtime-core' {
     Assets: typeof import('./src/components/Assets.vue')['default']
     Banner: typeof import('./src/components/NFT/Banner.vue')['default']
     BannerGroup: typeof import('./src/components/NFT/BannerGroup.vue')['default']
+    BannerGroup0: typeof import('./src/components/NFT/BannerGroup0.vue')['default']
     Button: typeof import('./src/components/NFT/Button.vue')['default']
     BuyNFT: typeof import('./src/components/NFT/modal/BuyNFT.vue')['default']
     ConnectWallet: typeof import('./src/components/ConnectWallet.vue')['default']
