@@ -23,14 +23,12 @@
       </div>
       <div class="mx-auto mt-28 md:mt-0 ">
         <BannerGroup />
-
         <div class="h-[5px] mt-3 flex justify-center space-x-3">
           <span class="bg-gray-600 h-full w-5 rounded block"></span>
           <span class="bg-gray-600 h-full w-5 rounded block"></span>
           <span class="bg-gray-600 h-full w-5 rounded block"></span>
           <span class="bg-gray-600 h-full w-5 rounded block"></span>
           <span class="bg-gray-600 h-full w-5 rounded block"></span>
-          
         </div>
         <!-- <img class="w-full" src="../assets/about-hero-right.png" alt="" /> -->
       </div>
@@ -57,17 +55,5 @@ export default {
 }
 </script>
 
-<style  scoped>
-.swiper-pagination {
-  position: absolute;
-  text-align: center;
-  transform: translateZ(0);
-  transition: opacity .3s;
-  z-index: 10;
-}
-
-.swiper-pagination-bullet {
-  height: 200px;
-  background-color: bisque;
-}
+<style  scoped> 
 </style>
