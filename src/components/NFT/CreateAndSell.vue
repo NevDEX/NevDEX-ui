@@ -1,15 +1,13 @@
 <template>
-  <div class="section bg-gray-900 pb-40">
+  <div class="bg-gray-900  text-white container mx-auto py-20">
     <div class="title text-white">
-      <h2 class="mb-[4rem] text-center text-[3rem] mt-[30rem] py-20 font-bold">Create and Sell Your NFTs</h2>
+      <h2 class="text-center text-[3rem] font-bold">Create and Sell Your NFTs</h2>
     </div>
-
-    <div class="container p-[5rem] bg-[#0e131f] mx-auto rounded ">
-      <div class="ellipse"></div>
-      <div class="content gap-[3rem] grid grid-cols-1 md:grid-cols-3 ">
+    <div class="bg-[#0e131f] rounded w-full mx-auto p-20">
+      <div class=" gap-[3rem] grid grid-cols-1 md:grid-cols-3 ">
         <div v-for="(section, index) in sections" :key="{ index }" class=" p-[2rem] bg-gray-900 space-y-6 rounded-md ">
           <div className="image">
-            <!-- <img src="{image}" alt="create and sell" /> -->
+
           </div>
           <h3 class="text-white font-bold">{{ section.title }}</h3>
           <p>{{ section.description }}</p>
@@ -67,12 +65,4 @@ export default {
 
 
 
-<style scoped>
-.section {
-  margin-top: 100px;
-}
-
-.createAndSell {
-  gap: 1rem;
-}
-</style>
+<style scoped></style>

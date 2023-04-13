@@ -1,11 +1,11 @@
 <template>
-  <div class="container mx-auto bg-[#131a29] px-20 my-[6pem] text-white py-40">
+  <div class="container mx-auto bg-[#131a29] my-[6pem] text-white p-20 pb-40">
     <div class="title">
       <h2 class="text-center text-[3rem]">NFT Marketplace</h2>
       <p class="text-center">Explore the NFTs in the most featured categories.</p>
     </div>
 
-    <div class="marketPlaceTypes flex justify-center gap-7 py-10">
+    <div class="marketPlaceTypes flex justify-center gap-7 py-20">
       <Button v-for="(txt, index) in tags" :key="index" :text="txt"></Button>
     </div>
 

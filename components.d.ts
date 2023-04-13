@@ -43,6 +43,7 @@ declare module '@vue/runtime-core' {
     NFTAttribute: typeof import('./src/components/NFT/NFTAttribute.vue')['default']
     NFTCollection: typeof import('./src/components/NFT/NFTCollection.vue')['default']
     NFTDetail: typeof import('./src/components/NFT/NFTDetail.vue')['default']
+    NFTHero: typeof import('./src/components/NFT/NFTHero.vue')['default']
     OrderBook: typeof import('./src/components/OrderBook.vue')['default']
     OrderRow: typeof import('./src/components/OrderRow.vue')['default']
     RangeSlider: typeof import('./src/components/RangeSlider.vue')['default']
