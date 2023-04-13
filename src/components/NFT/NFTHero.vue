@@ -9,7 +9,7 @@
                 <div class="text-5xl font-semibold md:text-4xl xl:text-5xl text-neutral-100 flex flex-col space-y-2 w-full">
                     <span> The leading</span>
                     <span> NFT Marketplace</span>
-                    <span> on Nervos Godwoken</span>
+                    <span> on Godwoken</span>
                 </div>
                 <p class="text-base xl:text-lg text-gray-400 mt-10">Mint & Trade the most outstanding NTFs in all
                     topics of
