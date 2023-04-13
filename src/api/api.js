@@ -87,3 +87,19 @@ export function orderbookMarketPrice(data) {
         data
     })
 }
+
+export function klines(data) {
+    return request({
+        url: '/klines',
+        method: 'post',
+        data
+    })
+}
+
+export function indexPrice(data) {
+    return request({
+        url: '/price',
+        method: 'post',
+        data
+    })
+}

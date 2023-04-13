@@ -6,16 +6,20 @@
       <div class="ml-1 w-[14rem] bg-[#111827] sm:absolute top-[6.5rem] z-20">
         <ul class="flex text-sm font-medium text-center text-gray-500 dark:text-gray-400 space-x-2">
           <li class=" ">
-            <a href="javascript:void(0)" class="inline-block w-[3rem] py-1 rounded-md hover:bg-gray-800 hover:text-white" v-bind:class="{ 'bg-gray-800': span === '5m' }" @click="timeSpan('5m')">5m</a>
+            <a href="javascript:void(0)" class="inline-block w-[3rem] py-1 rounded-md hover:bg-gray-800 hover:text-white"
+              v-bind:class="{ 'bg-gray-800': span === '5m' }" @click="timeSpan('5m')">5m</a>
           </li>
           <li class=" ">
-            <a href="javascript:void(0)" class="inline-block w-[3rem] py-1 rounded-md hover:bg-gray-800 hover:text-white" v-bind:class="{ 'bg-gray-800': span === '15m' }" @click="timeSpan('15m')">15m</a>
+            <a href="javascript:void(0)" class="inline-block w-[3rem] py-1 rounded-md hover:bg-gray-800 hover:text-white"
+              v-bind:class="{ 'bg-gray-800': span === '15m' }" @click="timeSpan('15m')">15m</a>
           </li>
           <li class=" ">
-            <a href="javascript:void(0)" class="inline-block w-[3rem] py-1 rounded-md hover:bg-gray-800 hover:text-white" v-bind:class="{ 'bg-gray-800': span === '1h' }" @click="timeSpan('1h')">1h</a>
+            <a href="javascript:void(0)" class="inline-block w-[3rem] py-1 rounded-md hover:bg-gray-800 hover:text-white"
+              v-bind:class="{ 'bg-gray-800': span === '1h' }" @click="timeSpan('1h')">1h</a>
           </li>
           <li class=" ">
-            <a href="javascript:void(0)" class="inline-block w-[3rem] py-1 rounded-md hover:bg-gray-800 hover:text-white" v-bind:class="{ 'bg-gray-800': span === '4h' }" @click="timeSpan('4h')">4h</a>
+            <a href="javascript:void(0)" class="inline-block w-[3rem] py-1 rounded-md hover:bg-gray-800 hover:text-white"
+              v-bind:class="{ 'bg-gray-800': span === '4h' }" @click="timeSpan('4h')">4h</a>
           </li>
         </ul>
       </div>
@@ -25,6 +29,7 @@
 </template>
 
 <script>
+import { klines } from '../api/api.js'
 const CONTAINER_ID = 'vue-trading-view'
 
 export default {
@@ -88,20 +93,31 @@ export default {
           // priceFormatter: myPriceFormatter,
         },
       })
+
       let arr = market.split('-')
-      if (arr[0] === 'YOK' || arr[0] === 'BRAIN') {
+      let base = arr[0]
+      let quote = arr[1].split('|')[0]
+      console.log('kline =======>', `${base}${quote}`)
+      if (base === 'YOK' || base === 'BRAIN' || base === 'NDX') {
+        // console.log('set empty')
         this.candleSeries.setData([])
-      } else
-        fetch(`https://api.binance.com/api/v3/klines?symbol=${arr[0]}${arr[1]}&interval=${this.span}&limit=1200`)
-          .then((res) => res.json())
-          .then((data) => {
+      } else {
+        if (base == "WBTC") {
+          base = "BTC"
+        }
+        if (quote == 'USDC') {
+          quote = "USDT"
+        }
+        klines({ symbol: `${base}${quote}`, interval: this.span })
+          .then((res) => {
+            let data = JSON.parse(res);
             const cdata = data.map((d) => {
-              // console.log(d[1], d[2], d[3], d[4])
               return { time: d[0] / 1000, open: d[1], high: d[2], low: d[3], close: d[4] }
             })
             this.candleSeries.setData(cdata)
           })
           .catch((err) => console.log(err))
+      }
     },
   },
   mounted() {
