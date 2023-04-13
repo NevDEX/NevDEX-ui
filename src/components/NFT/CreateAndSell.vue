@@ -1,10 +1,10 @@
 <template>
-  <div class="bg-gray-90">
-    <div class="text-white container mx-auto py-20">
-      <div class="title text-white py-10">
+  <div class=" bg-[#0e131f]">
+    <div class="text-white container mx-auto pb-40">
+      <div class="title text-white py-20">
         <h2 class="text-center text-[3rem] font-bold">Create and Sell Your NFTs</h2>
       </div>
-      <div class="bg-[#0e131f] rounded w-full mx-auto p-20">
+      <div class="bg-gray-90 rounded w-full mx-auto">
         <div class=" gap-[3rem] grid grid-cols-1 md:grid-cols-3 ">
           <div v-for="(section, index) in sections" :key="{ index }" class=" p-[2rem] bg-gray-900 space-y-6 rounded-md ">
             <div className="image">
@@ -17,7 +17,6 @@
         </div>
       </div>
     </div>
-
   </div>
 </template>
 
