@@ -79,7 +79,7 @@ input[type="range"] {
   -webkit-appearance: none;
   margin-right: 15px;
   width: 200px;
-  height: 7px;
+  height: 6px;
   background: #3a4d83;
   border-radius: 5px;
   background-image: linear-gradient(rgba(84, 143, 221, 0.6), rgba(84, 143, 221, 0.6));
