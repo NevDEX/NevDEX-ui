@@ -3,9 +3,10 @@
     <div class="mt-2 mb-2 flex justify-center w-full">
       <div class="slider w-full mb-2" @click="barClick">
         <div class="relative">
-          <input style="z-index: -1; width: 100%" type="range" value="0" class="slider" id="range" @mouseup="emitPercent"
-            @click="click" @mouseenter="showPercent = true" @mousemove="updatePercent($refs.value)" ref="input"
-            @mouseleave="showPercent = false" />
+          <input style="z-index: -1; width: 100%" type="range" value="0" class="slider" id="range"
+            @mouseup="emitPercent(); mousedown = false" @click="click" @mouseenter="showPercent = true"
+            @mousemove="updatePercent($refs.value)" ref="input" @mouseleave="showPercent = false"
+            @mousedown="mousedown = true" />
           <div class="w-full" v-if="showPercent">
             <div ref="sel" id="selectBtn"
               class="-top-3.5 h-1 w-8 text-center rounded-sm bg-transparent absolute text-blue-600 text-xs m-auto cursor-none">
@@ -29,6 +30,7 @@ export default {
     return {
       percent: 0,
       showPercent: false,
+      mousedown: false,
     }
   },
   mounted() { },
@@ -44,7 +46,9 @@ export default {
         this.$refs.sel.style.left = this.$refs.input.value - 7 + '%'
       }
       this.$refs.input.style.backgroundSize = this.percent + '% 100%'
-      this.$emit('sliderPercentUpdate', this.percent)
+      if (this.mousedown) {
+        this.$emit('sliderPercentUpdate', this.percent)
+      }
     },
     emitPercent() {
       this.$emit('sliderPercentUpdate', this.percent)
@@ -62,12 +66,7 @@ export default {
 </script>
 
 <style scoped>
-input[type="number"] {
-  width: 40px;
-  padding: 4px 5px;
-  border: 1px solid #bbb;
-  border-radius: 3px;
-}
+ 
 
 /* input[type="range"]:focus,
 input[type="number"]:focus {
@@ -80,11 +79,12 @@ input[type="range"] {
   margin-right: 15px;
   width: 200px;
   height: 6px;
-  background: #3a4d83;
+  background: #4b5563;
   border-radius: 5px;
-  background-image: linear-gradient(rgba(84, 143, 221, 0.6), rgba(84, 143, 221, 0.6));
+  background-image: linear-gradient(#0075ff, #0075ff);
   background-size: 0% 100%;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 /* Input Thumb */
@@ -93,10 +93,11 @@ input[type="range"]::-webkit-slider-thumb {
   height: 12px;
   width: 12px;
   border-radius: 50%;
-  background: #3122a3;
+  background: #0075ff;
   cursor: ew-resize;
   box-shadow: 0 0 2px 0 #555;
   transition: background .3s ease-in-out;
+  cursor: pointer;
 }
 
 input[type="range"]::-moz-range-thumb {
@@ -104,7 +105,7 @@ input[type="range"]::-moz-range-thumb {
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  background: #646362;
+  background: #4b5563;
   cursor: ew-resize;
   box-shadow: 0 0 2px 0 #555;
   transition: background .3s ease-in-out;
