@@ -13,11 +13,11 @@
               {{ percent }}%</div>
           </div>
         </div>
-        <div class="grid grid-cols-4 text-gray-300 text-center text-sm space-x-3 cursor-pointer mt-2">
-          <div class="bg-slate-800" @click="onClickPercent(25)">25%</div>
-          <div class="bg-slate-800" @click="onClickPercent(50)">50%</div>
-          <div class="bg-slate-800" @click="onClickPercent(75)">75%</div>
-          <div class="bg-slate-800" @click="onClickPercent(100)">100%</div>
+        <div class="grid grid-cols-4 px-1 text-gray-300 text-center text-xs space-x-3 cursor-pointer mt-2">
+          <div class="bg-slate-800 py-0.5" @click="onClickPercent(25)">25%</div>
+          <div class="bg-slate-800 py-0.5" @click="onClickPercent(50)">50%</div>
+          <div class="bg-slate-800 py-0.5" @click="onClickPercent(75)">75%</div>
+          <div class="bg-slate-800 py-0.5" @click="onClickPercent(100)">100%</div>
         </div>
       </div>
     </div>

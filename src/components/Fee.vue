@@ -6,8 +6,12 @@
         <!-- <div class=" "><span class=" ">Rebate</span></div> -->
       </div>
       <div class=" ">
-        <span class=" ">{{ isNaN($format(+total * +price * fee, 4)) ? 0 : $format(+total * +price * fee, 4) }} {{
-          quoteToken }}</span>
+        <span class=" ">{{
+          side == "buy" ? isNaN($format(+total * fee, 4)) ? 0 : $format(+total * fee, 4) : isNaN($format(+total * +price *
+            fee, 4))
+          ? 0 : $format(+total * +price * fee, 4)
+        }} {{
+  side == "buy" ? baseToken : quoteToken }}</span>
       </div>
     </li>
     <li class="flex flex-row justify-between">
@@ -28,7 +32,7 @@ export default {
       fee: 0.001,
     }
   },
-  props: ['total', 'price'],
+  props: ['total', 'price', 'side'],
   computed: {
     ...mapGetters(['market']),
   },
