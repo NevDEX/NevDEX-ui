@@ -1,39 +1,29 @@
 <template>
-  <div class="flex flex-col w-full h-full">
+  <div class="flex h-full w-full flex-col">
     <TradeBar />
-    <div class="flex md:gap-0 gap-12 h-full w-full">
-      <div class="flex flex-col-reverse md:flex-row flex-1">
-        <div class="md:w-1/5 2xl:w-1/6 w-full border-black border-r">
-          <div class="flex flex-col px-0.5 h-full">
-            <div class="bg-gray-900 h-full">
-              <div class="p-2 bg-gray-900 h-full">
-                <ul class="flex rounded-lg divide-gray-200 shadow sm:flex">
+    <div class="flex h-full w-full gap-12 md:gap-0">
+      <div class="flex flex-1 flex-col-reverse md:flex-row">
+        <div class="w-full border-r border-black md:w-1/5 2xl:w-1/6">
+          <div class="flex h-full flex-col px-0.5">
+            <div class="h-full bg-gray-900">
+              <div class="h-full bg-gray-900 p-2">
+                <ul class="flex divide-gray-200 rounded-lg shadow sm:flex">
                   <li class="w-full">
-                    <button
-                      class="inline-block relative py-2 px-4 w-full text-sm font-medium text-center text-gray-50 bg-gray-800 hover:text-gray-700 hover:bg-gray-600 focus:bg-green-300"
-                      @click="toggleSide('buy')" v-bind:class="{ 'bg-green-300': side === 'buy' }">BUY</button>
+                    <button class="relative inline-block w-full bg-gray-800 py-2 px-4 text-center text-sm font-medium text-gray-50 hover:bg-gray-600 hover:text-gray-700 focus:bg-green-300" @click="toggleSide('buy')" v-bind:class="{ 'bg-green-300': side === 'buy' }">BUY</button>
                   </li>
                   <li class="w-full">
-                    <button
-                      class="inline-block relative py-2 px-4 w-full text-sm font-medium text-center text-gray-50 bg-gray-800 hover:text-gray-700 hover:bg-gray-600 focus:bg-red-400"
-                      @click="toggleSide('sell')" v-bind:class="{ 'bg-red-400': side === 'sell' }">SELL</button>
+                    <button class="relative inline-block w-full bg-gray-800 py-2 px-4 text-center text-sm font-medium text-gray-50 hover:bg-gray-600 hover:text-gray-700 focus:bg-red-400" @click="toggleSide('sell')" v-bind:class="{ 'bg-red-400': side === 'sell' }">SELL</button>
                   </li>
                 </ul>
 
                 <!-- order type -->
-                <div class="pt-2 text-sm font-medium text-center text-gray-500 border-b border-gray-600">
-                  <ul class="flex flex-wrap -mb-px">
+                <div class="border-b border-gray-600 pt-2 text-center text-sm font-medium text-gray-500">
+                  <ul class="-mb-px flex flex-wrap">
                     <li class="mr-2">
-                      <a href="javascript:void(0)"
-                        class="inline-block p-2 rounded-t-lg border-b-2 border-transparent hover:text-gray-300 hover:border-blue-600"
-                        @click="tabOrderType('market')"
-                        v-bind:class="{ 'border-blue-600 text-gray-300': orderType === 'market' }">Market</a>
+                      <a href="javascript:void(0)" class="inline-block rounded-t-lg border-b-2 border-transparent p-2 hover:border-blue-600 hover:text-gray-300" @click="tabOrderType('market')" v-bind:class="{ 'border-blue-600 text-gray-300': orderType === 'market' }">Market</a>
                     </li>
                     <li class="mr-2">
-                      <a href="javascript:void(0)"
-                        class="inline-block p-2 rounded-t-lg border-b-2 border-transparent hover:text-gray-300 hover:border-blue-600"
-                        @click="tabOrderType('limit')"
-                        v-bind:class="{ 'border-blue-600 text-gray-300': orderType === 'limit' }">Limit</a>
+                      <a href="javascript:void(0)" class="inline-block rounded-t-lg border-b-2 border-transparent p-2 hover:border-blue-600 hover:text-gray-300" @click="tabOrderType('limit')" v-bind:class="{ 'border-blue-600 text-gray-300': orderType === 'limit' }">Limit</a>
                     </li>
                   </ul>
                 </div>
@@ -41,31 +31,20 @@
 
                 <!-- market order tab  -->
                 <div v-if="orderType === 'market'">
-                  <div class="mt-3 flex items-center rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                    <span class="w-3/12 text-gray-200 border border-gray-600 py-2 sm:text-sm rounded-l text-center"> Price
-                    </span>
-                    <div class="relative w-9/12 flex items-center">
-                      <input type="text"
-                        class="w-full absolute block pr-12 -top-4.5 border sm:text-sm text-gray-50 border-gray-500 text-center bg-gray-800"
-                        disabled :placeholder="orderbookPrice" />
-                      <div class="absolute -top-2.5 right-2 text-gray-400 text-sm">{{ quoteToken.name }}</div>
+                  <div class="mt-3 flex items-center rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    <span class="w-3/12 rounded-l border border-gray-600 py-2 text-center text-gray-200 sm:text-sm"> Price </span>
+                    <div class="relative flex w-9/12 items-center">
+                      <input type="text" class="-top-4.5 absolute block w-full border border-gray-500 bg-gray-800 pr-12 text-center text-gray-50 sm:text-sm" disabled :placeholder="orderbookPrice" />
+                      <div class="absolute -top-2.5 right-2 text-sm text-gray-400">{{ quoteToken.name }}</div>
                     </div>
                   </div>
 
-                  <div class="mt-3 flex items-center rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                    <span v-if="side === 'buy'"
-                      class="w-3/12 text-gray-200 border border-gray-600 py-2 sm:text-sm rounded-l text-center"> Total
-                    </span>
-                    <span v-else
-                      class="w-3/12 text-gray-200 border border-gray-600 py-2 sm:text-sm rounded-l text-center"> Size
-                    </span>
-                    <div class="relative w-9/12 flex items-center">
-                      <input type="number"
-                        class="w-full absolute block pr-12 -top-4.5 border sm:text-sm text-gray-50 border-gray-500 text-center bg-gray-800"
-                        step="0.001" :min="0" oninput="if(value<0)value=0" :value="total"
-                        @input="onMarketAmountChange($event.target.value)" />
-                      <div class="absolute -top-2.5 right-2 text-gray-400 text-sm">{{ side === 'buy' ? quoteToken.name :
-                        baseToken.name }}</div>
+                  <div class="mt-3 flex items-center rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    <span v-if="side === 'buy'" class="w-3/12 rounded-l border border-gray-600 py-2 text-center text-gray-200 sm:text-sm"> Total </span>
+                    <span v-else class="w-3/12 rounded-l border border-gray-600 py-2 text-center text-gray-200 sm:text-sm"> Size </span>
+                    <div class="relative flex w-9/12 items-center">
+                      <input type="number" class="-top-4.5 absolute block w-full border border-gray-500 bg-gray-800 pr-12 text-center text-gray-50 sm:text-sm" step="0.001" :min="0" oninput="if(value<0)value=0" :value="total" @input="onMarketAmountChange($event.target.value)" />
+                      <div class="absolute -top-2.5 right-2 text-sm text-gray-400">{{ side === 'buy' ? quoteToken.name : baseToken.name }}</div>
                     </div>
                   </div>
                 </div>
@@ -73,36 +52,27 @@
 
                 <!-- limit order tab  -->
                 <div v-if="orderType === 'limit'">
-                  <div class="mt-3 flex items-center rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                    <span class="w-3/12 text-gray-200 border border-gray-600 py-2 sm:text-sm rounded-l text-center"> Price
-                    </span>
-                    <div class="relative w-9/12 flex items-center">
-                      <input type="number"
-                        class="w-full absolute block pr-12 -top-4.5 border sm:text-sm text-gray-50 border-gray-500 text-center bg-gray-800"
-                        step="0.001" v-model="price" :min="0" oninput="if(value<0)value=0" />
-                      <div class="absolute -top-2.5 right-2 text-gray-400 text-sm">{{ quoteToken.name }}</div>
+                  <div class="mt-3 flex items-center rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    <span class="w-3/12 rounded-l border border-gray-600 py-2 text-center text-gray-200 sm:text-sm"> Price </span>
+                    <div class="relative flex w-9/12 items-center">
+                      <input type="number" class="-top-4.5 absolute block w-full border border-gray-500 bg-gray-800 pr-12 text-center text-gray-50 sm:text-sm" step="0.001" v-model="price" :min="0" oninput="if(value<0)value=0" />
+                      <div class="absolute -top-2.5 right-2 text-sm text-gray-400">{{ quoteToken.name }}</div>
                     </div>
                   </div>
-                  <div class="mt-3 flex items-center rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                    <span class="w-3/12 text-gray-200 border border-gray-600 py-2 sm:text-sm rounded-l text-center"> Size
-                    </span>
-                    <div class="relative w-9/12 flex items-center">
-                      <input type="number"
-                        class="w-full absolute block pr-12 -top-4.5 border sm:text-sm text-gray-50 border-gray-500 text-center bg-gray-800"
-                        step="0.001" :min="0" oninput="if(value<0)value=0" :value="total"
-                        @input="onLimitAmountChange($event.target.value)" />
-                      <div class="absolute -top-2.5 right-2 text-gray-400 text-sm">{{ baseToken.name }}</div>
+                  <div class="mt-3 flex items-center rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    <span class="w-3/12 rounded-l border border-gray-600 py-2 text-center text-gray-200 sm:text-sm"> Size </span>
+                    <div class="relative flex w-9/12 items-center">
+                      <input type="number" class="-top-4.5 absolute block w-full border border-gray-500 bg-gray-800 pr-12 text-center text-gray-50 sm:text-sm" step="0.001" :min="0" oninput="if(value<0)value=0" :value="total" @input="onLimitAmountChange($event.target.value)" />
+                      <div class="absolute -top-2.5 right-2 text-sm text-gray-400">{{ baseToken.name }}</div>
                     </div>
                   </div>
                 </div>
                 <!-- limit order tab  -->
-
-                <div class="flex justify-center mt-3 mb-2">
-                  <RangeSlider @sliderPercentUpdate="updatePercent" />
-                </div>
-                <div class="mt-2 flex justify-center items-center">
-                  <button class="py-2 w-full bg-gray-800 hover:bg-gray-600 text-gray-50" @click="onTrade">{{ opBtnTxt
-                  }}</button>
+                <RangeSlider @sliderPercentUpdate="updatePercent" />
+                <!-- <RangeSliderNew/> -->
+                <Fee :total="total" :fee="-1.162" />
+                <div class="mt-2 flex items-center justify-center">
+                  <button class="w-full bg-gray-800 py-2 text-gray-50 hover:bg-gray-600" @click="onTrade">{{ opBtnTxt }}</button>
                 </div>
                 <Assets />
               </div>
@@ -110,12 +80,11 @@
           </div>
         </div>
 
-        <div class="md:w-1/5 2xl:w-1/6 w-full border-black border-r h-full bg-gray-900">
-          <OrderBook @updateBid="onBidUpdate" @updateAsk="onAskUpdate" :baseToken="baseToken.name"
-            :quoteToken="quoteToken.name" :market="market" />
+        <div class="h-full w-full border-r border-black bg-gray-900 md:w-1/5 2xl:w-1/6">
+          <OrderBook @updateBid="onBidUpdate" @updateAsk="onAskUpdate" :baseToken="baseToken.name" :quoteToken="quoteToken.name" :market="market" />
         </div>
 
-        <div class="flex flex-col md:w-3/5 2xl:w-4/6 w-full h-full bg-gray-900">
+        <div class="flex h-full w-full flex-col bg-gray-900 md:w-3/5 2xl:w-4/6">
           <TradingView :market="market" class="h-[50vh]" />
           <TradeTab :market="market" class="h-[28vh] 2xl:h-[32vh]" />
         </div>
@@ -136,6 +105,7 @@ import WalletModal from '../components/WalletModal.vue'
 import Volume from '../components/Volume.vue'
 import Assets from '../components/Assets.vue'
 import TradeBar from '../components/TradeBar.vue'
+import Fee from '../components/Fee.vue'
 import { buildOrder, placeOrder } from '../api/api.js'
 import { ethers } from 'ethers'
 import { mapActions, mapGetters } from 'vuex'
@@ -147,7 +117,7 @@ import { orderbookMarketPrice } from '../api/api.js'
 
 export default {
   name: 'Trade',
-  components: { TradingView, TradeTab, RangeSlider, OrderBook, TradeFooter, WalletModal, Volume, Assets, TradeBar, CreateOrderModal, RangeSliderNew },
+  components: { TradingView, TradeTab, RangeSlider, OrderBook, TradeFooter, WalletModal, Volume, Assets, TradeBar, CreateOrderModal, RangeSliderNew, Fee },
   computed: {
     ...mapGetters(['market', 'account']),
   },
@@ -197,19 +167,18 @@ export default {
           this.initialAmount = this.$format(await this.getQuoteAmount(), 4)
           this.total = this.$format(this.initialAmount, 4)
         } else {
-          this.initialAmount = this.$format(await this.getQuoteAmount() / (1 + 0.02) / price, 4)
-          this.total = this.$format(await this.getQuoteAmount() / (1 + 0.02) / price, 4)
+          this.initialAmount = this.$format((await this.getQuoteAmount()) / (1 + 0.0) / price, 4)
+          this.total = this.$format((await this.getQuoteAmount()) / (1 + 0.0) / price, 4)
         }
         console.log('1111111111111111')
         console.log(this.total)
       } else {
         // limit order sell
-
       }
     },
     account: async function (account, _) {
       this.initialAmount = await this.getQuoteAmount()
-    }
+    },
   },
   methods: {
     ...mapActions(['updateOrderType']),
@@ -337,7 +306,7 @@ export default {
       this.side = side
       this.price = 0
       this.amount = 0
-      this.opBtnTxt = side === 'buy' ? 'BUY' : "SELL"
+      this.opBtnTxt = side === 'buy' ? 'BUY' : 'SELL'
       await this.getInitialAmount()
     },
     async tabOrderType(orderType) {

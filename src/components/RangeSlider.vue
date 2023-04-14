@@ -1,24 +1,20 @@
 <template>
-  <div class="slider" @click="barClick">
-    <div class="mx-0">
-      <div class="relative">
-        <input style="z-index: -1; width: 100%" type="range" value="0" class="mb-4 h-1 bg-gray-600 rounded-lg appearance-none cursor-pointer range-sm" id="slider" @mouseup="emitPercent" @click="click" @mouseenter="showPercent = true" @mousemove="updatePercent($refs.value)" ref="input" @mouseleave="showPercent = false" />
-        <div class="w-full" v-if="showPercent">
-          <div ref="sel" id="selectBtn" class="-top-3 h-4 w-8 text-center rounded-sm bg-transparent absolute text-blue-600 text-xs m-auto cursor-none">{{ percent }}%</div>
+  <div class="mt-1 mb-2 flex justify-center w-full">
+    <div class="slider" @click="barClick">
+      <div class="mx-0">
+        <div class="relative">
+          <input style="z-index: -1; width: 100%" type="range" value="0" class="mb-4 h-1.5 bg-gray-600 rounded-lg appearance-none cursor-pointer" id="slider" @mouseup="emitPercent" @click="click" @mouseenter="showPercent = true" @mousemove="updatePercent($refs.value)" ref="input" @mouseleave="showPercent = false" />
+          <div class="w-full" v-if="showPercent">
+            <div ref="sel" id="selectBtn" class="-top-3 h-1 w-8 text-center rounded-sm bg-transparent absolute text-blue-600 text-xs m-auto cursor-none">{{ percent }}%</div>
+          </div>
         </div>
-
-        <span style="transform: translateX(-10%); left: 25%; top: 35%; z-index: -10" class="h-2 w-2 bg-gray-600 rounded-lg absolute"></span>
-        <span style="transform: translateX(-20%); left: 50%; top: 35%; z-index: -10" class="h-2 w-2 bg-gray-600 rounded-lg absolute"></span>
-        <span style="transform: translateX(-50%); left: 75%; top: 35%; z-index: -10" class="h-2 w-2 bg-gray-600 rounded-lg absolute"></span>
-        <span style="right: 0px; top: 35%; z-index: -10" class="h-2 w-2 bg-gray-600 rounded-lg absolute"></span>
       </div>
-    </div>
-    <div class="w-full flex justify-between text-xs">
-      <span class="text-white" style="transform: translateX(-0%); left: 0%">0%</span>
-      <span class="text-white" style="transform: translateX(30%); left: 25%">25%</span>
-      <span class="text-white" style="transform: translateX(50%); left: 50%">50%</span>
-      <span class="text-white" style="transform: translateX(70%); left: 75%">75%</span>
-      <span class="text-white" style="transform: translateX(0%); left: 100%">100%</span>
+      <div class="grid grid-cols-4 text-gray-300 text-center text-sm space-x-3">
+        <div class="bg-slate-800">25%</div>
+        <div class="bg-slate-800">50%</div>
+        <div class="bg-slate-800">75%</div>
+        <div class="bg-slate-800">100%</div>
+      </div>
     </div>
   </div>
 </template>

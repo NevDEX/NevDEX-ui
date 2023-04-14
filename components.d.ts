@@ -30,6 +30,7 @@ declare module '@vue/runtime-core' {
     DropDown: typeof import('./src/components/DropDown.vue')['default']
     FarmConnectWallet: typeof import('./src/components/FarmConnectWallet.vue')['default']
     FarmDisclosure: typeof import('./src/components/FarmDisclosure.vue')['default']
+    Fee: typeof import('./src/components/Fee.vue')['default']
     Footer: typeof import('./src/components/footer/Footer.vue')['default']
     Hero: typeof import('./src/components/Hero.vue')['default']
     KLineWidget: typeof import('./src/components/KLineWidget.vue')['default']
