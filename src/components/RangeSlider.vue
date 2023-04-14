@@ -80,7 +80,7 @@ input[type="range"] {
   margin-right: 15px;
   width: 200px;
   height: 7px;
-  background: #2e2d2c;
+  background: #3a4d83;
   border-radius: 5px;
   background-image: linear-gradient(rgba(84, 143, 221, 0.6), rgba(84, 143, 221, 0.6));
   background-size: 0% 100%;
@@ -90,10 +90,10 @@ input[type="range"] {
 /* Input Thumb */
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  height: 15px;
-  width: 15px;
+  height: 12px;
+  width: 12px;
   border-radius: 50%;
-  background: #2e2d2c;
+  background: #3122a3;
   cursor: ew-resize;
   box-shadow: 0 0 2px 0 #555;
   transition: background .3s ease-in-out;
