@@ -1,18 +1,19 @@
 <template>
-  <ul class="text-gray-400 flex flex-col text-xs justify-between">
+  <ul class="text-gray-300 flex flex-col text-xs justify-between">
     <li class="flex flex-row justify-between">
       <div class=" ">
-        <span class=" ">Fee</span>
+        <span class=" ">Fee <span class="text-gray-500">({{ fee * 100 }}%)</span></span>
         <!-- <div class=" "><span class=" ">Rebate</span></div> -->
       </div>
       <div class=" ">
-        <span class=" ">{{ $format(+total * 0.002, 4) }} {{ quoteToken }}</span>
+        <span class=" ">{{ isNaN($format(+total * +price * fee, 4)) ? 0 : $format(+total * +price * fee, 4) }} {{
+          quoteToken }}</span>
       </div>
     </li>
     <li class="flex flex-row justify-between">
       <div class=" "><span class=" ">Total</span></div>
       <div class="">
-        <span class=" ">{{ $format(total, 4) }} {{ quoteToken }}</span>
+        <span class=" ">{{ isNaN($format(+total * price, 4)) ? 0 : $format(total * price, 4) }} {{ quoteToken }}</span>
       </div>
     </li>
   </ul>
@@ -24,15 +25,15 @@ export default {
     return {
       baseToken: '',
       quoteToken: '',
+      fee: 0.001,
     }
   },
-  props: ['total', 'fee'],
+  props: ['total', 'price'],
   computed: {
     ...mapGetters(['market']),
   },
   watch: {
-    market: async function (newVal, oldVal) {
-        console.log('111111 fee', newVal)
+    market: function (newVal, oldVal) {
       let arr = newVal.split('-')
       this.baseToken = arr[0]
       this.quoteToken = arr[1]

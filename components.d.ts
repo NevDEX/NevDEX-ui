@@ -48,6 +48,7 @@ declare module '@vue/runtime-core' {
     OrderBook: typeof import('./src/components/OrderBook.vue')['default']
     OrderRow: typeof import('./src/components/OrderRow.vue')['default']
     RangeSlider: typeof import('./src/components/RangeSlider.vue')['default']
+    RangeSliderBackup: typeof import('./src/components/RangeSliderBackup.vue')['default']
     RangeSliderNew: typeof import('./src/components/RangeSliderNew.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

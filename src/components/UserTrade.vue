@@ -205,7 +205,7 @@ export default {
         marketID: this.market,
       })
         .then((ret) => {
-          console.log('myOrders ret', ret)
+          // console.log('myOrders ret', ret)
           this.openOrders = ret.openOrder.filter((order) => {
             return order.Status != 'full_filled'
           })

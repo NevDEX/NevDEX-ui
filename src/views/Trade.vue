@@ -68,9 +68,10 @@
                   </div>
                 </div>
                 <!-- limit order tab  -->
-                <RangeSlider @sliderPercentUpdate="updatePercent" />
+
+                <RangeSlider @sliderPercentUpdate="updatePercent" ref="slider" />
                 <!-- <RangeSliderNew/> -->
-                <Fee :total="total" :fee="-1.162" />
+                <Fee :total="total" :price="price" />
                 <div class="mt-2 flex items-center justify-center">
                   <button class="w-full bg-gray-800 py-2 text-gray-50 hover:bg-gray-600" @click="onTrade">{{ opBtnTxt }}</button>
                 </div>
@@ -170,7 +171,7 @@ export default {
           this.initialAmount = this.$format((await this.getQuoteAmount()) / (1 + 0.0) / price, 4)
           this.total = this.$format((await this.getQuoteAmount()) / (1 + 0.0) / price, 4)
         }
-        console.log('1111111111111111')
+        console.log('1111111111111111 price watch')
         console.log(this.total)
       } else {
         // limit order sell
@@ -186,6 +187,8 @@ export default {
       console.log('onMarketAmountChange', amount)
       this.total = amount
       console.log('222222222222222')
+      let percent = +amount / +this.initialAmount
+      this.$refs.slider.setPercent(percent * 100)
       // this.initialAmount = amount
     },
     onLimitAmountChange(amount) {
