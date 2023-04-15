@@ -1,0 +1,65 @@
+{
+  "tokens": [
+    {
+      "chainId": 1,
+      "address": "0x99AfAF5E59ce132F3898a5FAdac52758AFaC5365",
+      "name": "Bit Coin",
+      "symbol": "BTC",
+      "decimals": 18,
+      "logoURI": "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579",
+      "id": "bitcoin"
+    },
+    {
+      "chainId": 1,
+      "address": "0xE2D965D653e57f5f4A49B0600C60092248566341",
+      "name": "BSC Token",
+      "symbol": "BNB",
+      "decimals": 18,
+      "logoURI": "BNB.svg",
+      "id": "binancecoin"
+    },
+    {
+      "chainId": 1,
+      "address": "0x3dE8E190F715cFD9C562C678362b6063AaaA4c58",
+      "name": "CKB",
+      "symbol": "CKB",
+      "decimals": 18,
+      "logoURI": "CKB.svg",
+      "id": "nervos-network"
+    },
+    {
+      "chainId": 1,
+      "address": "0x129001cb3421b5a710f7F25dc480D3F0cda726bf",
+      "name": "YokaiSwap Token",
+      "symbol": "YOK",
+      "decimals": 18,
+      "logoURI": "YOK.png",
+      "godwoken": true
+    },
+    {
+      "chainId": 1,
+      "address": "0x23543a003Ad301dd2ECfBDE4af6833da146d7793",
+      "name": "Brainiac Finance",
+      "symbol": "BRN",
+      "decimals": 18,
+      "logoURI": "BRN.svg",
+      "godwoken": true
+    },
+    {
+      "chainId": 1,
+      "address": "0xc36Fc101D6aDce8720ADb31fc0D70408A23FC8f0",
+      "name": "USDT",
+      "symbol": "USDT",
+      "decimals": 18,
+      "logoURI": "https://assets.coingecko.com/coins/images/325/large/Tether-logo.png?1598003707"
+    },
+    {
+      "chainId": 1,
+      "address": "0x7455b2B6a77079F37F1b265dBd39C5aB4D0DfB7b",
+      "name": "NDX",
+      "symbol": "NDX",
+      "decimals": 18,
+      "logoURI": "NDX.png"
+    }
+  ]
+}

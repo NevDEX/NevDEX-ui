@@ -1,7 +1,6 @@
-
 import { providers, ethers } from 'ethers';
-import { CONFIG } from "../config/config"
 import { networks } from '../config/network';
+import { CHAIN } from '../config/config';
 
 var walletGlobal = {
     signer: null,
@@ -18,12 +17,13 @@ async function connectWithEther() {
 
     const provider = new ethers.providers.Web3Provider(ethereum)
     const { chainId } = await provider.getNetwork();
-    if (chainId != networks['GodwokenTestnet'].chainId) {
+    if (chainId != networks[CHAIN].chainId) {
+        console.log('wallet_addEthereumChain', chainId)
         await ethereum.request({
             method: "wallet_addEthereumChain",
             params: [
                 {
-                    ...networks['GodwokenTestnet']
+                    ...networks[CHAIN]
                 }
             ]
         });

@@ -176,6 +176,8 @@ export default {
       orderbookPrice: 0,
       initialAmount: 0,
       total: 0,
+
+      initalAmountLimit: 0,
     }
   },
   watch: {
@@ -200,6 +202,8 @@ export default {
         } else {
           this.initialAmount = this.$format((await this.getQuoteAmount()) / (1 + 0.0) / price, 4)
           this.total = this.$format((await this.getQuoteAmount()) / (1 + 0.0) / price, 4)
+
+          this.initalAmountLimit =  this.total
         }
         console.log('1111111111111111 price watch')
         console.log(this.total)
@@ -388,11 +392,17 @@ export default {
         } else {
           this.total = this.$format((this.initialAmount * percent) / 100, 4)
         }
+        console.log('updatePercent market 11111 =>', this.total)
       } else {
-        this.total = this.$format((this.initialAmount * percent) / 100, 4)
-      }
+        if (this.side === 'buy') {
 
-      console.log('updatePercent 11111 =>', this.total)
+        this.total = this.$format((this.initalAmountLimit * percent) / 100, 4)
+
+        }else{
+          this.total = this.$format((this.initialAmount * percent) / 100, 4)
+        }
+        console.log('updatePercent limit 11111 =>', this.total)
+      }
     },
     async getInitialAmount() {
       // market buy
@@ -409,7 +419,7 @@ export default {
         } else {
           console.log('yyyyyyyyyyyyyyyyyyy', this.initialAmount)
           let quoteAmount = await this.getQuoteAmount()
-          this.initialAmount = quoteAmount / (1 + 0.02) / this.pirce
+          this.initialAmount = quoteAmount / this.pirce
           console.log('initialAmount 11111 =>', this.initialAmount)
           return
         }
@@ -418,6 +428,7 @@ export default {
     },
     async tick() {
       this.orderbookPrice = this.$format(await orderbookMarketPrice({ marketID: this.market }), 4)
+      this.initialAmount = await this.getQuoteAmount()
     },
   },
   async mounted() {

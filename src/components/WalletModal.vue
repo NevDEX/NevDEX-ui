@@ -162,12 +162,6 @@ export default {
       try {
         let address = await connectWithEther()
         this.updateAccount(address)
-
-        const { ethereum } = window
-        const provider = new ethers.providers.Web3Provider(ethereum)
-        const signer = provider.getSigner()
-
-        this.updateSinger(signer)
       } catch (error) {
         console.log('onConnectWallet', error)
       }
