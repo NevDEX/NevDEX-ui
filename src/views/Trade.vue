@@ -10,12 +10,12 @@
                 <ul class="flex divide-gray-200 rounded-lg shadow sm:flex">
                   <li class="w-full">
                     <button
-                      class="relative inline-block w-full bg-slate-800 py-2 px-4 text-center text-sm font-medium text-gray-50 hover:bg-gray-600 hover:text-gray-700 focus:bg-green-300"
+                      class="relative inline-block w-full bg-gray-800 py-2 px-4 text-center text-sm font-medium text-gray-50 hover:bg-gray-600 hover:text-gray-700 focus:bg-green-300"
                       @click="toggleSide('buy')" v-bind:class="{ 'bg-green-300': side === 'buy' }">BUY</button>
                   </li>
                   <li class="w-full">
                     <button
-                      class="relative inline-block w-full bg-slate-800 py-2 px-4 text-center text-sm font-medium text-gray-50 hover:bg-gray-600 hover:text-gray-700 focus:bg-red-400"
+                      class="relative inline-block w-full bg-gray-800 py-2 px-4 text-center text-sm font-medium text-gray-50 hover:bg-gray-600 hover:text-gray-700 focus:bg-red-400"
                       @click="toggleSide('sell')" v-bind:class="{ 'bg-red-400': side === 'sell' }">SELL</button>
                   </li>
                 </ul>
@@ -46,7 +46,7 @@
                     </span>
                     <div class="relative flex w-9/12 items-center">
                       <input type="text"
-                        class="-top-4.5 absolute block w-full border border-gray-500 bg-slate-800 pr-12 text-center text-gray-50 sm:text-sm"
+                        class="-top-4.5 absolute block w-full border border-gray-500 bg-gray-800 pr-12 text-center text-gray-50 sm:text-sm"
                         disabled :placeholder="orderbookPrice" />
                       <div class="absolute -top-2.5 right-2 text-sm text-gray-400">{{ quoteToken.name }}</div>
                     </div>
@@ -61,7 +61,7 @@
                     </span>
                     <div class="relative flex w-9/12 items-center">
                       <input type="number"
-                        class="-top-4.5 absolute block w-full border border-gray-500 bg-slate-800 pr-12 text-center text-gray-50 sm:text-sm"
+                        class="-top-4.5 absolute block w-full border border-gray-500 bg-gray-800 pr-12 text-center text-gray-50 sm:text-sm"
                         step="0.001" :min="0" oninput="if(value<0)value=0" :value="total"
                         @input="onMarketAmountChange($event.target.value)" />
                       <div class="absolute -top-2.5 right-2 text-sm text-gray-400">{{ side === 'buy' ? quoteToken.name :
@@ -78,7 +78,7 @@
                     </span>
                     <div class="relative flex w-9/12 items-center">
                       <input type="number"
-                        class="-top-4.5 absolute block w-full border border-gray-500 bg-slate-800 pr-12 text-center text-gray-50 sm:text-sm"
+                        class="-top-4.5 absolute block w-full border border-gray-500 bg-gray-800 pr-12 text-center text-gray-50 sm:text-sm"
                         step="0.001" v-model="price" :min="0" oninput="if(value<0)value=0" />
                       <div class="absolute -top-2.5 right-2 text-sm text-gray-400">{{ quoteToken.name }}</div>
                     </div>
@@ -88,7 +88,7 @@
                     </span>
                     <div class="relative flex w-9/12 items-center">
                       <input type="number"
-                        class="-top-4.5 absolute block w-full border border-gray-500 bg-slate-800 pr-12 text-center text-gray-50 sm:text-sm"
+                        class="-top-4.5 absolute block w-full border border-gray-500 bg-gray-800 pr-12 text-center text-gray-50 sm:text-sm"
                         step="0.001" :min="0" oninput="if(value<0)value=0" :value="total"
                         @input="onLimitAmountChange($event.target.value)" />
                       <div class="absolute -top-2.5 right-2 text-sm text-gray-400">{{ baseToken.name }}</div>
@@ -101,7 +101,7 @@
                 <!-- <RangeSliderNew/> -->
                 <Fee :total="total" :price="price" :side="side" />
                 <div class="mt-2 flex items-center justify-center">
-                  <button class="w-full bg-slate-800 py-2 text-gray-50 hover:bg-gray-600" @click="onTrade">{{ opBtnTxt
+                  <button class="w-full bg-gray-800 py-2 text-gray-50 hover:bg-gray-600" @click="onTrade">{{ opBtnTxt
                   }}</button>
                 </div>
                 <Assets />
