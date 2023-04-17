@@ -20,33 +20,6 @@
     },
     {
       "chainId": 1,
-      "address": "0x3dE8E190F715cFD9C562C678362b6063AaaA4c58",
-      "name": "CKB",
-      "symbol": "CKB",
-      "decimals": 18,
-      "logoURI": "CKB.svg",
-      "id": "nervos-network"
-    },
-    {
-      "chainId": 1,
-      "address": "0x129001cb3421b5a710f7F25dc480D3F0cda726bf",
-      "name": "YokaiSwap Token",
-      "symbol": "YOK",
-      "decimals": 18,
-      "logoURI": "YOK.png",
-      "godwoken": true
-    },
-    {
-      "chainId": 1,
-      "address": "0x23543a003Ad301dd2ECfBDE4af6833da146d7793",
-      "name": "Brainiac Finance",
-      "symbol": "BRN",
-      "decimals": 18,
-      "logoURI": "BRN.svg",
-      "godwoken": true
-    },
-    {
-      "chainId": 1,
       "address": "0xc36Fc101D6aDce8720ADb31fc0D70408A23FC8f0",
       "name": "USDT",
       "symbol": "USDT",

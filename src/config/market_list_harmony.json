@@ -1,0 +1,22 @@
+{
+  "USDT": [
+    {
+      "chainId": 1,
+      "market": "BTC-USDT"
+    },
+    {
+      "chainId": 1,
+      "market": "BNB-USDT"
+    }
+  ],
+  "USDC": [
+    {
+      "chainId": 1,
+      "market": "BTC-USDC"
+    },
+    {
+      "chainId": 1,
+      "market": "BNB-USDC"
+    }
+  ]
+}

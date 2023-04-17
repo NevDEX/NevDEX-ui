@@ -46,7 +46,7 @@
 <script>
 import { TransitionRoot, TransitionChild, Dialog, DialogPanel, DialogTitle } from '@headlessui/vue'
 import { getVaultBalance, withdraw } from '../../contract/contract'
-import tokenList from '../../config/tokenList.js'
+import {CONFIG} from '../../config/config'
 import { mapGetters } from 'vuex'
 import dropdown from './WithdrawDropdown.vue'
 import { getTokenAddress } from '../../utils/token'
@@ -107,7 +107,7 @@ export default {
       this.selectedToken.maxBalance = this.$format(this.selectedToken.balance, 4)
     },
     tokens() {
-      return tokenList.tokens.map((currElement, index) => {
+      return CONFIG.TokenList.tokens.map((currElement, index) => {
         return {
           name: currElement.symbol,
           id: index,

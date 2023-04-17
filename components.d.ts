@@ -53,6 +53,7 @@ declare module '@vue/runtime-core' {
     RouterView: typeof import('vue-router')['RouterView']
     SpinnerButtonCls: typeof import('./src/components/SpinnerButtonCls.vue')['default']
     StakeLP: typeof import('./src/components/modal/StakeLP.vue')['default']
+    SwitchNetwork: typeof import('./src/components/SwitchNetwork.vue')['default']
     TradeBar: typeof import('./src/components/TradeBar.vue')['default']
     TradeFooter: typeof import('./src/components/footer/TradeFooter.vue')['default']
     TradingView: typeof import('./src/components/TradingView.vue')['default']

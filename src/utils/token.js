@@ -1,16 +1,16 @@
-import tokenList from "../config/tokenList.js"
+import { CONFIG } from "../config/config"
 import axios from 'axios'
 
 function getTokenAddress(symbol) {
     // console.log('getTokenAddress symbol', symbol)
-    const tokenCfg = tokenList.tokens.filter(token => token.symbol == symbol);
+    const tokenCfg = CONFIG.TokenList.tokens.filter(token => token.symbol == symbol);
     // console.log(' ==>', tokenCfg[0].address)
     return tokenCfg[0].address
 }
 
 function getTokenCfg(symbol) {
     // console.log('getTokenCfg symbol', symbol)
-    const tokenCfg = tokenList.tokens.filter(token => token.symbol == symbol);
+    const tokenCfg = CONFIG.TokenList.tokens.filter(token => token.symbol == symbol);
     // console.log(' ==>', tokenCfg[0])
     return tokenCfg[0]
 }
