@@ -85,9 +85,8 @@ export default {
     getTokenConf(symbol) {
       return getTokenCfg(symbol)
     },
-
     tokens() {
-      return tokenList.tokens.map((token, index) => {
+      return CONFIG.TokenList.tokens.map((token, index) => {
         return {
           name: token.symbol,
           id: index,

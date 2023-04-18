@@ -15,6 +15,7 @@
     "floating-vue": "^2.0.0-beta.19",
     "moment": "^2.29.4",
     "mosha-vue-toastify": "^1.0.23",
+    "swiper": "^9.2.3",
     "tradingview-api": "^1.0.2",
     "vue": "^3.2.37",
     "vue-custom-range-slider": "^0.2.3",

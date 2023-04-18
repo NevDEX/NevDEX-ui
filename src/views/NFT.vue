@@ -2,7 +2,7 @@
   <NFTHero />
   <CreateAndSell />
   <MarketPlace />
-  <Footer /> 
+  <Footer />
 </template>
 
 <script>

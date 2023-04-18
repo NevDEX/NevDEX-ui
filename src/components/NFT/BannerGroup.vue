@@ -1,42 +1,46 @@
 <template>
-    <div class="swiper-container">
-        <div class="swiper-wrapper  min-h-full">
-            <div class="swiper-slide">
-                <img src="/src/assets/nft/marketplace1.png">
-            </div>
-            <div class="swiper-slide">
-                <img src="/src/assets/nft/marketplace2.png">
-            </div>
-            <div class="swiper-slide">
-                <img src="/src/assets/nft/marketplace3.png">
-            </div>
-        </div>
-    </div>
+  <swiper
+    class="swiper bg-transparent h-[60%] 2xl:h-[50%]"
+    :modules="modules"
+    :space-between="20"
+    :slides-per-view="3"
+    :pagination="{ clickable: true }"
+    :autoplay="{
+      delay: 2500,
+      disableOnInteraction: false,
+    }"
+  >
+    <swiper-slide class=""><img class="object-cover w-full h-[90%] transition-all duration-300 m-auto rounded-3xl dark:border dark:border-gray-800" src="https://ipfs.bluemove.io/uploads/sui-bears/avatar1.gif" /></swiper-slide>
+    <swiper-slide class=""><img class="object-cover w-full h-[90%] transition-all duration-300 m-auto rounded-3xl dark:border dark:border-gray-800" src="https://ipfs.bluemove.io/uploads/sui-bunnies/avatar.gif" /></swiper-slide>
+    <swiper-slide class=""><img class="object-cover w-full h-[90%] transition-all duration-300 m-auto rounded-3xl dark:border dark:border-gray-800" src="https://ipfs.bluemove.io/uploads/sui-punks/avatar.gif" /></swiper-slide>
+    <swiper-slide class=""><img class="object-cover w-full h-[90%] transition-all duration-300 m-auto rounded-3xl dark:border dark:border-gray-800" src="https://ipfs.bluemove.io/uploads/gozi-kong/avatar1.gif" /></swiper-slide>
+    <!-- <swiper-slide class=""><img class="object-cover w-full h-[90%] transition-all duration-300 m-auto rounded-3xl dark:border dark:border-gray-800" src="/src/assets/nft/marketplace4.png" /></swiper-slide>
+    <swiper-slide class=""><img class="object-cover w-full h-[90%] transition-all duration-300 m-auto rounded-3xl dark:border dark:border-gray-800" src="/src/assets/nft/marketplace5.png" /></swiper-slide>
+    <swiper-slide class=""><img class="object-cover w-full h-[90%] transition-all duration-300 m-auto rounded-3xl dark:border dark:border-gray-800" src="/src/assets/nft/marketplace6.png" /></swiper-slide> -->
+  </swiper>
 </template>
-<script>
-import Banner from "./Banner.vue"
-export default {
-    components: { Banner },
-    mounted() {
-        var mySwiper = new Swiper('.swiper-container', {
-            loop: true,
-            effect: 'coverflow',
-            slidesPerView: 2,
-            centeredSlides: true,
-            coverflowEffect: {
-                rotate: 0,
-                stretch: 80,
-                depth: 140,
-                modifier: 2
-            }
-        })
-    },
-}
-</script>
-<style  scoped>
-.swiper-container {}
+  
+<script  >
+import { defineComponent } from 'vue'
+import { Pagination, Autoplay } from 'swiper'
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import 'swiper/css'
+import 'swiper/css/pagination'
 
-.swiper-slide {
-    margin: auto;
-}
+export default defineComponent({
+  name: 'swiper-example-multiple-slides-per-biew',
+  title: 'Multiple slides per view',
+  url: import.meta.url,
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
+  setup() {
+    return {
+      modules: [Pagination, Autoplay],
+    }
+  },
+})
+</script>
+<style scoped>
 </style>
