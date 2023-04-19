@@ -4,7 +4,7 @@
                 class="block bg-[#ef233c] w-72 h-72 rounded-full mix-blend-multiply filter blur-3xl opacity-10 lg:w-96 lg:h-96"></span><span
                 class="block bg-[#04868b] w-72 h-72 -ml-20 mt-40 rounded-full mix-blend-multiply filter blur-3xl opacity-10 lg:w-96 lg:h-96 nc-animation-delay-2000"></span>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 md:px-0 w-full z-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 md:px-0 w-full z-10">
             <div class="text-white items-center mt-40 flex-inline flex-col">
                 <div class="text-5xl font-semibold md:text-4xl xl:text-5xl text-neutral-100 flex flex-col space-y-2 w-full">
                     <span> The leading</span>

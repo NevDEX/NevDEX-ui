@@ -23,7 +23,8 @@ export default {
   cursor: pointer;
 } */
 
-.blue {
+.blue {  
+
   background-color: #2d69fd;
 }
 
@@ -38,6 +39,7 @@ export default {
 }
 
 .btn {
+  border-radius: 0.25rem;
   font-family: Arial;
   color: #ffffff;
   font-size: 17px;

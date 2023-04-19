@@ -3,7 +3,7 @@
     <video autoPlay loop muted id="video" v-if="!_isMobile()">
       <source src="../assets/header-bg.mp4" type="video/mp4" />
     </video>
-    <div class="z-10 flex flex-col md:p-0 ">
+    <div class="z-10 flex flex-col md:p-0 p-5 bg">
       <span class="text-gray-50 font-bold md:text-5xl text-3xl md:mt-40 2xl:mt-60 mt-20">
         Trade on NevDEX Faster, Cheaper <br />
         and more Stable.

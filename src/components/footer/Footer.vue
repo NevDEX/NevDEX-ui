@@ -12,7 +12,7 @@
             on Nervos Blockchain.
           </span>
         </div>
-        <div class="mx-auto">
+        <div>
           <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase">PRODUCTS</h2>
           <ul class="text-gray-300">
             <li class="mb-4">
@@ -26,7 +26,7 @@
             </li>
           </ul>
         </div>
-        <div class="mx-auto">
+        <div>
           <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase">RESOURCES</h2>
           <ul class="text-gray-300">
             <li class="mb-4">
@@ -37,7 +37,7 @@
             </li>
           </ul>
         </div>
-        <div class="mx-auto">
+        <div>
           <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase">FOLLOW US</h2>
           <ul class="text-gray-300">
             <li class="mb-4">
@@ -52,9 +52,8 @@
           </ul>
         </div>
       </div>
-      <div class="py-4 px-4 bg-transparent md:flex md:items-center md:justify-between mr-12">
-        <span class="text-sm text-gray-300 sm:text-center">© {{ this.year }} <a href="#">NevDEX™</a>. All Rights Reserved.</span>
-
+      <div class="py-4 px-4 bg-transparent md:flex md:items-center md:justify-between">
+        <span class="text-sm text-gray-300 sm:text-center">© {{ this.year }} <a href="#">NevDEX™</a>. All Rights Reserved. </span>
         <div class="flex mt-4 space-x-6 sm:justify-center md:mt-0">
           <a href="https://twitter.com/NevDEX_" target="_blank" class="text-gray-500 hover:text-gray-900">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
