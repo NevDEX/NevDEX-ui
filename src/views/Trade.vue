@@ -9,14 +9,10 @@
               <div class="h-full bg-gray-900 p-2">
                 <ul class="flex divide-gray-200 rounded-lg shadow sm:flex">
                   <li class="w-full">
-                    <button
-                      class="relative inline-block w-full bg-gray-800 py-2 px-4 text-center text-sm font-medium text-gray-50 hover:bg-gray-600 hover:text-gray-700 focus:bg-green-300"
-                      @click="toggleSide('buy')" v-bind:class="{ 'bg-green-300': side === 'buy' }">BUY</button>
+                    <button class="relative inline-block w-full bg-gray-800 py-2 px-4 text-center text-sm font-medium text-gray-50 hover:bg-gray-600 hover:text-gray-700 focus:bg-green-300" @click="toggleSide('buy')" v-bind:class="{ 'bg-green-300': side === 'buy' }">BUY</button>
                   </li>
                   <li class="w-full">
-                    <button
-                      class="relative inline-block w-full bg-gray-800 py-2 px-4 text-center text-sm font-medium text-gray-50 hover:bg-gray-600 hover:text-gray-700 focus:bg-red-400"
-                      @click="toggleSide('sell')" v-bind:class="{ 'bg-red-400': side === 'sell' }">SELL</button>
+                    <button class="relative inline-block w-full bg-gray-800 py-2 px-4 text-center text-sm font-medium text-gray-50 hover:bg-gray-600 hover:text-gray-700 focus:bg-red-400" @click="toggleSide('sell')" v-bind:class="{ 'bg-red-400': side === 'sell' }">SELL</button>
                   </li>
                 </ul>
 
@@ -24,16 +20,10 @@
                 <div class="border-b border-gray-600 pt-2 text-center text-sm font-medium text-gray-500">
                   <ul class="-mb-px flex flex-wrap">
                     <li class="mr-2">
-                      <a href="javascript:void(0)"
-                        class="inline-block rounded-t-lg border-b-2 border-transparent p-2 hover:border-blue-600 hover:text-gray-300"
-                        @click="tabOrderType('market')"
-                        v-bind:class="{ 'border-blue-600 text-gray-300': orderType === 'market' }">Market</a>
+                      <a href="javascript:void(0)" class="inline-block rounded-t-lg border-b-2 border-transparent p-2 hover:border-blue-600 hover:text-gray-300" @click="tabOrderType('market')" v-bind:class="{ 'border-blue-600 text-gray-300': orderType === 'market' }">Market</a>
                     </li>
                     <li class="mr-2">
-                      <a href="javascript:void(0)"
-                        class="inline-block rounded-t-lg border-b-2 border-transparent p-2 hover:border-blue-600 hover:text-gray-300"
-                        @click="tabOrderType('limit')"
-                        v-bind:class="{ 'border-blue-600 text-gray-300': orderType === 'limit' }">Limit</a>
+                      <a href="javascript:void(0)" class="inline-block rounded-t-lg border-b-2 border-transparent p-2 hover:border-blue-600 hover:text-gray-300" @click="tabOrderType('limit')" v-bind:class="{ 'border-blue-600 text-gray-300': orderType === 'limit' }">Limit</a>
                     </li>
                   </ul>
                 </div>
@@ -42,30 +32,19 @@
                 <!-- market order tab  -->
                 <div v-if="orderType === 'market'">
                   <div class="mt-3 flex items-center rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                    <span class="w-3/12 rounded-l border border-gray-600 py-2 text-center text-gray-200 sm:text-sm"> Price
-                    </span>
+                    <span class="w-3/12 rounded-l border border-gray-600 py-2 text-center text-gray-200 sm:text-sm"> Price </span>
                     <div class="relative flex w-9/12 items-center">
-                      <input type="text"
-                        class="-top-4.5 absolute block w-full border border-gray-500 bg-gray-800 pr-12 text-center text-gray-50 sm:text-sm"
-                        disabled :placeholder="orderbookPrice" />
+                      <input type="text" class="-top-4.5 absolute block w-full border border-gray-500 bg-gray-800 pr-12 text-center text-gray-50 sm:text-sm" disabled :placeholder="orderbookPrice" />
                       <div class="absolute -top-2.5 right-2 text-sm text-gray-400">{{ quoteToken.name }}</div>
                     </div>
                   </div>
 
                   <div class="mt-3 flex items-center rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                    <span v-if="side === 'buy'"
-                      class="w-3/12 rounded-l border border-gray-600 py-2 text-center text-gray-200 sm:text-sm"> Total
-                    </span>
-                    <span v-else
-                      class="w-3/12 rounded-l border border-gray-600 py-2 text-center text-gray-200 sm:text-sm"> Size
-                    </span>
+                    <span v-if="side === 'buy'" class="w-3/12 rounded-l border border-gray-600 py-2 text-center text-gray-200 sm:text-sm"> Total </span>
+                    <span v-else class="w-3/12 rounded-l border border-gray-600 py-2 text-center text-gray-200 sm:text-sm"> Size </span>
                     <div class="relative flex w-9/12 items-center">
-                      <input type="number"
-                        class="-top-4.5 absolute block w-full border border-gray-500 bg-gray-800 pr-12 text-center text-gray-50 sm:text-sm"
-                        step="0.001" :min="0" oninput="if(value<0)value=0" :value="total"
-                        @input="onMarketAmountChange($event.target.value)" />
-                      <div class="absolute -top-2.5 right-2 text-sm text-gray-400">{{ side === 'buy' ? quoteToken.name :
-                        baseToken.name }}</div>
+                      <input type="number" class="-top-4.5 absolute block w-full border border-gray-500 bg-gray-800 pr-12 text-center text-gray-50 sm:text-sm" step="0.001" :min="0" oninput="if(value<0)value=0" :value="total" @input="onMarketAmountChange($event.target.value)" />
+                      <div class="absolute -top-2.5 right-2 text-sm text-gray-400">{{ side === 'buy' ? quoteToken.name : baseToken.name }}</div>
                     </div>
                   </div>
                 </div>
@@ -74,23 +53,16 @@
                 <!-- limit order tab  -->
                 <div v-if="orderType === 'limit'">
                   <div class="mt-3 flex items-center rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                    <span class="w-3/12 rounded-l border border-gray-600 py-2 text-center text-gray-200 sm:text-sm"> Price
-                    </span>
+                    <span class="w-3/12 rounded-l border border-gray-600 py-2 text-center text-gray-200 sm:text-sm"> Price </span>
                     <div class="relative flex w-9/12 items-center">
-                      <input type="number"
-                        class="-top-4.5 absolute block w-full border border-gray-500 bg-gray-800 pr-12 text-center text-gray-50 sm:text-sm"
-                        step="0.001" v-model="price" :min="0" oninput="if(value<0)value=0" />
+                      <input type="number" class="-top-4.5 absolute block w-full border border-gray-500 bg-gray-800 pr-12 text-center text-gray-50 sm:text-sm" step="0.001" v-model="price" :min="0" oninput="if(value<0)value=0" />
                       <div class="absolute -top-2.5 right-2 text-sm text-gray-400">{{ quoteToken.name }}</div>
                     </div>
                   </div>
                   <div class="mt-3 flex items-center rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                    <span class="w-3/12 rounded-l border border-gray-600 py-2 text-center text-gray-200 sm:text-sm"> Size
-                    </span>
+                    <span class="w-3/12 rounded-l border border-gray-600 py-2 text-center text-gray-200 sm:text-sm"> Size </span>
                     <div class="relative flex w-9/12 items-center">
-                      <input type="number"
-                        class="-top-4.5 absolute block w-full border border-gray-500 bg-gray-800 pr-12 text-center text-gray-50 sm:text-sm"
-                        step="0.001" :min="0" oninput="if(value<0)value=0" :value="total"
-                        @input="onLimitAmountChange($event.target.value)" />
+                      <input type="number" class="-top-4.5 absolute block w-full border border-gray-500 bg-gray-800 pr-12 text-center text-gray-50 sm:text-sm" step="0.001" :min="0" oninput="if(value<0)value=0" :value="total" @input="onLimitAmountChange($event.target.value)" />
                       <div class="absolute -top-2.5 right-2 text-sm text-gray-400">{{ baseToken.name }}</div>
                     </div>
                   </div>
@@ -100,21 +72,13 @@
                 <RangeSlider @sliderPercentUpdate="updatePercent" ref="slider" />
                 <!-- <RangeSliderNew/> -->
                 <Fee :total="total" :price="price" :side="side" />
-                <div class="mt-2 flex items-center justify-center">
-                  <button class="w-full bg-gray-800 py-2 text-gray-50 hover:bg-gray-600" @click="onTrade">{{ opBtnTxt
-                  }}</button>
-                </div>
+                <button class="mt-4 w-full bg-gray-800 py-2 text-gray-50 hover:bg-gray-600" @click="onTrade">{{ opBtnTxt }}</button>
                 <Assets />
               </div>
             </div>
           </div>
         </div>
-
-        <div class="h-full w-full border-r border-black bg-gray-900 md:w-1/5 2xl:w-1/6">
-          <OrderBook @updateBid="onBidUpdate" @updateAsk="onAskUpdate" :baseToken="baseToken.name"
-            :quoteToken="quoteToken.name" :market="market" />
-        </div>
-
+        <OrderBook @updateBid="onBidUpdate" @updateAsk="onAskUpdate" :baseToken="baseToken.name" :quoteToken="quoteToken.name" :market="market" />
         <div class="flex h-full w-full flex-col bg-gray-900 md:w-3/5 2xl:w-4/6">
           <TradingView :market="market" class="h-[50vh]" />
           <TradeTab :market="market" class="h-[28vh] 2xl:h-[32vh]" />
@@ -203,7 +167,7 @@ export default {
           this.initialAmount = this.$format((await this.getQuoteAmount()) / (1 + 0.0) / price, 4)
           this.total = this.$format((await this.getQuoteAmount()) / (1 + 0.0) / price, 4)
 
-          this.initalAmountLimit =  this.total
+          this.initalAmountLimit = this.total
         }
         console.log('1111111111111111 price watch')
         console.log(this.total)
@@ -395,10 +359,8 @@ export default {
         console.log('updatePercent market 11111 =>', this.total)
       } else {
         if (this.side === 'buy') {
-
-        this.total = this.$format((this.initalAmountLimit * percent) / 100, 4)
-
-        }else{
+          this.total = this.$format((this.initalAmountLimit * percent) / 100, 4)
+        } else {
           this.total = this.$format((this.initialAmount * percent) / 100, 4)
         }
         console.log('updatePercent limit 11111 =>', this.total)

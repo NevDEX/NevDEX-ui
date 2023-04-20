@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col bg-gray-900 px-3 py-1 h-[80vh] 2xl:h-[86vh] w-full">
+  <div class="flex flex-col bg-gray-900 px-3 py-1 h-[80vh] 2xl:h-[86vh] w-full border-r border-black md:w-1/5 2xl:w-1/6">
     <div class="flex justify-between">
       <span v-bind:class="[option === 'orderbook' ? activeClass : inActiveClass]" @click="onOrderbook"> Order Book</span>
       <span v-bind:class="[option === 'trades' ? activeClass : inActiveClass]" @click="onMarketTrades"> Market Trades</span>

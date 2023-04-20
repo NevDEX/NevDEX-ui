@@ -1,24 +1,22 @@
 <template>
-  <div class="mt-1 mb-2 flex justify-center w-full">
-    <div class="mt-2 mb-2 flex justify-center w-full">
-      <div class="slider w-full mb-2" @click="barClick">
-        <div class="relative">
-          <input style="z-index: -1; width: 100%" type="range" value="0" class="slider" id="range"
-            @mouseup="emitPercent(); mousedown = false" @click="click" @mouseenter="showPercent = true"
-            @mousemove="updatePercent($refs.value)" ref="input" @mouseleave="showPercent = false"
-            @mousedown="mousedown = true" />
-          <div class="w-full" v-if="showPercent">
-            <div ref="sel" id="selectBtn"
-              class="-top-3.5 h-1 w-8 text-center rounded-sm bg-transparent absolute text-blue-600 text-xs m-auto cursor-none">
-              {{ percent }}%</div>
-          </div>
+  <div class="mt-4 mb-2 flex justify-center w-full">
+    <div class="slider w-full mb-2" @click="barClick">
+      <div class="relative">
+        <input style="z-index: -1; width: 100%" type="range" value="0" class="slider" id="range"
+          @mouseup="emitPercent(); mousedown = false" @click="click" @mouseenter="showPercent = true"
+          @mousemove="updatePercent($refs.value)" ref="input" @mouseleave="showPercent = false"
+          @mousedown="mousedown = true" />
+        <div class="w-full" v-if="showPercent">
+          <div ref="sel" id="selectBtn"
+            class="-top-3.5 h-1 w-8 text-center rounded-sm bg-transparent absolute text-blue-600 text-xs m-auto cursor-none">
+            {{ percent }}%</div>
         </div>
-        <div class="grid grid-cols-4 px-1 text-gray-300 text-center text-xs space-x-3 cursor-pointer mt-2">
-          <div class="bg-gray-800 py-0.5" @click="onClickPercent(25)">25%</div>
-          <div class="bg-gray-800 py-0.5" @click="onClickPercent(50)">50%</div>
-          <div class="bg-gray-800 py-0.5" @click="onClickPercent(75)">75%</div>
-          <div class="bg-gray-800 py-0.5" @click="onClickPercent(100)">100%</div>
-        </div>
+      </div>
+      <div class="grid grid-cols-4 px-1 text-gray-300 text-center text-xs space-x-3 cursor-pointer mt-2">
+        <div class="bg-gray-800 py-0.5" @click="onClickPercent(25)">25%</div>
+        <div class="bg-gray-800 py-0.5" @click="onClickPercent(50)">50%</div>
+        <div class="bg-gray-800 py-0.5" @click="onClickPercent(75)">75%</div>
+        <div class="bg-gray-800 py-0.5" @click="onClickPercent(100)">100%</div>
       </div>
     </div>
   </div>
@@ -66,8 +64,6 @@ export default {
 </script>
 
 <style scoped>
- 
-
 /* input[type="range"]:focus,
 input[type="number"]:focus {
   box-shadow: 0 0 3px 1px #4b81dd;
