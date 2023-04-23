@@ -13,9 +13,7 @@
     </div> -->
 
     <div class="marketPlaces mx-auto grid grid-cols-1 md:grid-cols-4 gap-y-10 mt-10">
-      <div v-for="(nft, index) in marketPlaceData" :key="index"
-        class="mx-auto my-auto border-[0.5px] border-stone-600 rounded-xl shadow-xl hover:shadow-blue-600">
-
+      <div v-for="(nft, index) in marketPlaceData" :key="index" class="mx-auto my-auto border-[0.5px] border-stone-600 rounded-xl shadow-xl hover:shadow-blue-600">
         <div class="image">
           <img :src="nft.image" alt="marketplace" @click="onItemClick" />
         </div>
@@ -34,16 +32,17 @@
       </div>
     </div>
   </div>
-
+  <Pagination />
 
   <BuyNFT v-if="showBuyNFT" :isOpen="showBuyNFT" :farm="farm" @close="showBuyNFT = false" ref="buyNFT" />
 </template>
 
 <script>
-import BuyNFT from "./modal/BuyNFT.vue"
-import Button from "./Button.vue"
+import BuyNFT from './modal/BuyNFT.vue'
+import Button from './Button.vue'
+import Pagination from '../NFT/Pagination.vue'
 export default {
-  components: { BuyNFT, Button },
+  components: { BuyNFT, Button, Pagination },
   data() {
     return {
       marketPlaceData: [
@@ -80,13 +79,7 @@ export default {
           name: 'Joshua-jay',
         },
       ],
-      tags: [
-        "All",
-        "Art",
-        "Common",
-        "Trading",
-        "Rare",
-      ],
+      tags: ['All', 'Art', 'Common', 'Trading', 'Rare'],
       showBuyNFT: false,
     }
   },
@@ -99,7 +92,7 @@ export default {
     onBuy() {
       console.log('onBuy')
       this.showBuyNFT = true
-    }
+    },
   },
 }
 </script>
@@ -108,7 +101,7 @@ export default {
 .bzxyHv {
   line-height: 1;
   position: relative;
-  margin: 0.1rem .5rem 1rem;
+  margin: 0.1rem 0.5rem 1rem;
   font-size: 2.5rem;
   display: block;
   text-decoration: none;
@@ -122,7 +115,7 @@ export default {
 }
 
 .bzxyHv::before {
-  content: "";
+  content: '';
   height: 100%;
   width: 120%;
   background-image: radial-gradient(rgba(187, 187, 195, 0.35) 0.75px, transparent 0.75px);
