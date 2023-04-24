@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto bg-[#131a29] my-[6pem] text-white p-20 pb-40">
+  <div class="container mx-auto bg-[#131a29] my-[6pem] text-white p-20 pb-40" id="market">
     <div class="title">
       <!-- <h2 class="text-center text-[3rem]">NFT Marketplace</h2> -->
       <div class="h-20">
@@ -12,7 +12,7 @@
       <Button v-for="(txt, index) in tags" :key="index" :text="txt"></Button>
     </div> -->
 
-    <div class="marketPlaces mx-auto grid grid-cols-1 md:grid-cols-4 gap-y-10 mt-10">
+    <div class="marketPlaces mx-auto grid grid-cols-1 md:grid-cols-4 gap-y-10 mt-10 mb-16">
       <div v-for="(nft, index) in marketPlaceData" :key="index" class="mx-auto my-auto border-[0.5px] border-stone-600 rounded-xl shadow-xl hover:shadow-blue-600">
         <div class="image">
           <img :src="nft.image" alt="marketplace" @click="onItemClick" />
@@ -31,8 +31,9 @@
         </div>
       </div>
     </div>
+
+    <Pagination />
   </div>
-  <Pagination />
 
   <BuyNFT v-if="showBuyNFT" :isOpen="showBuyNFT" :farm="farm" @close="showBuyNFT = false" ref="buyNFT" />
 </template>

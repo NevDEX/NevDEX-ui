@@ -118,7 +118,7 @@ import { upload } from '../../utils/file_upload'
 import { pinFileToIPFS, pinJSONToIPFS } from '../../utils/pinfile'
 import UseWallet from '../../utils/wallet'
 import { db } from '../../utils/firebase'
-import { getFirestore, collection, doc, getDoc, setDoc, getDocs } from 'firebase/firestore'
+import { getFirestore, collection, doc, getDoc, setDoc, getDocs, addDoc } from 'firebase/firestore'
 
 const { walletGlobal } = UseWallet()
 const STATUS_INITIAL = 0,
@@ -234,9 +234,9 @@ export default {
       })
       console.log('jsonHash', jsonHash)
       // this.$toast.success(`Metadata created hash: ${jsonHash}`)
-      let tx = await createCollection(walletGlobal.account, this.name, this.symbol, jsonHash.data.IpfsHash, creationValue)
-      this.$toast.success(`Collection created`)
-      let collection = {
+      // let tx = await createCollection(walletGlobal.account, this.name, this.symbol, jsonHash.data.IpfsHash, creationValue)
+      // this.$toast.success(`Collection created`)
+      let collection_ = {
         title: this.title,
         subtitle: this.subtitle,
         description: this.description,
@@ -244,7 +244,7 @@ export default {
         banner: this.bannerImgHash,
       }
       const collectionsRef = collection(db, 'collections')
-      await setDoc(doc(collectionsRef, 'jsonHash'), {
+      await setDoc(doc(collectionsRef, jsonHash.data.IpfsHash), {
         title: this.title,
         subtitle: this.subtitle,
         description: this.description,
