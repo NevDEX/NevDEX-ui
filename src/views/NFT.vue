@@ -2,7 +2,7 @@
   <NFTHero />
   <CreateAndSell />
   <MarketPlace />
-  <Auctions/>
+  <Auctions />
   <Footer />
 </template>
 
@@ -17,11 +17,11 @@ import BannerGroup from '../components/NFT/BannerGroup.vue'
 
 export default {
   name: 'nft',
-  components: { NFTHero, CreateAndSell, MarketPlace, Footer, Button, BannerGroup,Auctions },
+  components: { NFTHero, CreateAndSell, MarketPlace, Footer, Button, BannerGroup, Auctions },
   data() {
     return {}
   },
 }
 </script>
 
-<style  scoped></style>
+<style scoped></style>

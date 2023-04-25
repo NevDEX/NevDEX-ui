@@ -13,7 +13,7 @@
           life with $NDX
         </p>
         <div class="flex justify-items-start w-full mt-10 space-x-6 z-10">
-          <Button text="Create" @click="onClick()"></Button>
+          <Button text="Create" @click="onCreate()"></Button>
           <Button text="Explore" @click="onExplore()"></Button>
         </div>
       </div>
@@ -35,8 +35,13 @@
 <script>
 export default {
   methods: {
-    onClick() {
-      console.log('onClick')
+    onCreate() {
+      console.log('onCreate')
+      const position = document.getElementById('create').offsetTop
+      window.scrollTo({ top: position, behavior: 'smooth' })
+      this.$nextTick(function () {
+        window.scrollTo({ behavior: 'smooth', top: position })
+      })
     },
     onExplore() {
       const position = document.getElementById('market').offsetTop

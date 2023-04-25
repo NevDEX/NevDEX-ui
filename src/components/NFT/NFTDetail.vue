@@ -311,6 +311,7 @@ import NFTAttribute from './NFTAttribute.vue'
 export default {
   components: { NFTAttribute },
   async created() {
+    // window, scrollTo(0, 0)
     // ======================= read =======================
     const usersRef = collection(db, 'users')
     console.log('usersRef', usersRef)

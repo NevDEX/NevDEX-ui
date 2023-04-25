@@ -1,5 +1,5 @@
 <template>
-  <div class=" bg-[#0e131f]">
+  <div class="bg-[#0e131f]" id="create">
     <div class="text-white container mx-auto pb-40 px-20">
       <div class="title text-white py-20">
         <h2 class="  text-[3rem] font-bold bzxyHv">Create and Sell Your NFTs</h2>
