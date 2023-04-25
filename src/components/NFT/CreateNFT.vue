@@ -28,7 +28,7 @@
               <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
                 <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
-              <input id="file-upload" multiple :name="uploadFieldName" type="file" class="sr-only" @change="coverFileChange($event.target.name, $event.target.files)" accept="image/*" />
+              <input id="file-upload" multiple :name="uploadFieldName" type="file" class="sr-only" @change="filesChange($event.target.files[0])" accept="image/*" />
             </label>
           </div>
         </div>
@@ -51,19 +51,65 @@
       </div>
     </div>
 
-      <button class="inline-flex w-full justify-center py-2  border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-400 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" @click="onCreate">Create</button>
-
+    <button class="inline-flex w-full justify-center py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-400 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" @click="onCreate">Create</button>
   </div>
 </template>
 
 <script>
+import { pinFileToIPFS } from '../../utils/pinfile'
+import { uploadNFTContent, getIPFSGatewayURL } from '../../utils/nft_storage'
+import { getFirestore, collection, doc, getDoc, setDoc, getDocs, addDoc } from 'firebase/firestore'
+
 export default {
   name: 'create_nft',
-
   data() {
     return {
       showUploadCover: true,
+      file: null,
+      rawFile: null,
+      royalty: 0,
+      title: '',
+      description: '',
     }
+  },
+  methods: {
+    filesChange(file) {
+      this.rawFile = file
+      let reader = new FileReader()
+      let that = this
+      reader.readAsDataURL(file)
+      reader.onload = function (e) {
+        that.file = this.result
+        console.log(this.result)
+      }
+    },
+    async onCreate() {
+      const metaData = await uploadNFTContent(this.rawFile)
+      let url = getIPFSGatewayURL(metaData.url)
+      console.log('111111 url', url)
+
+      const collectionsRef = collection(db, 'collections')
+      await setDoc(doc(collectionsRef, jsonHash.data.IpfsHash), {
+        title: this.title,
+        subtitle: this.subtitle,
+        description: this.description,
+        image: this.coverImgHash,
+        banner: this.bannerImgHash,
+      })
+
+      //   let metaData = { title: this.title, description: this.description, royalty: this.royalty }
+      //   console.log('metaData', metaData)
+
+      //   const added = await pinFileToIPFS(this.rawFile)
+      //   const { IpfsHash } = added.data
+      //   console.log('file ipfsHash:', IpfsHash)
+      //   this.$toast.success(`Metadata created hash: ${IpfsHash}`)
+      //   const tokenHash = await pinJSONToIPFS({ ...metaData, image: IpfsHash })
+      //   console.log('token IpfsHassh:', tokenHash.data.IpfsHash)
+      //   let tx = await mint(walletGlobal.account, tokenHash.data.IpfsHash, this.royalty, this.contractAddress)
+      //   this.$toast.success(`Transaction submitted`)
+      //   console.log('tx', tx)
+    },
   },
 }
 </script>

@@ -1,7 +1,6 @@
 import { NFTStorage } from 'nft.storage'
-const APIKEY = ''
-
-async function pinJSONToIPFS() {
+const APIKEY = 
+async function uploadNFTContent(inputFile) {
   const nftStorage = new NFTStorage({ token: APIKEY })
   try {
     const metaData = await nftStorage.store({
@@ -17,4 +16,10 @@ async function pinJSONToIPFS() {
   }
 }
 
-export { pinJSONToIPFS }
+const getIPFSGatewayURL = (ipfsURL) => {
+  let urlArray = ipfsURL.split('/')
+  let ipfsGateWayURL = `https://${urlArray[2]}.ipfs.dweb.link/${urlArray[3]}`
+  return ipfsGateWayURL
+}
+
+export { uploadNFTContent, getIPFSGatewayURL }
