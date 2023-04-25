@@ -46,6 +46,7 @@
     "unplugin-vue-components": "^0.22.4",
     "unplugin-vue-router": "^0.1.2",
     "vite": "^3.0.8",
-    "vue-tsc": "^0.40.1"
+    "vue-tsc": "^0.40.1",
+    "nft.storage": "^5.2.0"
   }
 }
