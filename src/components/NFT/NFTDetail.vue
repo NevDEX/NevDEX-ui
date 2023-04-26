@@ -299,7 +299,10 @@
         </div>
       </div>
     </div>
+
   </div>
+
+  <MoreFromThisCollection />
 </template>
 
 <script>
@@ -307,9 +310,9 @@ import { db } from '../../utils/firebase'
 import { initializeApp } from 'firebase/app'
 import { getFirestore, collection, doc, getDoc, setDoc, getDocs } from 'firebase/firestore'
 import NFTAttribute from './NFTAttribute.vue'
-
+import MoreFromThisCollection from './MoreFromThisCollection.vue'
 export default {
-  components: { NFTAttribute },
+  components: { NFTAttribute, MoreFromThisCollection },
   async created() {
     // window, scrollTo(0, 0)
     // ======================= read =======================

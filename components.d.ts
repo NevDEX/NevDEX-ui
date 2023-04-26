@@ -45,6 +45,7 @@ declare module '@vue/runtime-core' {
     MenuButton: typeof import('@headlessui/vue')['MenuButton']
     MenuItem: typeof import('@headlessui/vue')['MenuItem']
     MenuItems: typeof import('@headlessui/vue')['MenuItems']
+    MoreFromThisCollection: typeof import('./src/components/NFT/MoreFromThisCollection.vue')['default']
     Navbar: typeof import('./src/components/Navbar.vue')['default']
     NFTArritube: typeof import('./src/components/NFT/NFTArritube.vue')['default']
     NFTAttribute: typeof import('./src/components/NFT/NFTAttribute.vue')['default']
