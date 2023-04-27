@@ -1,26 +1,25 @@
 <template>
+  <h1 class="text-gray-200 text-3xl font-bold my-10 mx-10">More from this collection</h1>
   <swiper
     :pagination="{
       type: 'progressbar',
     }"
     :navigation="true"
     :modules="modules"
-    class="flex flex-row w-full"
+    class="flex flex-row  mx-10"
   >
-    <swiper-slide class="bg-gray-300 h-80 w-60">
-      <div v-for="(nft, index) in nfs" :key="index" class="mx-auto my-auto border-[0.5px] border-stone-600 rounded-xl shadow-xl hover:shadow-blue-600 h-[24rem] w-[17rem]">
+    <swiper-slide class="h-[24rem] w-[17rem]">
+      <div v-for="(nft, index) in nfs" :key="index" class="mx-auto my-auto border-[0.5px] border-stone-600 rounded-xl shadow-xl">
         <div class="w-full">
           <img :src="nft.image" alt="marketplace" @click="onItemClick" class="w-full" />
         </div>
         <div class="m-[10px]">
-          <div class="name">
+          <div class="name text-left">
             <h4>{{ nft.name }}</h4>
-            <!-- <BsThreeDots /> -->
           </div>
-          <h6 class="username">@koolkishansheth</h6>
+          <h6 class="username"></h6>
           <div class="price-container flex flex-row justify-between">
             <h5 class="price">5.5 NDX</h5>
-            <!-- <FaEthereum /> -->
             <button @click="onBuy">buy</button>
           </div>
         </div>
@@ -29,7 +28,6 @@
     <swiper-slide class="bg-gray-300 h-80 w-60">Slide 3</swiper-slide>
     <swiper-slide class="bg-gray-300 h-80 w-60">Slide 4</swiper-slide>
     <swiper-slide class="bg-gray-300 h-80 w-60">Slide 5</swiper-slide>
-   
   </swiper>
 </template>
 
@@ -47,23 +45,23 @@ export default {
       nfs: [
         {
           image: '/src/assets/nft/marketplace1.png',
-          name: 'Aiboi-meta',
+          name: 'SUIHEROES #447',
         },
         {
           image: '/src/assets/nft/marketplace2.png',
-          name: 'Pedram-mohamm...',
+          name: 'SUIHEROES #448',
         },
         {
           image: '/src/assets/nft/marketplace3.png',
-          name: 'Eduardo-pena',
+          name: 'SUIHEROES #449',
         },
         {
           image: '/src/assets/nft/marketplace4.png',
-          name: 'Daeho-cha',
+          name: 'SUIHEROES #450',
         },
         {
           image: '/src/assets/nft/marketplace5.png',
-          name: 'Justine-florentino',
+          name: 'SUIHEROES #451',
         },
       ],
     }
@@ -94,6 +92,4 @@ export default {
   justify-content: center;
   align-items: center;
 }
-
- 
 </style>
