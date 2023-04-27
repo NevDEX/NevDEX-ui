@@ -6,7 +6,7 @@
     }"
     :navigation="true"
     :modules="modules"
-    class="flex flex-row  mx-10"
+    class="flex flex-row mx-10"
   >
     <swiper-slide class="h-[24rem] w-[17rem]">
       <div v-for="(nft, index) in nfs" :key="index" class="mx-auto my-auto border-[0.5px] border-stone-600 rounded-xl shadow-xl">
