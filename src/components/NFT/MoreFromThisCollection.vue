@@ -1,7 +1,13 @@
 <template>
-  <div class="mx-60 my-60">
-    <h1 class="text-gray-200 text-3xl font-bold">More from this collection</h1>
-    <div class="mt-8 grid grid-flow-col-dense gap-20">
+  <swiper
+    :pagination="{
+      type: 'progressbar',
+    }"
+    :navigation="true"
+    :modules="modules"
+    class="flex flex-row w-full"
+  >
+    <swiper-slide class="bg-gray-300 h-80 w-60">
       <div v-for="(nft, index) in nfs" :key="index" class="mx-auto my-auto border-[0.5px] border-stone-600 rounded-xl shadow-xl hover:shadow-blue-600 h-[24rem] w-[17rem]">
         <div class="w-full">
           <img :src="nft.image" alt="marketplace" @click="onItemClick" class="w-full" />
@@ -19,14 +25,25 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </swiper-slide>
+    <swiper-slide class="bg-gray-300 h-80 w-60">Slide 3</swiper-slide>
+    <swiper-slide class="bg-gray-300 h-80 w-60">Slide 4</swiper-slide>
+    <swiper-slide class="bg-gray-300 h-80 w-60">Slide 5</swiper-slide>
+   
+  </swiper>
 </template>
 
 <script>
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import 'swiper/css'
+import 'swiper/css/pagination'
+
+import { Pagination, Navigation } from 'swiper'
 export default {
+  components: { Pagination, Navigation, Swiper, SwiperSlide },
   data() {
     return {
+      modules: [Pagination, Navigation],
       nfs: [
         {
           image: '/src/assets/nft/marketplace1.png',
@@ -48,24 +65,35 @@ export default {
           image: '/src/assets/nft/marketplace5.png',
           name: 'Justine-florentino',
         },
-        {
-          image: '/src/assets/nft/marketplace6.png',
-          name: 'Hoang-l-p-solan',
-        },
-        {
-          image: '/src/assets/nft/marketplace7.png',
-          name: 'Joshua-jay',
-        },
-        {
-          image: '/src/assets/nft/marketplace8.png',
-          name: 'Joshua-jay',
-        },
       ],
     }
   },
   methods: {},
-  mounted() {},
+
+  setup() {
+    return {
+      modules: [Pagination, Navigation],
+    }
+  },
 }
 </script>
 
-<style></style>
+<style scoped>
+.swiper {
+  width: 100%;
+  height: 30%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ 
+</style>
