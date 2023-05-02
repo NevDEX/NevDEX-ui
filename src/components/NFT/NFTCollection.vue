@@ -273,98 +273,1799 @@
 
 
           <div class="">
-            <div class="mt-6 lg:mt-8">
+            <div class="mt-6 lg:mt-8" style="">
               <div class="grid gap-x-4 gap-y-10 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
                 <div
-                  class="grid gap-2 sm:gap-x-4 sm:gap-y-10 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 col-start-1 col-end-6 row-start-1">
+                  class="grid gap-2 sm:gap-x-4 sm:gap-y-10  grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 col-start-1 col-end-6 row-start-1">
                   <div class=" ">
                     <div
-                      class="nc-CardNFT cursor-pointer relative flex flex-col group !border-0 [ nc-box-has-hover nc-dark-box-bg-has-hover ]"
+                      class="nc-CardNFT cursor-pointer relative flex flex-col group !border-0 [ nc-box-has-hover nc-dark-box-bg-has-hover ] "
                       data-nc-id="CardNFT">
                       <div class="relative flex-shrink-0 z-20">
                         <div class="relative">
                           <div class=" ">
                             <div
-                              class="nc-NcImage flex aspect-w-11 aspect-h-12 w-full h-0 rounded-3xl overflow-hidden z-10 border-2 border-transparent dark:border-neutral-900 nft-content"
-                              data-nc-id="NcImage">
-                              <img src="https://ipfs.bluemove.io/uploads/plasmaverse/avatar.webp"
+                              class="nc-NcImage flex aspect-w-11 aspect-h-12 w-full h-0 rounded-3xl overflow-hidden z-10 border-2 border-transparent dark:border-neutral-900 nft-content "
+                              data-nc-id="NcImage"><img
+                                src="https://ipfs.bluemove.net/uploads/sui-crypto-lady/images/749.png"
                                 class="object-cover w-full h-full group-hover:scale-[1.03] transition-transform duration-300 ease-in-out will-change-transform"
-                                alt="nc-imgs" />
-                            </div>
+                                alt="nc-imgs"></div>
                           </div>
                           <div
                             class="hidden sm:block absolute right-0 left-0 bottom-0 top-0 m-auto w-fit h-fit transition-all duration-[400ms] z-20 opacity-0 group-hover:opacity-100 translate-y-44 group-hover:translate-y-0">
                             <button
-                              class="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6 text-white bg-gradient-to-br from-purple-600 to-purple-600 via-blue-500 bg-[length:300%] !bg-left hover:!bg-right !transition-[background-position] !duration-[300ms] ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 !h-12 max-w-[150px] !text-sm !p-2 !px-3 flex items-center gap-2 justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0">
-                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                              class="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  text-white bg-gradient-to-br from-purple-600 to-purple-600 via-blue-500 bg-[length:300%] !bg-left hover:!bg-right !transition-[background-position] !duration-[300ms] ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 !h-12 max-w-[150px] !text-sm !p-2 !px-3 flex items-center gap-2 justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0"><svg
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                                 stroke="currentColor" class="w-4 h-4">
                                 <path stroke-linecap="round" stroke-linejoin="round"
-                                  d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
-                              </svg>Quick Buy
-                            </button>
-                          </div>
-                        </div>
-                        <button
-                          class="bg-black/50 px-3.5 h-10 flex items-center justify-center rounded-full text-white absolute top-3 right-3 z-20 !h-9">
-                          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
-                            <path
-                              d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
-                              stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"
-                              stroke-linejoin="round"></path>
-                          </svg><span class="ml-2 text-sm">0</span>
-                        </button>
-                      </div>
-                      <div class="p-4 py-5 space-y-3">
-                        <h2 class="text-xs sm:text-base font-medium h-[30px] sm:h-[45px] line-clamp-2 break-words">
-                          PLASMAVERSE #356</h2>
-                        <div class="w-2d4 w-full border-b border-neutral-100 dark:border-neutral-700"></div>
-                        <div class="flex justify-between items-end">
-                          <div class="pt-3">
+                                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
+                            </svg>Quick Buy</button></div>
+                      </div><button
+                        class="bg-black/50 px-3.5 h-10 flex items-center justify-center rounded-full text-white absolute top-3 right-3 z-20 !h-9"><svg
+                          class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                            stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        </svg><span class="ml-2 text-sm">0</span></button>
+                    </div>
+                    <div class="p-4 py-5 space-y-3">
+                      <h2 class="text-xs sm:text-base font-medium h-[30px] sm:h-[45px] line-clamp-2 break-words">#SCL749
+                      </h2>
+                      <div class="w-2d4 w-full border-b border-neutral-100 dark:border-neutral-700"></div>
+                      <div class="flex justify-between items-end ">
+                        <div class="pt-3">
+                          <div
+                            class="flex items-baseline border-2 border-suicolor rounded-lg relative py-2 px-2.5 text-sm sm:text-base font-semibold ">
+                            <span
+                              class="block absolute font-normal bottom-full translate-y-3 p-1 -mx-1 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 bg-white dark:bg-neutral-900 dark:group-hover:bg-neutral-800 group-hover:bg-neutral-50">Price</span>
                             <div
-                              class="flex items-baseline border-2 border-suicolor rounded-lg relative py-2 px-2.5 text-sm sm:text-base font-semibold">
-                              <span
-                                class="block absolute font-normal bottom-full translate-y-3 p-1 -mx-1 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 bg-white dark:bg-neutral-900 dark:group-hover:bg-neutral-800 group-hover:bg-neutral-50">Price</span>
-                              <div
-                                class="!leading-none flex gap-1 justify-center items-end mt-[6px] sm:mt-[4px] text-suicolor">
-                                <div class="nc-NcImage" data-nc-id="NcImage"><img
-                                    src="/static/media/sui-logo.5ffb9a0fdbc85585c037d04c8f674090.svg" class="w-3 h-4"
-                                    alt="nc-imgs" /></div>
-                                <p class="text-xs sm:text-sm 2xl:text-base sm:h-[19px]">243</p>
-                              </div>
+                              class="!leading-none flex gap-1 justify-center items-end mt-[6px] sm:mt-[4px]  text-suicolor">
+                              <div class="nc-NcImage " data-nc-id="NcImage"><img
+                                  src="/static/media/sui-logo.5ffb9a0fdbc85585c037d04c8f674090.svg" class="w-3 h-4"
+                                  alt="nc-imgs"></div>
+                              <p class="text-xs sm:text-sm 2xl:text-base sm:h-[19px]">240</p>
                             </div>
                           </div>
-                          <div
-                            class="hidden sm:flex items-center text-sm text-neutral-500 dark:text-neutral-400 hover:scale-105 transition-all duration-100 z-20">
-                            <p class="bg-white border-[7px] rounded-full w-12 h-12 p-1 z-10 border-neutral-700"><img
-                                alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
-                                class="w-6 h-6" /></p>
-                            <p class="p-2 pt-2.5 text-white text-xs rounded-2xl -ml-[25px] z-0 pl-[25px] bg-neutral-700">
-                              Bulk Buy</p>
-                          </div>
-                          <p
-                            class="block sm:hidden hover:scale-110 hover:border-blue-500 bg-white border-[7px] rounded-full w-10 h-10 p-1 z-20 border-neutral-700">
-                            <img alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
-                              class="w-4 h-4" />
-                          </p>
                         </div>
+                        <div
+                          class="hidden sm:flex  items-center text-sm text-neutral-500 dark:text-neutral-400 hover:scale-105 transition-all duration-100 z-20">
+                          <p class="bg-white border-[7px] rounded-full w-12 h-12 p-1 z-10 border-neutral-700"><img
+                              alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                              class="w-6 h-6"></p>
+                          <p class="p-2 pt-2.5 text-white text-xs rounded-2xl -ml-[25px] z-0 pl-[25px] bg-neutral-700">
+                            Bulk Buy</p>
+                        </div>
+                        <p
+                          class="block sm:hidden hover:scale-110 hover:border-blue-500 bg-white border-[7px] rounded-full w-10 h-10 p-1 z-20 border-neutral-700">
+                          <img alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                            class="w-4 h-4"></p>
                       </div>
-                      <a class="absolute inset-0 z-10" href="/collection/market-item/6719"></a>
-                    </div>
+                    </div><a class="absolute inset-0 z-10" href="/collection/market-item/60475"></a>
                   </div>
-
-
-
+                </div>
+                <div class=" ">
+                  <div
+                    class="nc-CardNFT cursor-pointer relative flex flex-col group !border-0 [ nc-box-has-hover nc-dark-box-bg-has-hover ] "
+                    data-nc-id="CardNFT">
+                    <div class="relative flex-shrink-0 z-20">
+                      <div class="relative">
+                        <div class=" ">
+                          <div
+                            class="nc-NcImage flex aspect-w-11 aspect-h-12 w-full h-0 rounded-3xl overflow-hidden z-10 border-2 border-transparent dark:border-neutral-900 nft-content "
+                            data-nc-id="NcImage"><img
+                              src="https://ipfs.bluemove.net/uploads/sui-crypto-lady/images/646.png"
+                              class="object-cover w-full h-full group-hover:scale-[1.03] transition-transform duration-300 ease-in-out will-change-transform"
+                              alt="nc-imgs"></div>
+                        </div>
+                        <div
+                          class="hidden sm:block absolute right-0 left-0 bottom-0 top-0 m-auto w-fit h-fit transition-all duration-[400ms] z-20 opacity-0 group-hover:opacity-100 translate-y-44 group-hover:translate-y-0">
+                          <button
+                            class="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  text-white bg-gradient-to-br from-purple-600 to-purple-600 via-blue-500 bg-[length:300%] !bg-left hover:!bg-right !transition-[background-position] !duration-[300ms] ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 !h-12 max-w-[150px] !text-sm !p-2 !px-3 flex items-center gap-2 justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0"><svg
+                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                              stroke="currentColor" class="w-4 h-4">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
+                            </svg>Quick Buy</button></div>
+                      </div><button
+                        class="bg-black/50 px-3.5 h-10 flex items-center justify-center rounded-full text-white absolute top-3 right-3 z-20 !h-9"><svg
+                          class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                            stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        </svg><span class="ml-2 text-sm">0</span></button>
+                    </div>
+                    <div class="p-4 py-5 space-y-3">
+                      <h2 class="text-xs sm:text-base font-medium h-[30px] sm:h-[45px] line-clamp-2 break-words">#SCL646
+                      </h2>
+                      <div class="w-2d4 w-full border-b border-neutral-100 dark:border-neutral-700"></div>
+                      <div class="flex justify-between items-end ">
+                        <div class="pt-3">
+                          <div
+                            class="flex items-baseline border-2 border-suicolor rounded-lg relative py-2 px-2.5 text-sm sm:text-base font-semibold ">
+                            <span
+                              class="block absolute font-normal bottom-full translate-y-3 p-1 -mx-1 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 bg-white dark:bg-neutral-900 dark:group-hover:bg-neutral-800 group-hover:bg-neutral-50">Price</span>
+                            <div
+                              class="!leading-none flex gap-1 justify-center items-end mt-[6px] sm:mt-[4px]  text-suicolor">
+                              <div class="nc-NcImage " data-nc-id="NcImage"><img
+                                  src="/static/media/sui-logo.5ffb9a0fdbc85585c037d04c8f674090.svg" class="w-3 h-4"
+                                  alt="nc-imgs"></div>
+                              <p class="text-xs sm:text-sm 2xl:text-base sm:h-[19px]">250</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden sm:flex  items-center text-sm text-neutral-500 dark:text-neutral-400 hover:scale-105 transition-all duration-100 z-20">
+                          <p class="bg-white border-[7px] rounded-full w-12 h-12 p-1 z-10 border-neutral-700"><img
+                              alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                              class="w-6 h-6"></p>
+                          <p class="p-2 pt-2.5 text-white text-xs rounded-2xl -ml-[25px] z-0 pl-[25px] bg-neutral-700">
+                            Bulk Buy</p>
+                        </div>
+                        <p
+                          class="block sm:hidden hover:scale-110 hover:border-blue-500 bg-white border-[7px] rounded-full w-10 h-10 p-1 z-20 border-neutral-700">
+                          <img alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                            class="w-4 h-4"></p>
+                      </div>
+                    </div><a class="absolute inset-0 z-10" href="/collection/market-item/56282"></a>
+                  </div>
+                </div>
+                <div class=" ">
+                  <div
+                    class="nc-CardNFT cursor-pointer relative flex flex-col group !border-0 [ nc-box-has-hover nc-dark-box-bg-has-hover ] "
+                    data-nc-id="CardNFT">
+                    <div class="relative flex-shrink-0 z-20">
+                      <div class="relative">
+                        <div class=" ">
+                          <div
+                            class="nc-NcImage flex aspect-w-11 aspect-h-12 w-full h-0 rounded-3xl overflow-hidden z-10 border-2 border-transparent dark:border-neutral-900 nft-content "
+                            data-nc-id="NcImage"><img
+                              src="https://ipfs.bluemove.net/uploads/sui-crypto-lady/images/380.png"
+                              class="object-cover w-full h-full group-hover:scale-[1.03] transition-transform duration-300 ease-in-out will-change-transform"
+                              alt="nc-imgs"></div>
+                        </div>
+                        <div
+                          class="hidden sm:block absolute right-0 left-0 bottom-0 top-0 m-auto w-fit h-fit transition-all duration-[400ms] z-20 opacity-0 group-hover:opacity-100 translate-y-44 group-hover:translate-y-0">
+                          <button
+                            class="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  text-white bg-gradient-to-br from-purple-600 to-purple-600 via-blue-500 bg-[length:300%] !bg-left hover:!bg-right !transition-[background-position] !duration-[300ms] ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 !h-12 max-w-[150px] !text-sm !p-2 !px-3 flex items-center gap-2 justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0"><svg
+                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                              stroke="currentColor" class="w-4 h-4">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
+                            </svg>Quick Buy</button></div>
+                      </div><button
+                        class="bg-black/50 px-3.5 h-10 flex items-center justify-center rounded-full text-white absolute top-3 right-3 z-20 !h-9"><svg
+                          class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                            stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        </svg><span class="ml-2 text-sm">0</span></button>
+                    </div>
+                    <div class="p-4 py-5 space-y-3">
+                      <h2 class="text-xs sm:text-base font-medium h-[30px] sm:h-[45px] line-clamp-2 break-words">#SCL380
+                      </h2>
+                      <div class="w-2d4 w-full border-b border-neutral-100 dark:border-neutral-700"></div>
+                      <div class="flex justify-between items-end ">
+                        <div class="pt-3">
+                          <div
+                            class="flex items-baseline border-2 border-suicolor rounded-lg relative py-2 px-2.5 text-sm sm:text-base font-semibold ">
+                            <span
+                              class="block absolute font-normal bottom-full translate-y-3 p-1 -mx-1 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 bg-white dark:bg-neutral-900 dark:group-hover:bg-neutral-800 group-hover:bg-neutral-50">Price</span>
+                            <div
+                              class="!leading-none flex gap-1 justify-center items-end mt-[6px] sm:mt-[4px]  text-suicolor">
+                              <div class="nc-NcImage " data-nc-id="NcImage"><img
+                                  src="/static/media/sui-logo.5ffb9a0fdbc85585c037d04c8f674090.svg" class="w-3 h-4"
+                                  alt="nc-imgs"></div>
+                              <p class="text-xs sm:text-sm 2xl:text-base sm:h-[19px]">250</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden sm:flex  items-center text-sm text-neutral-500 dark:text-neutral-400 hover:scale-105 transition-all duration-100 z-20">
+                          <p class="bg-white border-[7px] rounded-full w-12 h-12 p-1 z-10 border-neutral-700"><img
+                              alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                              class="w-6 h-6"></p>
+                          <p class="p-2 pt-2.5 text-white text-xs rounded-2xl -ml-[25px] z-0 pl-[25px] bg-neutral-700">
+                            Bulk Buy</p>
+                        </div>
+                        <p
+                          class="block sm:hidden hover:scale-110 hover:border-blue-500 bg-white border-[7px] rounded-full w-10 h-10 p-1 z-20 border-neutral-700">
+                          <img alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                            class="w-4 h-4"></p>
+                      </div>
+                    </div><a class="absolute inset-0 z-10" href="/collection/market-item/56356"></a>
+                  </div>
+                </div>
+                <div class=" ">
+                  <div
+                    class="nc-CardNFT cursor-pointer relative flex flex-col group !border-0 [ nc-box-has-hover nc-dark-box-bg-has-hover ] "
+                    data-nc-id="CardNFT">
+                    <div class="relative flex-shrink-0 z-20">
+                      <div class="relative">
+                        <div class=" ">
+                          <div
+                            class="nc-NcImage flex aspect-w-11 aspect-h-12 w-full h-0 rounded-3xl overflow-hidden z-10 border-2 border-transparent dark:border-neutral-900 nft-content "
+                            data-nc-id="NcImage"><img
+                              src="https://ipfs.bluemove.net/uploads/sui-crypto-lady/images/995.png"
+                              class="object-cover w-full h-full group-hover:scale-[1.03] transition-transform duration-300 ease-in-out will-change-transform"
+                              alt="nc-imgs"></div>
+                        </div>
+                        <div
+                          class="hidden sm:block absolute right-0 left-0 bottom-0 top-0 m-auto w-fit h-fit transition-all duration-[400ms] z-20 opacity-0 group-hover:opacity-100 translate-y-44 group-hover:translate-y-0">
+                          <button
+                            class="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  text-white bg-gradient-to-br from-purple-600 to-purple-600 via-blue-500 bg-[length:300%] !bg-left hover:!bg-right !transition-[background-position] !duration-[300ms] ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 !h-12 max-w-[150px] !text-sm !p-2 !px-3 flex items-center gap-2 justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0"><svg
+                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                              stroke="currentColor" class="w-4 h-4">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
+                            </svg>Quick Buy</button></div>
+                      </div><button
+                        class="bg-black/50 px-3.5 h-10 flex items-center justify-center rounded-full text-white absolute top-3 right-3 z-20 !h-9"><svg
+                          class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                            stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        </svg><span class="ml-2 text-sm">0</span></button>
+                    </div>
+                    <div class="p-4 py-5 space-y-3">
+                      <h2 class="text-xs sm:text-base font-medium h-[30px] sm:h-[45px] line-clamp-2 break-words">#SCL995
+                      </h2>
+                      <div class="w-2d4 w-full border-b border-neutral-100 dark:border-neutral-700"></div>
+                      <div class="flex justify-between items-end ">
+                        <div class="pt-3">
+                          <div
+                            class="flex items-baseline border-2 border-suicolor rounded-lg relative py-2 px-2.5 text-sm sm:text-base font-semibold ">
+                            <span
+                              class="block absolute font-normal bottom-full translate-y-3 p-1 -mx-1 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 bg-white dark:bg-neutral-900 dark:group-hover:bg-neutral-800 group-hover:bg-neutral-50">Price</span>
+                            <div
+                              class="!leading-none flex gap-1 justify-center items-end mt-[6px] sm:mt-[4px]  text-suicolor">
+                              <div class="nc-NcImage " data-nc-id="NcImage"><img
+                                  src="/static/media/sui-logo.5ffb9a0fdbc85585c037d04c8f674090.svg" class="w-3 h-4"
+                                  alt="nc-imgs"></div>
+                              <p class="text-xs sm:text-sm 2xl:text-base sm:h-[19px]">250</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden sm:flex  items-center text-sm text-neutral-500 dark:text-neutral-400 hover:scale-105 transition-all duration-100 z-20">
+                          <p class="bg-white border-[7px] rounded-full w-12 h-12 p-1 z-10 border-neutral-700"><img
+                              alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                              class="w-6 h-6"></p>
+                          <p class="p-2 pt-2.5 text-white text-xs rounded-2xl -ml-[25px] z-0 pl-[25px] bg-neutral-700">
+                            Bulk Buy</p>
+                        </div>
+                        <p
+                          class="block sm:hidden hover:scale-110 hover:border-blue-500 bg-white border-[7px] rounded-full w-10 h-10 p-1 z-20 border-neutral-700">
+                          <img alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                            class="w-4 h-4"></p>
+                      </div>
+                    </div><a class="absolute inset-0 z-10" href="/collection/market-item/56358"></a>
+                  </div>
+                </div>
+                <div class=" ">
+                  <div
+                    class="nc-CardNFT cursor-pointer relative flex flex-col group !border-0 [ nc-box-has-hover nc-dark-box-bg-has-hover ] "
+                    data-nc-id="CardNFT">
+                    <div class="relative flex-shrink-0 z-20">
+                      <div class="relative">
+                        <div class=" ">
+                          <div
+                            class="nc-NcImage flex aspect-w-11 aspect-h-12 w-full h-0 rounded-3xl overflow-hidden z-10 border-2 border-transparent dark:border-neutral-900 nft-content "
+                            data-nc-id="NcImage"><img
+                              src="https://ipfs.bluemove.net/uploads/sui-crypto-lady/images/778.png"
+                              class="object-cover w-full h-full group-hover:scale-[1.03] transition-transform duration-300 ease-in-out will-change-transform"
+                              alt="nc-imgs"></div>
+                        </div>
+                        <div
+                          class="hidden sm:block absolute right-0 left-0 bottom-0 top-0 m-auto w-fit h-fit transition-all duration-[400ms] z-20 opacity-0 group-hover:opacity-100 translate-y-44 group-hover:translate-y-0">
+                          <button
+                            class="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  text-white bg-gradient-to-br from-purple-600 to-purple-600 via-blue-500 bg-[length:300%] !bg-left hover:!bg-right !transition-[background-position] !duration-[300ms] ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 !h-12 max-w-[150px] !text-sm !p-2 !px-3 flex items-center gap-2 justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0"><svg
+                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                              stroke="currentColor" class="w-4 h-4">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
+                            </svg>Quick Buy</button></div>
+                      </div><button
+                        class="bg-black/50 px-3.5 h-10 flex items-center justify-center rounded-full text-white absolute top-3 right-3 z-20 !h-9"><svg
+                          class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                            stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        </svg><span class="ml-2 text-sm">0</span></button>
+                    </div>
+                    <div class="p-4 py-5 space-y-3">
+                      <h2 class="text-xs sm:text-base font-medium h-[30px] sm:h-[45px] line-clamp-2 break-words">#SCL778
+                      </h2>
+                      <div class="w-2d4 w-full border-b border-neutral-100 dark:border-neutral-700"></div>
+                      <div class="flex justify-between items-end ">
+                        <div class="pt-3">
+                          <div
+                            class="flex items-baseline border-2 border-suicolor rounded-lg relative py-2 px-2.5 text-sm sm:text-base font-semibold ">
+                            <span
+                              class="block absolute font-normal bottom-full translate-y-3 p-1 -mx-1 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 bg-white dark:bg-neutral-900 dark:group-hover:bg-neutral-800 group-hover:bg-neutral-50">Price</span>
+                            <div
+                              class="!leading-none flex gap-1 justify-center items-end mt-[6px] sm:mt-[4px]  text-suicolor">
+                              <div class="nc-NcImage " data-nc-id="NcImage"><img
+                                  src="/static/media/sui-logo.5ffb9a0fdbc85585c037d04c8f674090.svg" class="w-3 h-4"
+                                  alt="nc-imgs"></div>
+                              <p class="text-xs sm:text-sm 2xl:text-base sm:h-[19px]">250</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden sm:flex  items-center text-sm text-neutral-500 dark:text-neutral-400 hover:scale-105 transition-all duration-100 z-20">
+                          <p class="bg-white border-[7px] rounded-full w-12 h-12 p-1 z-10 border-neutral-700"><img
+                              alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                              class="w-6 h-6"></p>
+                          <p class="p-2 pt-2.5 text-white text-xs rounded-2xl -ml-[25px] z-0 pl-[25px] bg-neutral-700">
+                            Bulk Buy</p>
+                        </div>
+                        <p
+                          class="block sm:hidden hover:scale-110 hover:border-blue-500 bg-white border-[7px] rounded-full w-10 h-10 p-1 z-20 border-neutral-700">
+                          <img alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                            class="w-4 h-4"></p>
+                      </div>
+                    </div><a class="absolute inset-0 z-10" href="/collection/market-item/56361"></a>
+                  </div>
+                </div>
+                <div class=" ">
+                  <div
+                    class="nc-CardNFT cursor-pointer relative flex flex-col group !border-0 [ nc-box-has-hover nc-dark-box-bg-has-hover ] "
+                    data-nc-id="CardNFT">
+                    <div class="relative flex-shrink-0 z-20">
+                      <div class="relative">
+                        <div class=" ">
+                          <div
+                            class="nc-NcImage flex aspect-w-11 aspect-h-12 w-full h-0 rounded-3xl overflow-hidden z-10 border-2 border-transparent dark:border-neutral-900 nft-content "
+                            data-nc-id="NcImage"><img
+                              src="https://ipfs.bluemove.net/uploads/sui-crypto-lady/images/454.png"
+                              class="object-cover w-full h-full group-hover:scale-[1.03] transition-transform duration-300 ease-in-out will-change-transform"
+                              alt="nc-imgs"></div>
+                        </div>
+                        <div
+                          class="hidden sm:block absolute right-0 left-0 bottom-0 top-0 m-auto w-fit h-fit transition-all duration-[400ms] z-20 opacity-0 group-hover:opacity-100 translate-y-44 group-hover:translate-y-0">
+                          <button
+                            class="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  text-white bg-gradient-to-br from-purple-600 to-purple-600 via-blue-500 bg-[length:300%] !bg-left hover:!bg-right !transition-[background-position] !duration-[300ms] ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 !h-12 max-w-[150px] !text-sm !p-2 !px-3 flex items-center gap-2 justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0"><svg
+                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                              stroke="currentColor" class="w-4 h-4">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
+                            </svg>Quick Buy</button></div>
+                      </div><button
+                        class="bg-black/50 px-3.5 h-10 flex items-center justify-center rounded-full text-white absolute top-3 right-3 z-20 !h-9"><svg
+                          class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                            stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        </svg><span class="ml-2 text-sm">0</span></button>
+                    </div>
+                    <div class="p-4 py-5 space-y-3">
+                      <h2 class="text-xs sm:text-base font-medium h-[30px] sm:h-[45px] line-clamp-2 break-words">#SCL454
+                      </h2>
+                      <div class="w-2d4 w-full border-b border-neutral-100 dark:border-neutral-700"></div>
+                      <div class="flex justify-between items-end ">
+                        <div class="pt-3">
+                          <div
+                            class="flex items-baseline border-2 border-suicolor rounded-lg relative py-2 px-2.5 text-sm sm:text-base font-semibold ">
+                            <span
+                              class="block absolute font-normal bottom-full translate-y-3 p-1 -mx-1 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 bg-white dark:bg-neutral-900 dark:group-hover:bg-neutral-800 group-hover:bg-neutral-50">Price</span>
+                            <div
+                              class="!leading-none flex gap-1 justify-center items-end mt-[6px] sm:mt-[4px]  text-suicolor">
+                              <div class="nc-NcImage " data-nc-id="NcImage"><img
+                                  src="/static/media/sui-logo.5ffb9a0fdbc85585c037d04c8f674090.svg" class="w-3 h-4"
+                                  alt="nc-imgs"></div>
+                              <p class="text-xs sm:text-sm 2xl:text-base sm:h-[19px]">280</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden sm:flex  items-center text-sm text-neutral-500 dark:text-neutral-400 hover:scale-105 transition-all duration-100 z-20">
+                          <p class="bg-white border-[7px] rounded-full w-12 h-12 p-1 z-10 border-neutral-700"><img
+                              alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                              class="w-6 h-6"></p>
+                          <p class="p-2 pt-2.5 text-white text-xs rounded-2xl -ml-[25px] z-0 pl-[25px] bg-neutral-700">
+                            Bulk Buy</p>
+                        </div>
+                        <p
+                          class="block sm:hidden hover:scale-110 hover:border-blue-500 bg-white border-[7px] rounded-full w-10 h-10 p-1 z-20 border-neutral-700">
+                          <img alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                            class="w-4 h-4"></p>
+                      </div>
+                    </div><a class="absolute inset-0 z-10" href="/collection/market-item/57002"></a>
+                  </div>
+                </div>
+                <div class=" ">
+                  <div
+                    class="nc-CardNFT cursor-pointer relative flex flex-col group !border-0 [ nc-box-has-hover nc-dark-box-bg-has-hover ] "
+                    data-nc-id="CardNFT">
+                    <div class="relative flex-shrink-0 z-20">
+                      <div class="relative">
+                        <div class=" ">
+                          <div
+                            class="nc-NcImage flex aspect-w-11 aspect-h-12 w-full h-0 rounded-3xl overflow-hidden z-10 border-2 border-transparent dark:border-neutral-900 nft-content "
+                            data-nc-id="NcImage"><img
+                              src="https://ipfs.bluemove.net/uploads/sui-crypto-lady/images/66.png"
+                              class="object-cover w-full h-full group-hover:scale-[1.03] transition-transform duration-300 ease-in-out will-change-transform"
+                              alt="nc-imgs"></div>
+                        </div>
+                        <div
+                          class="hidden sm:block absolute right-0 left-0 bottom-0 top-0 m-auto w-fit h-fit transition-all duration-[400ms] z-20 opacity-0 group-hover:opacity-100 translate-y-44 group-hover:translate-y-0">
+                          <button
+                            class="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  text-white bg-gradient-to-br from-purple-600 to-purple-600 via-blue-500 bg-[length:300%] !bg-left hover:!bg-right !transition-[background-position] !duration-[300ms] ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 !h-12 max-w-[150px] !text-sm !p-2 !px-3 flex items-center gap-2 justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0"><svg
+                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                              stroke="currentColor" class="w-4 h-4">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
+                            </svg>Quick Buy</button></div>
+                      </div><button
+                        class="bg-black/50 px-3.5 h-10 flex items-center justify-center rounded-full text-white absolute top-3 right-3 z-20 !h-9"><svg
+                          class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                            stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        </svg><span class="ml-2 text-sm">0</span></button>
+                    </div>
+                    <div class="p-4 py-5 space-y-3">
+                      <h2 class="text-xs sm:text-base font-medium h-[30px] sm:h-[45px] line-clamp-2 break-words">#SCL66
+                      </h2>
+                      <div class="w-2d4 w-full border-b border-neutral-100 dark:border-neutral-700"></div>
+                      <div class="flex justify-between items-end ">
+                        <div class="pt-3">
+                          <div
+                            class="flex items-baseline border-2 border-suicolor rounded-lg relative py-2 px-2.5 text-sm sm:text-base font-semibold ">
+                            <span
+                              class="block absolute font-normal bottom-full translate-y-3 p-1 -mx-1 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 bg-white dark:bg-neutral-900 dark:group-hover:bg-neutral-800 group-hover:bg-neutral-50">Price</span>
+                            <div
+                              class="!leading-none flex gap-1 justify-center items-end mt-[6px] sm:mt-[4px]  text-suicolor">
+                              <div class="nc-NcImage " data-nc-id="NcImage"><img
+                                  src="/static/media/sui-logo.5ffb9a0fdbc85585c037d04c8f674090.svg" class="w-3 h-4"
+                                  alt="nc-imgs"></div>
+                              <p class="text-xs sm:text-sm 2xl:text-base sm:h-[19px]">285</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden sm:flex  items-center text-sm text-neutral-500 dark:text-neutral-400 hover:scale-105 transition-all duration-100 z-20">
+                          <p class="bg-white border-[7px] rounded-full w-12 h-12 p-1 z-10 border-neutral-700"><img
+                              alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                              class="w-6 h-6"></p>
+                          <p class="p-2 pt-2.5 text-white text-xs rounded-2xl -ml-[25px] z-0 pl-[25px] bg-neutral-700">
+                            Bulk Buy</p>
+                        </div>
+                        <p
+                          class="block sm:hidden hover:scale-110 hover:border-blue-500 bg-white border-[7px] rounded-full w-10 h-10 p-1 z-20 border-neutral-700">
+                          <img alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                            class="w-4 h-4"></p>
+                      </div>
+                    </div><a class="absolute inset-0 z-10" href="/collection/market-item/57877"></a>
+                  </div>
+                </div>
+                <div class=" ">
+                  <div
+                    class="nc-CardNFT cursor-pointer relative flex flex-col group !border-0 [ nc-box-has-hover nc-dark-box-bg-has-hover ] "
+                    data-nc-id="CardNFT">
+                    <div class="relative flex-shrink-0 z-20">
+                      <div class="relative">
+                        <div class=" ">
+                          <div
+                            class="nc-NcImage flex aspect-w-11 aspect-h-12 w-full h-0 rounded-3xl overflow-hidden z-10 border-2 border-transparent dark:border-neutral-900 nft-content "
+                            data-nc-id="NcImage"><img
+                              src="https://ipfs.bluemove.net/uploads/sui-crypto-lady/images/527.png"
+                              class="object-cover w-full h-full group-hover:scale-[1.03] transition-transform duration-300 ease-in-out will-change-transform"
+                              alt="nc-imgs"></div>
+                        </div>
+                        <div
+                          class="hidden sm:block absolute right-0 left-0 bottom-0 top-0 m-auto w-fit h-fit transition-all duration-[400ms] z-20 opacity-0 group-hover:opacity-100 translate-y-44 group-hover:translate-y-0">
+                          <button
+                            class="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  text-white bg-gradient-to-br from-purple-600 to-purple-600 via-blue-500 bg-[length:300%] !bg-left hover:!bg-right !transition-[background-position] !duration-[300ms] ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 !h-12 max-w-[150px] !text-sm !p-2 !px-3 flex items-center gap-2 justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0"><svg
+                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                              stroke="currentColor" class="w-4 h-4">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
+                            </svg>Quick Buy</button></div>
+                      </div><button
+                        class="bg-black/50 px-3.5 h-10 flex items-center justify-center rounded-full text-white absolute top-3 right-3 z-20 !h-9"><svg
+                          class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                            stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        </svg><span class="ml-2 text-sm">0</span></button>
+                    </div>
+                    <div class="p-4 py-5 space-y-3">
+                      <h2 class="text-xs sm:text-base font-medium h-[30px] sm:h-[45px] line-clamp-2 break-words">#SCL527
+                      </h2>
+                      <div class="w-2d4 w-full border-b border-neutral-100 dark:border-neutral-700"></div>
+                      <div class="flex justify-between items-end ">
+                        <div class="pt-3">
+                          <div
+                            class="flex items-baseline border-2 border-suicolor rounded-lg relative py-2 px-2.5 text-sm sm:text-base font-semibold ">
+                            <span
+                              class="block absolute font-normal bottom-full translate-y-3 p-1 -mx-1 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 bg-white dark:bg-neutral-900 dark:group-hover:bg-neutral-800 group-hover:bg-neutral-50">Price</span>
+                            <div
+                              class="!leading-none flex gap-1 justify-center items-end mt-[6px] sm:mt-[4px]  text-suicolor">
+                              <div class="nc-NcImage " data-nc-id="NcImage"><img
+                                  src="/static/media/sui-logo.5ffb9a0fdbc85585c037d04c8f674090.svg" class="w-3 h-4"
+                                  alt="nc-imgs"></div>
+                              <p class="text-xs sm:text-sm 2xl:text-base sm:h-[19px]">290</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden sm:flex  items-center text-sm text-neutral-500 dark:text-neutral-400 hover:scale-105 transition-all duration-100 z-20">
+                          <p class="bg-white border-[7px] rounded-full w-12 h-12 p-1 z-10 border-neutral-700"><img
+                              alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                              class="w-6 h-6"></p>
+                          <p class="p-2 pt-2.5 text-white text-xs rounded-2xl -ml-[25px] z-0 pl-[25px] bg-neutral-700">
+                            Bulk Buy</p>
+                        </div>
+                        <p
+                          class="block sm:hidden hover:scale-110 hover:border-blue-500 bg-white border-[7px] rounded-full w-10 h-10 p-1 z-20 border-neutral-700">
+                          <img alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                            class="w-4 h-4"></p>
+                      </div>
+                    </div><a class="absolute inset-0 z-10" href="/collection/market-item/56152"></a>
+                  </div>
+                </div>
+                <div class=" ">
+                  <div
+                    class="nc-CardNFT cursor-pointer relative flex flex-col group !border-0 [ nc-box-has-hover nc-dark-box-bg-has-hover ] "
+                    data-nc-id="CardNFT">
+                    <div class="relative flex-shrink-0 z-20">
+                      <div class="relative">
+                        <div class=" ">
+                          <div
+                            class="nc-NcImage flex aspect-w-11 aspect-h-12 w-full h-0 rounded-3xl overflow-hidden z-10 border-2 border-transparent dark:border-neutral-900 nft-content "
+                            data-nc-id="NcImage"><img
+                              src="https://ipfs.bluemove.net/uploads/sui-crypto-lady/images/636.png"
+                              class="object-cover w-full h-full group-hover:scale-[1.03] transition-transform duration-300 ease-in-out will-change-transform"
+                              alt="nc-imgs"></div>
+                        </div>
+                        <div
+                          class="hidden sm:block absolute right-0 left-0 bottom-0 top-0 m-auto w-fit h-fit transition-all duration-[400ms] z-20 opacity-0 group-hover:opacity-100 translate-y-44 group-hover:translate-y-0">
+                          <button
+                            class="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  text-white bg-gradient-to-br from-purple-600 to-purple-600 via-blue-500 bg-[length:300%] !bg-left hover:!bg-right !transition-[background-position] !duration-[300ms] ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 !h-12 max-w-[150px] !text-sm !p-2 !px-3 flex items-center gap-2 justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0"><svg
+                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                              stroke="currentColor" class="w-4 h-4">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
+                            </svg>Quick Buy</button></div>
+                      </div><button
+                        class="bg-black/50 px-3.5 h-10 flex items-center justify-center rounded-full text-white absolute top-3 right-3 z-20 !h-9"><svg
+                          class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                            stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        </svg><span class="ml-2 text-sm">0</span></button>
+                    </div>
+                    <div class="p-4 py-5 space-y-3">
+                      <h2 class="text-xs sm:text-base font-medium h-[30px] sm:h-[45px] line-clamp-2 break-words">#SCL636
+                      </h2>
+                      <div class="w-2d4 w-full border-b border-neutral-100 dark:border-neutral-700"></div>
+                      <div class="flex justify-between items-end ">
+                        <div class="pt-3">
+                          <div
+                            class="flex items-baseline border-2 border-suicolor rounded-lg relative py-2 px-2.5 text-sm sm:text-base font-semibold ">
+                            <span
+                              class="block absolute font-normal bottom-full translate-y-3 p-1 -mx-1 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 bg-white dark:bg-neutral-900 dark:group-hover:bg-neutral-800 group-hover:bg-neutral-50">Price</span>
+                            <div
+                              class="!leading-none flex gap-1 justify-center items-end mt-[6px] sm:mt-[4px]  text-suicolor">
+                              <div class="nc-NcImage " data-nc-id="NcImage"><img
+                                  src="/static/media/sui-logo.5ffb9a0fdbc85585c037d04c8f674090.svg" class="w-3 h-4"
+                                  alt="nc-imgs"></div>
+                              <p class="text-xs sm:text-sm 2xl:text-base sm:h-[19px]">299</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden sm:flex  items-center text-sm text-neutral-500 dark:text-neutral-400 hover:scale-105 transition-all duration-100 z-20">
+                          <p class="bg-white border-[7px] rounded-full w-12 h-12 p-1 z-10 border-neutral-700"><img
+                              alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                              class="w-6 h-6"></p>
+                          <p class="p-2 pt-2.5 text-white text-xs rounded-2xl -ml-[25px] z-0 pl-[25px] bg-neutral-700">
+                            Bulk Buy</p>
+                        </div>
+                        <p
+                          class="block sm:hidden hover:scale-110 hover:border-blue-500 bg-white border-[7px] rounded-full w-10 h-10 p-1 z-20 border-neutral-700">
+                          <img alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                            class="w-4 h-4"></p>
+                      </div>
+                    </div><a class="absolute inset-0 z-10" href="/collection/market-item/56776"></a>
+                  </div>
+                </div>
+                <div class=" ">
+                  <div
+                    class="nc-CardNFT cursor-pointer relative flex flex-col group !border-0 [ nc-box-has-hover nc-dark-box-bg-has-hover ] "
+                    data-nc-id="CardNFT">
+                    <div class="relative flex-shrink-0 z-20">
+                      <div class="relative">
+                        <div class=" ">
+                          <div
+                            class="nc-NcImage flex aspect-w-11 aspect-h-12 w-full h-0 rounded-3xl overflow-hidden z-10 border-2 border-transparent dark:border-neutral-900 nft-content "
+                            data-nc-id="NcImage"><img
+                              src="https://ipfs.bluemove.net/uploads/sui-crypto-lady/images/134.png"
+                              class="object-cover w-full h-full group-hover:scale-[1.03] transition-transform duration-300 ease-in-out will-change-transform"
+                              alt="nc-imgs"></div>
+                        </div>
+                        <div
+                          class="hidden sm:block absolute right-0 left-0 bottom-0 top-0 m-auto w-fit h-fit transition-all duration-[400ms] z-20 opacity-0 group-hover:opacity-100 translate-y-44 group-hover:translate-y-0">
+                          <button
+                            class="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  text-white bg-gradient-to-br from-purple-600 to-purple-600 via-blue-500 bg-[length:300%] !bg-left hover:!bg-right !transition-[background-position] !duration-[300ms] ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 !h-12 max-w-[150px] !text-sm !p-2 !px-3 flex items-center gap-2 justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0"><svg
+                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                              stroke="currentColor" class="w-4 h-4">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
+                            </svg>Quick Buy</button></div>
+                      </div><button
+                        class="bg-black/50 px-3.5 h-10 flex items-center justify-center rounded-full text-white absolute top-3 right-3 z-20 !h-9"><svg
+                          class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                            stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        </svg><span class="ml-2 text-sm">0</span></button>
+                    </div>
+                    <div class="p-4 py-5 space-y-3">
+                      <h2 class="text-xs sm:text-base font-medium h-[30px] sm:h-[45px] line-clamp-2 break-words">#SCL134
+                      </h2>
+                      <div class="w-2d4 w-full border-b border-neutral-100 dark:border-neutral-700"></div>
+                      <div class="flex justify-between items-end ">
+                        <div class="pt-3">
+                          <div
+                            class="flex items-baseline border-2 border-suicolor rounded-lg relative py-2 px-2.5 text-sm sm:text-base font-semibold ">
+                            <span
+                              class="block absolute font-normal bottom-full translate-y-3 p-1 -mx-1 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 bg-white dark:bg-neutral-900 dark:group-hover:bg-neutral-800 group-hover:bg-neutral-50">Price</span>
+                            <div
+                              class="!leading-none flex gap-1 justify-center items-end mt-[6px] sm:mt-[4px]  text-suicolor">
+                              <div class="nc-NcImage " data-nc-id="NcImage"><img
+                                  src="/static/media/sui-logo.5ffb9a0fdbc85585c037d04c8f674090.svg" class="w-3 h-4"
+                                  alt="nc-imgs"></div>
+                              <p class="text-xs sm:text-sm 2xl:text-base sm:h-[19px]">299</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden sm:flex  items-center text-sm text-neutral-500 dark:text-neutral-400 hover:scale-105 transition-all duration-100 z-20">
+                          <p class="bg-white border-[7px] rounded-full w-12 h-12 p-1 z-10 border-neutral-700"><img
+                              alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                              class="w-6 h-6"></p>
+                          <p class="p-2 pt-2.5 text-white text-xs rounded-2xl -ml-[25px] z-0 pl-[25px] bg-neutral-700">
+                            Bulk Buy</p>
+                        </div>
+                        <p
+                          class="block sm:hidden hover:scale-110 hover:border-blue-500 bg-white border-[7px] rounded-full w-10 h-10 p-1 z-20 border-neutral-700">
+                          <img alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                            class="w-4 h-4"></p>
+                      </div>
+                    </div><a class="absolute inset-0 z-10" href="/collection/market-item/57195"></a>
+                  </div>
+                </div>
+                <div class=" ">
+                  <div
+                    class="nc-CardNFT cursor-pointer relative flex flex-col group !border-0 [ nc-box-has-hover nc-dark-box-bg-has-hover ] "
+                    data-nc-id="CardNFT">
+                    <div class="relative flex-shrink-0 z-20">
+                      <div class="relative">
+                        <div class=" ">
+                          <div
+                            class="nc-NcImage flex aspect-w-11 aspect-h-12 w-full h-0 rounded-3xl overflow-hidden z-10 border-2 border-transparent dark:border-neutral-900 nft-content "
+                            data-nc-id="NcImage"><img
+                              src="https://ipfs.bluemove.net/uploads/sui-crypto-lady/images/359.png"
+                              class="object-cover w-full h-full group-hover:scale-[1.03] transition-transform duration-300 ease-in-out will-change-transform"
+                              alt="nc-imgs"></div>
+                        </div>
+                        <div
+                          class="hidden sm:block absolute right-0 left-0 bottom-0 top-0 m-auto w-fit h-fit transition-all duration-[400ms] z-20 opacity-0 group-hover:opacity-100 translate-y-44 group-hover:translate-y-0">
+                          <button
+                            class="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  text-white bg-gradient-to-br from-purple-600 to-purple-600 via-blue-500 bg-[length:300%] !bg-left hover:!bg-right !transition-[background-position] !duration-[300ms] ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 !h-12 max-w-[150px] !text-sm !p-2 !px-3 flex items-center gap-2 justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0"><svg
+                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                              stroke="currentColor" class="w-4 h-4">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
+                            </svg>Quick Buy</button></div>
+                      </div><button
+                        class="bg-black/50 px-3.5 h-10 flex items-center justify-center rounded-full text-white absolute top-3 right-3 z-20 !h-9"><svg
+                          class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                            stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        </svg><span class="ml-2 text-sm">0</span></button>
+                    </div>
+                    <div class="p-4 py-5 space-y-3">
+                      <h2 class="text-xs sm:text-base font-medium h-[30px] sm:h-[45px] line-clamp-2 break-words">#SCL359
+                      </h2>
+                      <div class="w-2d4 w-full border-b border-neutral-100 dark:border-neutral-700"></div>
+                      <div class="flex justify-between items-end ">
+                        <div class="pt-3">
+                          <div
+                            class="flex items-baseline border-2 border-suicolor rounded-lg relative py-2 px-2.5 text-sm sm:text-base font-semibold ">
+                            <span
+                              class="block absolute font-normal bottom-full translate-y-3 p-1 -mx-1 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 bg-white dark:bg-neutral-900 dark:group-hover:bg-neutral-800 group-hover:bg-neutral-50">Price</span>
+                            <div
+                              class="!leading-none flex gap-1 justify-center items-end mt-[6px] sm:mt-[4px]  text-suicolor">
+                              <div class="nc-NcImage " data-nc-id="NcImage">
+                                <div
+                                  class="w-3 h-4 flex items-center justify-center bg-neutral-200 dark:bg-neutral-6000 text-neutral-100 dark:text-neutral-500">
+                                  <div class="h-2/4 max-w-[50%]"><img alt="no-image"
+                                      src="/static/media/no-image-dark.7558c65e2ab5b262fc4fb10290a87bea.svg"
+                                      class="h-full dark:block hidden"><img alt="no-image"
+                                      src="/static/media/no-image-light.2de86cbe2d5545f26f5b57e0be304899.svg"
+                                      class="h-full block dark:hidden"></div>
+                                </div>
+                              </div>
+                              <p class="text-xs sm:text-sm 2xl:text-base sm:h-[19px]">300</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden sm:flex  items-center text-sm text-neutral-500 dark:text-neutral-400 hover:scale-105 transition-all duration-100 z-20">
+                          <p class="bg-white border-[7px] rounded-full w-12 h-12 p-1 z-10 border-neutral-700"><img
+                              alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                              class="w-6 h-6"></p>
+                          <p class="p-2 pt-2.5 text-white text-xs rounded-2xl -ml-[25px] z-0 pl-[25px] bg-neutral-700">
+                            Bulk Buy</p>
+                        </div>
+                        <p
+                          class="block sm:hidden hover:scale-110 hover:border-blue-500 bg-white border-[7px] rounded-full w-10 h-10 p-1 z-20 border-neutral-700">
+                          <img alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                            class="w-4 h-4"></p>
+                      </div>
+                    </div><a class="absolute inset-0 z-10" href="/collection/market-item/56275"></a>
+                  </div>
+                </div>
+                <div class=" ">
+                  <div
+                    class="nc-CardNFT cursor-pointer relative flex flex-col group !border-0 [ nc-box-has-hover nc-dark-box-bg-has-hover ] "
+                    data-nc-id="CardNFT">
+                    <div class="relative flex-shrink-0 z-20">
+                      <div class="relative">
+                        <div class=" ">
+                          <div
+                            class="nc-NcImage flex aspect-w-11 aspect-h-12 w-full h-0 rounded-3xl overflow-hidden z-10 border-2 border-transparent dark:border-neutral-900 nft-content "
+                            data-nc-id="NcImage"><img
+                              src="https://ipfs.bluemove.net/uploads/sui-crypto-lady/images/434.png"
+                              class="object-cover w-full h-full group-hover:scale-[1.03] transition-transform duration-300 ease-in-out will-change-transform"
+                              alt="nc-imgs"></div>
+                        </div>
+                        <div
+                          class="hidden sm:block absolute right-0 left-0 bottom-0 top-0 m-auto w-fit h-fit transition-all duration-[400ms] z-20 opacity-0 group-hover:opacity-100 translate-y-44 group-hover:translate-y-0">
+                          <button
+                            class="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  text-white bg-gradient-to-br from-purple-600 to-purple-600 via-blue-500 bg-[length:300%] !bg-left hover:!bg-right !transition-[background-position] !duration-[300ms] ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 !h-12 max-w-[150px] !text-sm !p-2 !px-3 flex items-center gap-2 justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0"><svg
+                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                              stroke="currentColor" class="w-4 h-4">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
+                            </svg>Quick Buy</button></div>
+                      </div><button
+                        class="bg-black/50 px-3.5 h-10 flex items-center justify-center rounded-full text-white absolute top-3 right-3 z-20 !h-9"><svg
+                          class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                            stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        </svg><span class="ml-2 text-sm">0</span></button>
+                    </div>
+                    <div class="p-4 py-5 space-y-3">
+                      <h2 class="text-xs sm:text-base font-medium h-[30px] sm:h-[45px] line-clamp-2 break-words">#SCL434
+                      </h2>
+                      <div class="w-2d4 w-full border-b border-neutral-100 dark:border-neutral-700"></div>
+                      <div class="flex justify-between items-end ">
+                        <div class="pt-3">
+                          <div
+                            class="flex items-baseline border-2 border-suicolor rounded-lg relative py-2 px-2.5 text-sm sm:text-base font-semibold ">
+                            <span
+                              class="block absolute font-normal bottom-full translate-y-3 p-1 -mx-1 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 bg-white dark:bg-neutral-900 dark:group-hover:bg-neutral-800 group-hover:bg-neutral-50">Price</span>
+                            <div
+                              class="!leading-none flex gap-1 justify-center items-end mt-[6px] sm:mt-[4px]  text-suicolor">
+                              <div class="nc-NcImage " data-nc-id="NcImage">
+                                <div
+                                  class="w-3 h-4 flex items-center justify-center bg-neutral-200 dark:bg-neutral-6000 text-neutral-100 dark:text-neutral-500">
+                                  <div class="h-2/4 max-w-[50%]"><img alt="no-image"
+                                      src="/static/media/no-image-dark.7558c65e2ab5b262fc4fb10290a87bea.svg"
+                                      class="h-full dark:block hidden"><img alt="no-image"
+                                      src="/static/media/no-image-light.2de86cbe2d5545f26f5b57e0be304899.svg"
+                                      class="h-full block dark:hidden"></div>
+                                </div>
+                              </div>
+                              <p class="text-xs sm:text-sm 2xl:text-base sm:h-[19px]">350</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden sm:flex  items-center text-sm text-neutral-500 dark:text-neutral-400 hover:scale-105 transition-all duration-100 z-20">
+                          <p class="bg-white border-[7px] rounded-full w-12 h-12 p-1 z-10 border-neutral-700"><img
+                              alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                              class="w-6 h-6"></p>
+                          <p class="p-2 pt-2.5 text-white text-xs rounded-2xl -ml-[25px] z-0 pl-[25px] bg-neutral-700">
+                            Bulk Buy</p>
+                        </div>
+                        <p
+                          class="block sm:hidden hover:scale-110 hover:border-blue-500 bg-white border-[7px] rounded-full w-10 h-10 p-1 z-20 border-neutral-700">
+                          <img alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                            class="w-4 h-4"></p>
+                      </div>
+                    </div><a class="absolute inset-0 z-10" href="/collection/market-item/56173"></a>
+                  </div>
+                </div>
+                <div class=" ">
+                  <div
+                    class="nc-CardNFT cursor-pointer relative flex flex-col group !border-0 [ nc-box-has-hover nc-dark-box-bg-has-hover ] "
+                    data-nc-id="CardNFT">
+                    <div class="relative flex-shrink-0 z-20">
+                      <div class="relative">
+                        <div class=" ">
+                          <div
+                            class="nc-NcImage flex aspect-w-11 aspect-h-12 w-full h-0 rounded-3xl overflow-hidden z-10 border-2 border-transparent dark:border-neutral-900 nft-content "
+                            data-nc-id="NcImage"><img
+                              src="https://ipfs.bluemove.net/uploads/sui-crypto-lady/images/607.png"
+                              class="object-cover w-full h-full group-hover:scale-[1.03] transition-transform duration-300 ease-in-out will-change-transform"
+                              alt="nc-imgs"></div>
+                        </div>
+                        <div
+                          class="hidden sm:block absolute right-0 left-0 bottom-0 top-0 m-auto w-fit h-fit transition-all duration-[400ms] z-20 opacity-0 group-hover:opacity-100 translate-y-44 group-hover:translate-y-0">
+                          <button
+                            class="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  text-white bg-gradient-to-br from-purple-600 to-purple-600 via-blue-500 bg-[length:300%] !bg-left hover:!bg-right !transition-[background-position] !duration-[300ms] ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 !h-12 max-w-[150px] !text-sm !p-2 !px-3 flex items-center gap-2 justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0"><svg
+                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                              stroke="currentColor" class="w-4 h-4">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
+                            </svg>Quick Buy</button></div>
+                      </div><button
+                        class="bg-black/50 px-3.5 h-10 flex items-center justify-center rounded-full text-white absolute top-3 right-3 z-20 !h-9"><svg
+                          class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                            stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        </svg><span class="ml-2 text-sm">0</span></button>
+                    </div>
+                    <div class="p-4 py-5 space-y-3">
+                      <h2 class="text-xs sm:text-base font-medium h-[30px] sm:h-[45px] line-clamp-2 break-words">#SCL607
+                      </h2>
+                      <div class="w-2d4 w-full border-b border-neutral-100 dark:border-neutral-700"></div>
+                      <div class="flex justify-between items-end ">
+                        <div class="pt-3">
+                          <div
+                            class="flex items-baseline border-2 border-suicolor rounded-lg relative py-2 px-2.5 text-sm sm:text-base font-semibold ">
+                            <span
+                              class="block absolute font-normal bottom-full translate-y-3 p-1 -mx-1 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 bg-white dark:bg-neutral-900 dark:group-hover:bg-neutral-800 group-hover:bg-neutral-50">Price</span>
+                            <div
+                              class="!leading-none flex gap-1 justify-center items-end mt-[6px] sm:mt-[4px]  text-suicolor">
+                              <div class="nc-NcImage " data-nc-id="NcImage">
+                                <div
+                                  class="w-3 h-4 flex items-center justify-center bg-neutral-200 dark:bg-neutral-6000 text-neutral-100 dark:text-neutral-500">
+                                  <div class="h-2/4 max-w-[50%]"><img alt="no-image"
+                                      src="/static/media/no-image-dark.7558c65e2ab5b262fc4fb10290a87bea.svg"
+                                      class="h-full dark:block hidden"><img alt="no-image"
+                                      src="/static/media/no-image-light.2de86cbe2d5545f26f5b57e0be304899.svg"
+                                      class="h-full block dark:hidden"></div>
+                                </div>
+                              </div>
+                              <p class="text-xs sm:text-sm 2xl:text-base sm:h-[19px]">350</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden sm:flex  items-center text-sm text-neutral-500 dark:text-neutral-400 hover:scale-105 transition-all duration-100 z-20">
+                          <p class="bg-white border-[7px] rounded-full w-12 h-12 p-1 z-10 border-neutral-700"><img
+                              alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                              class="w-6 h-6"></p>
+                          <p class="p-2 pt-2.5 text-white text-xs rounded-2xl -ml-[25px] z-0 pl-[25px] bg-neutral-700">
+                            Bulk Buy</p>
+                        </div>
+                        <p
+                          class="block sm:hidden hover:scale-110 hover:border-blue-500 bg-white border-[7px] rounded-full w-10 h-10 p-1 z-20 border-neutral-700">
+                          <img alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                            class="w-4 h-4"></p>
+                      </div>
+                    </div><a class="absolute inset-0 z-10" href="/collection/market-item/56326"></a>
+                  </div>
+                </div>
+                <div class=" ">
+                  <div
+                    class="nc-CardNFT cursor-pointer relative flex flex-col group !border-0 [ nc-box-has-hover nc-dark-box-bg-has-hover ] "
+                    data-nc-id="CardNFT">
+                    <div class="relative flex-shrink-0 z-20">
+                      <div class="relative">
+                        <div class=" ">
+                          <div
+                            class="nc-NcImage flex aspect-w-11 aspect-h-12 w-full h-0 rounded-3xl overflow-hidden z-10 border-2 border-transparent dark:border-neutral-900 nft-content "
+                            data-nc-id="NcImage"><img
+                              src="https://ipfs.bluemove.net/uploads/sui-crypto-lady/images/248.png"
+                              class="object-cover w-full h-full group-hover:scale-[1.03] transition-transform duration-300 ease-in-out will-change-transform"
+                              alt="nc-imgs"></div>
+                        </div>
+                        <div
+                          class="hidden sm:block absolute right-0 left-0 bottom-0 top-0 m-auto w-fit h-fit transition-all duration-[400ms] z-20 opacity-0 group-hover:opacity-100 translate-y-44 group-hover:translate-y-0">
+                          <button
+                            class="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  text-white bg-gradient-to-br from-purple-600 to-purple-600 via-blue-500 bg-[length:300%] !bg-left hover:!bg-right !transition-[background-position] !duration-[300ms] ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 !h-12 max-w-[150px] !text-sm !p-2 !px-3 flex items-center gap-2 justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0"><svg
+                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                              stroke="currentColor" class="w-4 h-4">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
+                            </svg>Quick Buy</button></div>
+                      </div><button
+                        class="bg-black/50 px-3.5 h-10 flex items-center justify-center rounded-full text-white absolute top-3 right-3 z-20 !h-9"><svg
+                          class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                            stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        </svg><span class="ml-2 text-sm">0</span></button>
+                    </div>
+                    <div class="p-4 py-5 space-y-3">
+                      <h2 class="text-xs sm:text-base font-medium h-[30px] sm:h-[45px] line-clamp-2 break-words">#SCL248
+                      </h2>
+                      <div class="w-2d4 w-full border-b border-neutral-100 dark:border-neutral-700"></div>
+                      <div class="flex justify-between items-end ">
+                        <div class="pt-3">
+                          <div
+                            class="flex items-baseline border-2 border-suicolor rounded-lg relative py-2 px-2.5 text-sm sm:text-base font-semibold ">
+                            <span
+                              class="block absolute font-normal bottom-full translate-y-3 p-1 -mx-1 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 bg-white dark:bg-neutral-900 dark:group-hover:bg-neutral-800 group-hover:bg-neutral-50">Price</span>
+                            <div
+                              class="!leading-none flex gap-1 justify-center items-end mt-[6px] sm:mt-[4px]  text-suicolor">
+                              <div class="nc-NcImage " data-nc-id="NcImage">
+                                <div
+                                  class="w-3 h-4 flex items-center justify-center bg-neutral-200 dark:bg-neutral-6000 text-neutral-100 dark:text-neutral-500">
+                                  <div class="h-2/4 max-w-[50%]"><img alt="no-image"
+                                      src="/static/media/no-image-dark.7558c65e2ab5b262fc4fb10290a87bea.svg"
+                                      class="h-full dark:block hidden"><img alt="no-image"
+                                      src="/static/media/no-image-light.2de86cbe2d5545f26f5b57e0be304899.svg"
+                                      class="h-full block dark:hidden"></div>
+                                </div>
+                              </div>
+                              <p class="text-xs sm:text-sm 2xl:text-base sm:h-[19px]">350</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden sm:flex  items-center text-sm text-neutral-500 dark:text-neutral-400 hover:scale-105 transition-all duration-100 z-20">
+                          <p class="bg-white border-[7px] rounded-full w-12 h-12 p-1 z-10 border-neutral-700"><img
+                              alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                              class="w-6 h-6"></p>
+                          <p class="p-2 pt-2.5 text-white text-xs rounded-2xl -ml-[25px] z-0 pl-[25px] bg-neutral-700">
+                            Bulk Buy</p>
+                        </div>
+                        <p
+                          class="block sm:hidden hover:scale-110 hover:border-blue-500 bg-white border-[7px] rounded-full w-10 h-10 p-1 z-20 border-neutral-700">
+                          <img alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                            class="w-4 h-4"></p>
+                      </div>
+                    </div><a class="absolute inset-0 z-10" href="/collection/market-item/56355"></a>
+                  </div>
+                </div>
+                <div class=" ">
+                  <div
+                    class="nc-CardNFT cursor-pointer relative flex flex-col group !border-0 [ nc-box-has-hover nc-dark-box-bg-has-hover ] "
+                    data-nc-id="CardNFT">
+                    <div class="relative flex-shrink-0 z-20">
+                      <div class="relative">
+                        <div class=" ">
+                          <div
+                            class="nc-NcImage flex aspect-w-11 aspect-h-12 w-full h-0 rounded-3xl overflow-hidden z-10 border-2 border-transparent dark:border-neutral-900 nft-content "
+                            data-nc-id="NcImage"><img
+                              src="https://ipfs.bluemove.net/uploads/sui-crypto-lady/images/424.png"
+                              class="object-cover w-full h-full group-hover:scale-[1.03] transition-transform duration-300 ease-in-out will-change-transform"
+                              alt="nc-imgs"></div>
+                        </div>
+                        <div
+                          class="hidden sm:block absolute right-0 left-0 bottom-0 top-0 m-auto w-fit h-fit transition-all duration-[400ms] z-20 opacity-0 group-hover:opacity-100 translate-y-44 group-hover:translate-y-0">
+                          <button
+                            class="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  text-white bg-gradient-to-br from-purple-600 to-purple-600 via-blue-500 bg-[length:300%] !bg-left hover:!bg-right !transition-[background-position] !duration-[300ms] ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 !h-12 max-w-[150px] !text-sm !p-2 !px-3 flex items-center gap-2 justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0"><svg
+                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                              stroke="currentColor" class="w-4 h-4">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
+                            </svg>Quick Buy</button></div>
+                      </div><button
+                        class="bg-black/50 px-3.5 h-10 flex items-center justify-center rounded-full text-white absolute top-3 right-3 z-20 !h-9"><svg
+                          class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                            stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        </svg><span class="ml-2 text-sm">0</span></button>
+                    </div>
+                    <div class="p-4 py-5 space-y-3">
+                      <h2 class="text-xs sm:text-base font-medium h-[30px] sm:h-[45px] line-clamp-2 break-words">#SCL424
+                      </h2>
+                      <div class="w-2d4 w-full border-b border-neutral-100 dark:border-neutral-700"></div>
+                      <div class="flex justify-between items-end ">
+                        <div class="pt-3">
+                          <div
+                            class="flex items-baseline border-2 border-suicolor rounded-lg relative py-2 px-2.5 text-sm sm:text-base font-semibold ">
+                            <span
+                              class="block absolute font-normal bottom-full translate-y-3 p-1 -mx-1 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 bg-white dark:bg-neutral-900 dark:group-hover:bg-neutral-800 group-hover:bg-neutral-50">Price</span>
+                            <div
+                              class="!leading-none flex gap-1 justify-center items-end mt-[6px] sm:mt-[4px]  text-suicolor">
+                              <div class="nc-NcImage " data-nc-id="NcImage">
+                                <div
+                                  class="w-3 h-4 flex items-center justify-center bg-neutral-200 dark:bg-neutral-6000 text-neutral-100 dark:text-neutral-500">
+                                  <div class="h-2/4 max-w-[50%]"><img alt="no-image"
+                                      src="/static/media/no-image-dark.7558c65e2ab5b262fc4fb10290a87bea.svg"
+                                      class="h-full dark:block hidden"><img alt="no-image"
+                                      src="/static/media/no-image-light.2de86cbe2d5545f26f5b57e0be304899.svg"
+                                      class="h-full block dark:hidden"></div>
+                                </div>
+                              </div>
+                              <p class="text-xs sm:text-sm 2xl:text-base sm:h-[19px]">375</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden sm:flex  items-center text-sm text-neutral-500 dark:text-neutral-400 hover:scale-105 transition-all duration-100 z-20">
+                          <p class="bg-white border-[7px] rounded-full w-12 h-12 p-1 z-10 border-neutral-700"><img
+                              alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                              class="w-6 h-6"></p>
+                          <p class="p-2 pt-2.5 text-white text-xs rounded-2xl -ml-[25px] z-0 pl-[25px] bg-neutral-700">
+                            Bulk Buy</p>
+                        </div>
+                        <p
+                          class="block sm:hidden hover:scale-110 hover:border-blue-500 bg-white border-[7px] rounded-full w-10 h-10 p-1 z-20 border-neutral-700">
+                          <img alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                            class="w-4 h-4"></p>
+                      </div>
+                    </div><a class="absolute inset-0 z-10" href="/collection/market-item/56278"></a>
+                  </div>
+                </div>
+                <div class=" ">
+                  <div
+                    class="nc-CardNFT cursor-pointer relative flex flex-col group !border-0 [ nc-box-has-hover nc-dark-box-bg-has-hover ] "
+                    data-nc-id="CardNFT">
+                    <div class="relative flex-shrink-0 z-20">
+                      <div class="relative">
+                        <div class=" ">
+                          <div
+                            class="nc-NcImage flex aspect-w-11 aspect-h-12 w-full h-0 rounded-3xl overflow-hidden z-10 border-2 border-transparent dark:border-neutral-900 nft-content "
+                            data-nc-id="NcImage">
+                            <div
+                              class="object-cover w-full h-full group-hover:scale-[1.03] transition-transform duration-300 ease-in-out will-change-transform flex items-center justify-center bg-neutral-200 dark:bg-neutral-6000 text-neutral-100 dark:text-neutral-500">
+                              <div class="h-2/4 max-w-[50%]"><img alt="no-image"
+                                  src="/static/media/no-image-dark.7558c65e2ab5b262fc4fb10290a87bea.svg"
+                                  class="h-full dark:block hidden"><img alt="no-image"
+                                  src="/static/media/no-image-light.2de86cbe2d5545f26f5b57e0be304899.svg"
+                                  class="h-full block dark:hidden"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden sm:block absolute right-0 left-0 bottom-0 top-0 m-auto w-fit h-fit transition-all duration-[400ms] z-20 opacity-0 group-hover:opacity-100 translate-y-44 group-hover:translate-y-0">
+                          <button
+                            class="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  text-white bg-gradient-to-br from-purple-600 to-purple-600 via-blue-500 bg-[length:300%] !bg-left hover:!bg-right !transition-[background-position] !duration-[300ms] ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 !h-12 max-w-[150px] !text-sm !p-2 !px-3 flex items-center gap-2 justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0"><svg
+                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                              stroke="currentColor" class="w-4 h-4">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
+                            </svg>Quick Buy</button></div>
+                      </div><button
+                        class="bg-black/50 px-3.5 h-10 flex items-center justify-center rounded-full text-white absolute top-3 right-3 z-20 !h-9"><svg
+                          class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                            stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        </svg><span class="ml-2 text-sm">0</span></button>
+                    </div>
+                    <div class="p-4 py-5 space-y-3">
+                      <h2 class="text-xs sm:text-base font-medium h-[30px] sm:h-[45px] line-clamp-2 break-words">#SCL483
+                      </h2>
+                      <div class="w-2d4 w-full border-b border-neutral-100 dark:border-neutral-700"></div>
+                      <div class="flex justify-between items-end ">
+                        <div class="pt-3">
+                          <div
+                            class="flex items-baseline border-2 border-suicolor rounded-lg relative py-2 px-2.5 text-sm sm:text-base font-semibold ">
+                            <span
+                              class="block absolute font-normal bottom-full translate-y-3 p-1 -mx-1 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 bg-white dark:bg-neutral-900 dark:group-hover:bg-neutral-800 group-hover:bg-neutral-50">Price</span>
+                            <div
+                              class="!leading-none flex gap-1 justify-center items-end mt-[6px] sm:mt-[4px]  text-suicolor">
+                              <div class="nc-NcImage " data-nc-id="NcImage">
+                                <div
+                                  class="w-3 h-4 flex items-center justify-center bg-neutral-200 dark:bg-neutral-6000 text-neutral-100 dark:text-neutral-500">
+                                  <div class="h-2/4 max-w-[50%]"><img alt="no-image"
+                                      src="/static/media/no-image-dark.7558c65e2ab5b262fc4fb10290a87bea.svg"
+                                      class="h-full dark:block hidden"><img alt="no-image"
+                                      src="/static/media/no-image-light.2de86cbe2d5545f26f5b57e0be304899.svg"
+                                      class="h-full block dark:hidden"></div>
+                                </div>
+                              </div>
+                              <p class="text-xs sm:text-sm 2xl:text-base sm:h-[19px]">400</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden sm:flex  items-center text-sm text-neutral-500 dark:text-neutral-400 hover:scale-105 transition-all duration-100 z-20">
+                          <p class="bg-white border-[7px] rounded-full w-12 h-12 p-1 z-10 border-neutral-700"><img
+                              alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                              class="w-6 h-6"></p>
+                          <p class="p-2 pt-2.5 text-white text-xs rounded-2xl -ml-[25px] z-0 pl-[25px] bg-neutral-700">
+                            Bulk Buy</p>
+                        </div>
+                        <p
+                          class="block sm:hidden hover:scale-110 hover:border-blue-500 bg-white border-[7px] rounded-full w-10 h-10 p-1 z-20 border-neutral-700">
+                          <img alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                            class="w-4 h-4"></p>
+                      </div>
+                    </div><a class="absolute inset-0 z-10" href="/collection/market-item/56246"></a>
+                  </div>
+                </div>
+                <div class=" ">
+                  <div
+                    class="nc-CardNFT cursor-pointer relative flex flex-col group !border-0 [ nc-box-has-hover nc-dark-box-bg-has-hover ] "
+                    data-nc-id="CardNFT">
+                    <div class="relative flex-shrink-0 z-20">
+                      <div class="relative">
+                        <div class=" ">
+                          <div
+                            class="nc-NcImage flex aspect-w-11 aspect-h-12 w-full h-0 rounded-3xl overflow-hidden z-10 border-2 border-transparent dark:border-neutral-900 nft-content "
+                            data-nc-id="NcImage">
+                            <div
+                              class="object-cover w-full h-full group-hover:scale-[1.03] transition-transform duration-300 ease-in-out will-change-transform flex items-center justify-center bg-neutral-200 dark:bg-neutral-6000 text-neutral-100 dark:text-neutral-500">
+                              <div class="h-2/4 max-w-[50%]"><img alt="no-image"
+                                  src="/static/media/no-image-dark.7558c65e2ab5b262fc4fb10290a87bea.svg"
+                                  class="h-full dark:block hidden"><img alt="no-image"
+                                  src="/static/media/no-image-light.2de86cbe2d5545f26f5b57e0be304899.svg"
+                                  class="h-full block dark:hidden"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden sm:block absolute right-0 left-0 bottom-0 top-0 m-auto w-fit h-fit transition-all duration-[400ms] z-20 opacity-0 group-hover:opacity-100 translate-y-44 group-hover:translate-y-0">
+                          <button
+                            class="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  text-white bg-gradient-to-br from-purple-600 to-purple-600 via-blue-500 bg-[length:300%] !bg-left hover:!bg-right !transition-[background-position] !duration-[300ms] ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 !h-12 max-w-[150px] !text-sm !p-2 !px-3 flex items-center gap-2 justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0"><svg
+                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                              stroke="currentColor" class="w-4 h-4">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
+                            </svg>Quick Buy</button></div>
+                      </div><button
+                        class="bg-black/50 px-3.5 h-10 flex items-center justify-center rounded-full text-white absolute top-3 right-3 z-20 !h-9"><svg
+                          class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                            stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        </svg><span class="ml-2 text-sm">0</span></button>
+                    </div>
+                    <div class="p-4 py-5 space-y-3">
+                      <h2 class="text-xs sm:text-base font-medium h-[30px] sm:h-[45px] line-clamp-2 break-words">#SCL388
+                      </h2>
+                      <div class="w-2d4 w-full border-b border-neutral-100 dark:border-neutral-700"></div>
+                      <div class="flex justify-between items-end ">
+                        <div class="pt-3">
+                          <div
+                            class="flex items-baseline border-2 border-suicolor rounded-lg relative py-2 px-2.5 text-sm sm:text-base font-semibold ">
+                            <span
+                              class="block absolute font-normal bottom-full translate-y-3 p-1 -mx-1 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 bg-white dark:bg-neutral-900 dark:group-hover:bg-neutral-800 group-hover:bg-neutral-50">Price</span>
+                            <div
+                              class="!leading-none flex gap-1 justify-center items-end mt-[6px] sm:mt-[4px]  text-suicolor">
+                              <div class="nc-NcImage " data-nc-id="NcImage">
+                                <div
+                                  class="w-3 h-4 flex items-center justify-center bg-neutral-200 dark:bg-neutral-6000 text-neutral-100 dark:text-neutral-500">
+                                  <div class="h-2/4 max-w-[50%]"><img alt="no-image"
+                                      src="/static/media/no-image-dark.7558c65e2ab5b262fc4fb10290a87bea.svg"
+                                      class="h-full dark:block hidden"><img alt="no-image"
+                                      src="/static/media/no-image-light.2de86cbe2d5545f26f5b57e0be304899.svg"
+                                      class="h-full block dark:hidden"></div>
+                                </div>
+                              </div>
+                              <p class="text-xs sm:text-sm 2xl:text-base sm:h-[19px]">409</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden sm:flex  items-center text-sm text-neutral-500 dark:text-neutral-400 hover:scale-105 transition-all duration-100 z-20">
+                          <p class="bg-white border-[7px] rounded-full w-12 h-12 p-1 z-10 border-neutral-700"><img
+                              alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                              class="w-6 h-6"></p>
+                          <p class="p-2 pt-2.5 text-white text-xs rounded-2xl -ml-[25px] z-0 pl-[25px] bg-neutral-700">
+                            Bulk Buy</p>
+                        </div>
+                        <p
+                          class="block sm:hidden hover:scale-110 hover:border-blue-500 bg-white border-[7px] rounded-full w-10 h-10 p-1 z-20 border-neutral-700">
+                          <img alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                            class="w-4 h-4"></p>
+                      </div>
+                    </div><a class="absolute inset-0 z-10" href="/collection/market-item/56218"></a>
+                  </div>
+                </div>
+                <div class=" ">
+                  <div
+                    class="nc-CardNFT cursor-pointer relative flex flex-col group !border-0 [ nc-box-has-hover nc-dark-box-bg-has-hover ] "
+                    data-nc-id="CardNFT">
+                    <div class="relative flex-shrink-0 z-20">
+                      <div class="relative">
+                        <div class=" ">
+                          <div
+                            class="nc-NcImage flex aspect-w-11 aspect-h-12 w-full h-0 rounded-3xl overflow-hidden z-10 border-2 border-transparent dark:border-neutral-900 nft-content "
+                            data-nc-id="NcImage">
+                            <div
+                              class="object-cover w-full h-full group-hover:scale-[1.03] transition-transform duration-300 ease-in-out will-change-transform flex items-center justify-center bg-neutral-200 dark:bg-neutral-6000 text-neutral-100 dark:text-neutral-500">
+                              <div class="h-2/4 max-w-[50%]"><img alt="no-image"
+                                  src="/static/media/no-image-dark.7558c65e2ab5b262fc4fb10290a87bea.svg"
+                                  class="h-full dark:block hidden"><img alt="no-image"
+                                  src="/static/media/no-image-light.2de86cbe2d5545f26f5b57e0be304899.svg"
+                                  class="h-full block dark:hidden"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden sm:block absolute right-0 left-0 bottom-0 top-0 m-auto w-fit h-fit transition-all duration-[400ms] z-20 opacity-0 group-hover:opacity-100 translate-y-44 group-hover:translate-y-0">
+                          <button
+                            class="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  text-white bg-gradient-to-br from-purple-600 to-purple-600 via-blue-500 bg-[length:300%] !bg-left hover:!bg-right !transition-[background-position] !duration-[300ms] ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 !h-12 max-w-[150px] !text-sm !p-2 !px-3 flex items-center gap-2 justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0"><svg
+                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                              stroke="currentColor" class="w-4 h-4">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
+                            </svg>Quick Buy</button></div>
+                      </div><button
+                        class="bg-black/50 px-3.5 h-10 flex items-center justify-center rounded-full text-white absolute top-3 right-3 z-20 !h-9"><svg
+                          class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                            stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        </svg><span class="ml-2 text-sm">0</span></button>
+                    </div>
+                    <div class="p-4 py-5 space-y-3">
+                      <h2 class="text-xs sm:text-base font-medium h-[30px] sm:h-[45px] line-clamp-2 break-words">#SCL252
+                      </h2>
+                      <div class="w-2d4 w-full border-b border-neutral-100 dark:border-neutral-700"></div>
+                      <div class="flex justify-between items-end ">
+                        <div class="pt-3">
+                          <div
+                            class="flex items-baseline border-2 border-suicolor rounded-lg relative py-2 px-2.5 text-sm sm:text-base font-semibold ">
+                            <span
+                              class="block absolute font-normal bottom-full translate-y-3 p-1 -mx-1 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 bg-white dark:bg-neutral-900 dark:group-hover:bg-neutral-800 group-hover:bg-neutral-50">Price</span>
+                            <div
+                              class="!leading-none flex gap-1 justify-center items-end mt-[6px] sm:mt-[4px]  text-suicolor">
+                              <div class="nc-NcImage " data-nc-id="NcImage">
+                                <div
+                                  class="w-3 h-4 flex items-center justify-center bg-neutral-200 dark:bg-neutral-6000 text-neutral-100 dark:text-neutral-500">
+                                  <div class="h-2/4 max-w-[50%]"><img alt="no-image"
+                                      src="/static/media/no-image-dark.7558c65e2ab5b262fc4fb10290a87bea.svg"
+                                      class="h-full dark:block hidden"><img alt="no-image"
+                                      src="/static/media/no-image-light.2de86cbe2d5545f26f5b57e0be304899.svg"
+                                      class="h-full block dark:hidden"></div>
+                                </div>
+                              </div>
+                              <p class="text-xs sm:text-sm 2xl:text-base sm:h-[19px]">500</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden sm:flex  items-center text-sm text-neutral-500 dark:text-neutral-400 hover:scale-105 transition-all duration-100 z-20">
+                          <p class="bg-white border-[7px] rounded-full w-12 h-12 p-1 z-10 border-neutral-700"><img
+                              alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                              class="w-6 h-6"></p>
+                          <p class="p-2 pt-2.5 text-white text-xs rounded-2xl -ml-[25px] z-0 pl-[25px] bg-neutral-700">
+                            Bulk Buy</p>
+                        </div>
+                        <p
+                          class="block sm:hidden hover:scale-110 hover:border-blue-500 bg-white border-[7px] rounded-full w-10 h-10 p-1 z-20 border-neutral-700">
+                          <img alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                            class="w-4 h-4"></p>
+                      </div>
+                    </div><a class="absolute inset-0 z-10" href="/collection/market-item/56149"></a>
+                  </div>
+                </div>
+                <div class=" ">
+                  <div
+                    class="nc-CardNFT cursor-pointer relative flex flex-col group !border-0 [ nc-box-has-hover nc-dark-box-bg-has-hover ] "
+                    data-nc-id="CardNFT">
+                    <div class="relative flex-shrink-0 z-20">
+                      <div class="relative">
+                        <div class=" ">
+                          <div
+                            class="nc-NcImage flex aspect-w-11 aspect-h-12 w-full h-0 rounded-3xl overflow-hidden z-10 border-2 border-transparent dark:border-neutral-900 nft-content "
+                            data-nc-id="NcImage">
+                            <div
+                              class="object-cover w-full h-full group-hover:scale-[1.03] transition-transform duration-300 ease-in-out will-change-transform flex items-center justify-center bg-neutral-200 dark:bg-neutral-6000 text-neutral-100 dark:text-neutral-500">
+                              <div class="h-2/4 max-w-[50%]"><img alt="no-image"
+                                  src="/static/media/no-image-dark.7558c65e2ab5b262fc4fb10290a87bea.svg"
+                                  class="h-full dark:block hidden"><img alt="no-image"
+                                  src="/static/media/no-image-light.2de86cbe2d5545f26f5b57e0be304899.svg"
+                                  class="h-full block dark:hidden"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden sm:block absolute right-0 left-0 bottom-0 top-0 m-auto w-fit h-fit transition-all duration-[400ms] z-20 opacity-0 group-hover:opacity-100 translate-y-44 group-hover:translate-y-0">
+                          <button
+                            class="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  text-white bg-gradient-to-br from-purple-600 to-purple-600 via-blue-500 bg-[length:300%] !bg-left hover:!bg-right !transition-[background-position] !duration-[300ms] ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 !h-12 max-w-[150px] !text-sm !p-2 !px-3 flex items-center gap-2 justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0"><svg
+                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                              stroke="currentColor" class="w-4 h-4">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
+                            </svg>Quick Buy</button></div>
+                      </div><button
+                        class="bg-black/50 px-3.5 h-10 flex items-center justify-center rounded-full text-white absolute top-3 right-3 z-20 !h-9"><svg
+                          class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                            stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        </svg><span class="ml-2 text-sm">0</span></button>
+                    </div>
+                    <div class="p-4 py-5 space-y-3">
+                      <h2 class="text-xs sm:text-base font-medium h-[30px] sm:h-[45px] line-clamp-2 break-words">#SCL289
+                      </h2>
+                      <div class="w-2d4 w-full border-b border-neutral-100 dark:border-neutral-700"></div>
+                      <div class="flex justify-between items-end ">
+                        <div class="pt-3">
+                          <div
+                            class="flex items-baseline border-2 border-suicolor rounded-lg relative py-2 px-2.5 text-sm sm:text-base font-semibold ">
+                            <span
+                              class="block absolute font-normal bottom-full translate-y-3 p-1 -mx-1 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 bg-white dark:bg-neutral-900 dark:group-hover:bg-neutral-800 group-hover:bg-neutral-50">Price</span>
+                            <div
+                              class="!leading-none flex gap-1 justify-center items-end mt-[6px] sm:mt-[4px]  text-suicolor">
+                              <div class="nc-NcImage " data-nc-id="NcImage">
+                                <div
+                                  class="w-3 h-4 flex items-center justify-center bg-neutral-200 dark:bg-neutral-6000 text-neutral-100 dark:text-neutral-500">
+                                  <div class="h-2/4 max-w-[50%]"><img alt="no-image"
+                                      src="/static/media/no-image-dark.7558c65e2ab5b262fc4fb10290a87bea.svg"
+                                      class="h-full dark:block hidden"><img alt="no-image"
+                                      src="/static/media/no-image-light.2de86cbe2d5545f26f5b57e0be304899.svg"
+                                      class="h-full block dark:hidden"></div>
+                                </div>
+                              </div>
+                              <p class="text-xs sm:text-sm 2xl:text-base sm:h-[19px]">500</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden sm:flex  items-center text-sm text-neutral-500 dark:text-neutral-400 hover:scale-105 transition-all duration-100 z-20">
+                          <p class="bg-white border-[7px] rounded-full w-12 h-12 p-1 z-10 border-neutral-700"><img
+                              alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                              class="w-6 h-6"></p>
+                          <p class="p-2 pt-2.5 text-white text-xs rounded-2xl -ml-[25px] z-0 pl-[25px] bg-neutral-700">
+                            Bulk Buy</p>
+                        </div>
+                        <p
+                          class="block sm:hidden hover:scale-110 hover:border-blue-500 bg-white border-[7px] rounded-full w-10 h-10 p-1 z-20 border-neutral-700">
+                          <img alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                            class="w-4 h-4"></p>
+                      </div>
+                    </div><a class="absolute inset-0 z-10" href="/collection/market-item/56247"></a>
+                  </div>
+                </div>
+                <div class=" ">
+                  <div
+                    class="nc-CardNFT cursor-pointer relative flex flex-col group !border-0 [ nc-box-has-hover nc-dark-box-bg-has-hover ] "
+                    data-nc-id="CardNFT">
+                    <div class="relative flex-shrink-0 z-20">
+                      <div class="relative">
+                        <div class=" ">
+                          <div
+                            class="nc-NcImage flex aspect-w-11 aspect-h-12 w-full h-0 rounded-3xl overflow-hidden z-10 border-2 border-transparent dark:border-neutral-900 nft-content "
+                            data-nc-id="NcImage">
+                            <div
+                              class="object-cover w-full h-full group-hover:scale-[1.03] transition-transform duration-300 ease-in-out will-change-transform flex items-center justify-center bg-neutral-200 dark:bg-neutral-6000 text-neutral-100 dark:text-neutral-500">
+                              <div class="h-2/4 max-w-[50%]"><img alt="no-image"
+                                  src="/static/media/no-image-dark.7558c65e2ab5b262fc4fb10290a87bea.svg"
+                                  class="h-full dark:block hidden"><img alt="no-image"
+                                  src="/static/media/no-image-light.2de86cbe2d5545f26f5b57e0be304899.svg"
+                                  class="h-full block dark:hidden"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden sm:block absolute right-0 left-0 bottom-0 top-0 m-auto w-fit h-fit transition-all duration-[400ms] z-20 opacity-0 group-hover:opacity-100 translate-y-44 group-hover:translate-y-0">
+                          <button
+                            class="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  text-white bg-gradient-to-br from-purple-600 to-purple-600 via-blue-500 bg-[length:300%] !bg-left hover:!bg-right !transition-[background-position] !duration-[300ms] ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 !h-12 max-w-[150px] !text-sm !p-2 !px-3 flex items-center gap-2 justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0"><svg
+                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                              stroke="currentColor" class="w-4 h-4">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
+                            </svg>Quick Buy</button></div>
+                      </div><button
+                        class="bg-black/50 px-3.5 h-10 flex items-center justify-center rounded-full text-white absolute top-3 right-3 z-20 !h-9"><svg
+                          class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                            stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        </svg><span class="ml-2 text-sm">0</span></button>
+                    </div>
+                    <div class="p-4 py-5 space-y-3">
+                      <h2 class="text-xs sm:text-base font-medium h-[30px] sm:h-[45px] line-clamp-2 break-words">#SCL213
+                      </h2>
+                      <div class="w-2d4 w-full border-b border-neutral-100 dark:border-neutral-700"></div>
+                      <div class="flex justify-between items-end ">
+                        <div class="pt-3">
+                          <div
+                            class="flex items-baseline border-2 border-suicolor rounded-lg relative py-2 px-2.5 text-sm sm:text-base font-semibold ">
+                            <span
+                              class="block absolute font-normal bottom-full translate-y-3 p-1 -mx-1 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 bg-white dark:bg-neutral-900 dark:group-hover:bg-neutral-800 group-hover:bg-neutral-50">Price</span>
+                            <div
+                              class="!leading-none flex gap-1 justify-center items-end mt-[6px] sm:mt-[4px]  text-suicolor">
+                              <div class="nc-NcImage " data-nc-id="NcImage">
+                                <div
+                                  class="w-3 h-4 flex items-center justify-center bg-neutral-200 dark:bg-neutral-6000 text-neutral-100 dark:text-neutral-500">
+                                  <div class="h-2/4 max-w-[50%]"><img alt="no-image"
+                                      src="/static/media/no-image-dark.7558c65e2ab5b262fc4fb10290a87bea.svg"
+                                      class="h-full dark:block hidden"><img alt="no-image"
+                                      src="/static/media/no-image-light.2de86cbe2d5545f26f5b57e0be304899.svg"
+                                      class="h-full block dark:hidden"></div>
+                                </div>
+                              </div>
+                              <p class="text-xs sm:text-sm 2xl:text-base sm:h-[19px]">500</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden sm:flex  items-center text-sm text-neutral-500 dark:text-neutral-400 hover:scale-105 transition-all duration-100 z-20">
+                          <p class="bg-white border-[7px] rounded-full w-12 h-12 p-1 z-10 border-neutral-700"><img
+                              alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                              class="w-6 h-6"></p>
+                          <p class="p-2 pt-2.5 text-white text-xs rounded-2xl -ml-[25px] z-0 pl-[25px] bg-neutral-700">
+                            Bulk Buy</p>
+                        </div>
+                        <p
+                          class="block sm:hidden hover:scale-110 hover:border-blue-500 bg-white border-[7px] rounded-full w-10 h-10 p-1 z-20 border-neutral-700">
+                          <img alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                            class="w-4 h-4"></p>
+                      </div>
+                    </div><a class="absolute inset-0 z-10" href="/collection/market-item/56251"></a>
+                  </div>
+                </div>
+                <div class=" ">
+                  <div
+                    class="nc-CardNFT cursor-pointer relative flex flex-col group !border-0 [ nc-box-has-hover nc-dark-box-bg-has-hover ] "
+                    data-nc-id="CardNFT">
+                    <div class="relative flex-shrink-0 z-20">
+                      <div class="relative">
+                        <div class=" ">
+                          <div
+                            class="nc-NcImage flex aspect-w-11 aspect-h-12 w-full h-0 rounded-3xl overflow-hidden z-10 border-2 border-transparent dark:border-neutral-900 nft-content "
+                            data-nc-id="NcImage">
+                            <div
+                              class="object-cover w-full h-full group-hover:scale-[1.03] transition-transform duration-300 ease-in-out will-change-transform flex items-center justify-center bg-neutral-200 dark:bg-neutral-6000 text-neutral-100 dark:text-neutral-500">
+                              <div class="h-2/4 max-w-[50%]"><img alt="no-image"
+                                  src="/static/media/no-image-dark.7558c65e2ab5b262fc4fb10290a87bea.svg"
+                                  class="h-full dark:block hidden"><img alt="no-image"
+                                  src="/static/media/no-image-light.2de86cbe2d5545f26f5b57e0be304899.svg"
+                                  class="h-full block dark:hidden"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden sm:block absolute right-0 left-0 bottom-0 top-0 m-auto w-fit h-fit transition-all duration-[400ms] z-20 opacity-0 group-hover:opacity-100 translate-y-44 group-hover:translate-y-0">
+                          <button
+                            class="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  text-white bg-gradient-to-br from-purple-600 to-purple-600 via-blue-500 bg-[length:300%] !bg-left hover:!bg-right !transition-[background-position] !duration-[300ms] ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 !h-12 max-w-[150px] !text-sm !p-2 !px-3 flex items-center gap-2 justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0"><svg
+                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                              stroke="currentColor" class="w-4 h-4">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
+                            </svg>Quick Buy</button></div>
+                      </div><button
+                        class="bg-black/50 px-3.5 h-10 flex items-center justify-center rounded-full text-white absolute top-3 right-3 z-20 !h-9"><svg
+                          class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                            stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        </svg><span class="ml-2 text-sm">0</span></button>
+                    </div>
+                    <div class="p-4 py-5 space-y-3">
+                      <h2 class="text-xs sm:text-base font-medium h-[30px] sm:h-[45px] line-clamp-2 break-words">#SCL110
+                      </h2>
+                      <div class="w-2d4 w-full border-b border-neutral-100 dark:border-neutral-700"></div>
+                      <div class="flex justify-between items-end ">
+                        <div class="pt-3">
+                          <div
+                            class="flex items-baseline border-2 border-suicolor rounded-lg relative py-2 px-2.5 text-sm sm:text-base font-semibold ">
+                            <span
+                              class="block absolute font-normal bottom-full translate-y-3 p-1 -mx-1 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 bg-white dark:bg-neutral-900 dark:group-hover:bg-neutral-800 group-hover:bg-neutral-50">Price</span>
+                            <div
+                              class="!leading-none flex gap-1 justify-center items-end mt-[6px] sm:mt-[4px]  text-suicolor">
+                              <div class="nc-NcImage " data-nc-id="NcImage">
+                                <div
+                                  class="w-3 h-4 flex items-center justify-center bg-neutral-200 dark:bg-neutral-6000 text-neutral-100 dark:text-neutral-500">
+                                  <div class="h-2/4 max-w-[50%]"><img alt="no-image"
+                                      src="/static/media/no-image-dark.7558c65e2ab5b262fc4fb10290a87bea.svg"
+                                      class="h-full dark:block hidden"><img alt="no-image"
+                                      src="/static/media/no-image-light.2de86cbe2d5545f26f5b57e0be304899.svg"
+                                      class="h-full block dark:hidden"></div>
+                                </div>
+                              </div>
+                              <p class="text-xs sm:text-sm 2xl:text-base sm:h-[19px]">500</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden sm:flex  items-center text-sm text-neutral-500 dark:text-neutral-400 hover:scale-105 transition-all duration-100 z-20">
+                          <p class="bg-white border-[7px] rounded-full w-12 h-12 p-1 z-10 border-neutral-700"><img
+                              alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                              class="w-6 h-6"></p>
+                          <p class="p-2 pt-2.5 text-white text-xs rounded-2xl -ml-[25px] z-0 pl-[25px] bg-neutral-700">
+                            Bulk Buy</p>
+                        </div>
+                        <p
+                          class="block sm:hidden hover:scale-110 hover:border-blue-500 bg-white border-[7px] rounded-full w-10 h-10 p-1 z-20 border-neutral-700">
+                          <img alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                            class="w-4 h-4"></p>
+                      </div>
+                    </div><a class="absolute inset-0 z-10" href="/collection/market-item/59002"></a>
+                  </div>
+                </div>
+                <div class=" ">
+                  <div
+                    class="nc-CardNFT cursor-pointer relative flex flex-col group !border-0 [ nc-box-has-hover nc-dark-box-bg-has-hover ] "
+                    data-nc-id="CardNFT">
+                    <div class="relative flex-shrink-0 z-20">
+                      <div class="relative">
+                        <div class=" ">
+                          <div
+                            class="nc-NcImage flex aspect-w-11 aspect-h-12 w-full h-0 rounded-3xl overflow-hidden z-10 border-2 border-transparent dark:border-neutral-900 nft-content "
+                            data-nc-id="NcImage">
+                            <div
+                              class="object-cover w-full h-full group-hover:scale-[1.03] transition-transform duration-300 ease-in-out will-change-transform flex items-center justify-center bg-neutral-200 dark:bg-neutral-6000 text-neutral-100 dark:text-neutral-500">
+                              <div class="h-2/4 max-w-[50%]"><img alt="no-image"
+                                  src="/static/media/no-image-dark.7558c65e2ab5b262fc4fb10290a87bea.svg"
+                                  class="h-full dark:block hidden"><img alt="no-image"
+                                  src="/static/media/no-image-light.2de86cbe2d5545f26f5b57e0be304899.svg"
+                                  class="h-full block dark:hidden"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden sm:block absolute right-0 left-0 bottom-0 top-0 m-auto w-fit h-fit transition-all duration-[400ms] z-20 opacity-0 group-hover:opacity-100 translate-y-44 group-hover:translate-y-0">
+                          <button
+                            class="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  text-white bg-gradient-to-br from-purple-600 to-purple-600 via-blue-500 bg-[length:300%] !bg-left hover:!bg-right !transition-[background-position] !duration-[300ms] ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 !h-12 max-w-[150px] !text-sm !p-2 !px-3 flex items-center gap-2 justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0"><svg
+                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                              stroke="currentColor" class="w-4 h-4">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
+                            </svg>Quick Buy</button></div>
+                      </div><button
+                        class="bg-black/50 px-3.5 h-10 flex items-center justify-center rounded-full text-white absolute top-3 right-3 z-20 !h-9"><svg
+                          class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                            stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        </svg><span class="ml-2 text-sm">0</span></button>
+                    </div>
+                    <div class="p-4 py-5 space-y-3">
+                      <h2 class="text-xs sm:text-base font-medium h-[30px] sm:h-[45px] line-clamp-2 break-words">#SCL357
+                      </h2>
+                      <div class="w-2d4 w-full border-b border-neutral-100 dark:border-neutral-700"></div>
+                      <div class="flex justify-between items-end ">
+                        <div class="pt-3">
+                          <div
+                            class="flex items-baseline border-2 border-suicolor rounded-lg relative py-2 px-2.5 text-sm sm:text-base font-semibold ">
+                            <span
+                              class="block absolute font-normal bottom-full translate-y-3 p-1 -mx-1 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 bg-white dark:bg-neutral-900 dark:group-hover:bg-neutral-800 group-hover:bg-neutral-50">Price</span>
+                            <div
+                              class="!leading-none flex gap-1 justify-center items-end mt-[6px] sm:mt-[4px]  text-suicolor">
+                              <div class="nc-NcImage " data-nc-id="NcImage">
+                                <div
+                                  class="w-3 h-4 flex items-center justify-center bg-neutral-200 dark:bg-neutral-6000 text-neutral-100 dark:text-neutral-500">
+                                  <div class="h-2/4 max-w-[50%]"><img alt="no-image"
+                                      src="/static/media/no-image-dark.7558c65e2ab5b262fc4fb10290a87bea.svg"
+                                      class="h-full dark:block hidden"><img alt="no-image"
+                                      src="/static/media/no-image-light.2de86cbe2d5545f26f5b57e0be304899.svg"
+                                      class="h-full block dark:hidden"></div>
+                                </div>
+                              </div>
+                              <p class="text-xs sm:text-sm 2xl:text-base sm:h-[19px]">666</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden sm:flex  items-center text-sm text-neutral-500 dark:text-neutral-400 hover:scale-105 transition-all duration-100 z-20">
+                          <p class="bg-white border-[7px] rounded-full w-12 h-12 p-1 z-10 border-neutral-700"><img
+                              alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                              class="w-6 h-6"></p>
+                          <p class="p-2 pt-2.5 text-white text-xs rounded-2xl -ml-[25px] z-0 pl-[25px] bg-neutral-700">
+                            Bulk Buy</p>
+                        </div>
+                        <p
+                          class="block sm:hidden hover:scale-110 hover:border-blue-500 bg-white border-[7px] rounded-full w-10 h-10 p-1 z-20 border-neutral-700">
+                          <img alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                            class="w-4 h-4"></p>
+                      </div>
+                    </div><a class="absolute inset-0 z-10" href="/collection/market-item/56594"></a>
+                  </div>
+                </div>
+                <div class=" ">
+                  <div
+                    class="nc-CardNFT cursor-pointer relative flex flex-col group !border-0 [ nc-box-has-hover nc-dark-box-bg-has-hover ] "
+                    data-nc-id="CardNFT">
+                    <div class="relative flex-shrink-0 z-20">
+                      <div class="relative">
+                        <div class=" ">
+                          <div
+                            class="nc-NcImage flex aspect-w-11 aspect-h-12 w-full h-0 rounded-3xl overflow-hidden z-10 border-2 border-transparent dark:border-neutral-900 nft-content "
+                            data-nc-id="NcImage">
+                            <div
+                              class="object-cover w-full h-full group-hover:scale-[1.03] transition-transform duration-300 ease-in-out will-change-transform flex items-center justify-center bg-neutral-200 dark:bg-neutral-6000 text-neutral-100 dark:text-neutral-500">
+                              <div class="h-2/4 max-w-[50%]"><img alt="no-image"
+                                  src="/static/media/no-image-dark.7558c65e2ab5b262fc4fb10290a87bea.svg"
+                                  class="h-full dark:block hidden"><img alt="no-image"
+                                  src="/static/media/no-image-light.2de86cbe2d5545f26f5b57e0be304899.svg"
+                                  class="h-full block dark:hidden"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden sm:block absolute right-0 left-0 bottom-0 top-0 m-auto w-fit h-fit transition-all duration-[400ms] z-20 opacity-0 group-hover:opacity-100 translate-y-44 group-hover:translate-y-0">
+                          <button
+                            class="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  text-white bg-gradient-to-br from-purple-600 to-purple-600 via-blue-500 bg-[length:300%] !bg-left hover:!bg-right !transition-[background-position] !duration-[300ms] ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 !h-12 max-w-[150px] !text-sm !p-2 !px-3 flex items-center gap-2 justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0"><svg
+                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                              stroke="currentColor" class="w-4 h-4">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
+                            </svg>Quick Buy</button></div>
+                      </div><button
+                        class="bg-black/50 px-3.5 h-10 flex items-center justify-center rounded-full text-white absolute top-3 right-3 z-20 !h-9"><svg
+                          class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                            stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        </svg><span class="ml-2 text-sm">0</span></button>
+                    </div>
+                    <div class="p-4 py-5 space-y-3">
+                      <h2 class="text-xs sm:text-base font-medium h-[30px] sm:h-[45px] line-clamp-2 break-words">#SCL90
+                      </h2>
+                      <div class="w-2d4 w-full border-b border-neutral-100 dark:border-neutral-700"></div>
+                      <div class="flex justify-between items-end ">
+                        <div class="pt-3">
+                          <div
+                            class="flex items-baseline border-2 border-suicolor rounded-lg relative py-2 px-2.5 text-sm sm:text-base font-semibold ">
+                            <span
+                              class="block absolute font-normal bottom-full translate-y-3 p-1 -mx-1 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 bg-white dark:bg-neutral-900 dark:group-hover:bg-neutral-800 group-hover:bg-neutral-50">Price</span>
+                            <div
+                              class="!leading-none flex gap-1 justify-center items-end mt-[6px] sm:mt-[4px]  text-suicolor">
+                              <div class="nc-NcImage " data-nc-id="NcImage">
+                                <div
+                                  class="w-3 h-4 flex items-center justify-center bg-neutral-200 dark:bg-neutral-6000 text-neutral-100 dark:text-neutral-500">
+                                  <div class="h-2/4 max-w-[50%]"><img alt="no-image"
+                                      src="/static/media/no-image-dark.7558c65e2ab5b262fc4fb10290a87bea.svg"
+                                      class="h-full dark:block hidden"><img alt="no-image"
+                                      src="/static/media/no-image-light.2de86cbe2d5545f26f5b57e0be304899.svg"
+                                      class="h-full block dark:hidden"></div>
+                                </div>
+                              </div>
+                              <p class="text-xs sm:text-sm 2xl:text-base sm:h-[19px]">680</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden sm:flex  items-center text-sm text-neutral-500 dark:text-neutral-400 hover:scale-105 transition-all duration-100 z-20">
+                          <p class="bg-white border-[7px] rounded-full w-12 h-12 p-1 z-10 border-neutral-700"><img
+                              alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                              class="w-6 h-6"></p>
+                          <p class="p-2 pt-2.5 text-white text-xs rounded-2xl -ml-[25px] z-0 pl-[25px] bg-neutral-700">
+                            Bulk Buy</p>
+                        </div>
+                        <p
+                          class="block sm:hidden hover:scale-110 hover:border-blue-500 bg-white border-[7px] rounded-full w-10 h-10 p-1 z-20 border-neutral-700">
+                          <img alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                            class="w-4 h-4"></p>
+                      </div>
+                    </div><a class="absolute inset-0 z-10" href="/collection/market-item/56170"></a>
+                  </div>
+                </div>
+                <div class=" ">
+                  <div
+                    class="nc-CardNFT cursor-pointer relative flex flex-col group !border-0 [ nc-box-has-hover nc-dark-box-bg-has-hover ] "
+                    data-nc-id="CardNFT">
+                    <div class="relative flex-shrink-0 z-20">
+                      <div class="relative">
+                        <div class=" ">
+                          <div
+                            class="nc-NcImage flex aspect-w-11 aspect-h-12 w-full h-0 rounded-3xl overflow-hidden z-10 border-2 border-transparent dark:border-neutral-900 nft-content "
+                            data-nc-id="NcImage">
+                            <div
+                              class="object-cover w-full h-full group-hover:scale-[1.03] transition-transform duration-300 ease-in-out will-change-transform flex items-center justify-center bg-neutral-200 dark:bg-neutral-6000 text-neutral-100 dark:text-neutral-500">
+                              <div class="h-2/4 max-w-[50%]"><img alt="no-image"
+                                  src="/static/media/no-image-dark.7558c65e2ab5b262fc4fb10290a87bea.svg"
+                                  class="h-full dark:block hidden"><img alt="no-image"
+                                  src="/static/media/no-image-light.2de86cbe2d5545f26f5b57e0be304899.svg"
+                                  class="h-full block dark:hidden"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden sm:block absolute right-0 left-0 bottom-0 top-0 m-auto w-fit h-fit transition-all duration-[400ms] z-20 opacity-0 group-hover:opacity-100 translate-y-44 group-hover:translate-y-0">
+                          <button
+                            class="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  text-white bg-gradient-to-br from-purple-600 to-purple-600 via-blue-500 bg-[length:300%] !bg-left hover:!bg-right !transition-[background-position] !duration-[300ms] ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 !h-12 max-w-[150px] !text-sm !p-2 !px-3 flex items-center gap-2 justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0"><svg
+                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                              stroke="currentColor" class="w-4 h-4">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
+                            </svg>Quick Buy</button></div>
+                      </div><button
+                        class="bg-black/50 px-3.5 h-10 flex items-center justify-center rounded-full text-white absolute top-3 right-3 z-20 !h-9"><svg
+                          class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                            stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        </svg><span class="ml-2 text-sm">0</span></button>
+                    </div>
+                    <div class="p-4 py-5 space-y-3">
+                      <h2 class="text-xs sm:text-base font-medium h-[30px] sm:h-[45px] line-clamp-2 break-words">#SCL543
+                      </h2>
+                      <div class="w-2d4 w-full border-b border-neutral-100 dark:border-neutral-700"></div>
+                      <div class="flex justify-between items-end ">
+                        <div class="pt-3">
+                          <div
+                            class="flex items-baseline border-2 border-suicolor rounded-lg relative py-2 px-2.5 text-sm sm:text-base font-semibold ">
+                            <span
+                              class="block absolute font-normal bottom-full translate-y-3 p-1 -mx-1 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 bg-white dark:bg-neutral-900 dark:group-hover:bg-neutral-800 group-hover:bg-neutral-50">Price</span>
+                            <div
+                              class="!leading-none flex gap-1 justify-center items-end mt-[6px] sm:mt-[4px]  text-suicolor">
+                              <div class="nc-NcImage " data-nc-id="NcImage">
+                                <div
+                                  class="w-3 h-4 flex items-center justify-center bg-neutral-200 dark:bg-neutral-6000 text-neutral-100 dark:text-neutral-500">
+                                  <div class="h-2/4 max-w-[50%]"><img alt="no-image"
+                                      src="/static/media/no-image-dark.7558c65e2ab5b262fc4fb10290a87bea.svg"
+                                      class="h-full dark:block hidden"><img alt="no-image"
+                                      src="/static/media/no-image-light.2de86cbe2d5545f26f5b57e0be304899.svg"
+                                      class="h-full block dark:hidden"></div>
+                                </div>
+                              </div>
+                              <p class="text-xs sm:text-sm 2xl:text-base sm:h-[19px]">699</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden sm:flex  items-center text-sm text-neutral-500 dark:text-neutral-400 hover:scale-105 transition-all duration-100 z-20">
+                          <p class="bg-white border-[7px] rounded-full w-12 h-12 p-1 z-10 border-neutral-700"><img
+                              alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                              class="w-6 h-6"></p>
+                          <p class="p-2 pt-2.5 text-white text-xs rounded-2xl -ml-[25px] z-0 pl-[25px] bg-neutral-700">
+                            Bulk Buy</p>
+                        </div>
+                        <p
+                          class="block sm:hidden hover:scale-110 hover:border-blue-500 bg-white border-[7px] rounded-full w-10 h-10 p-1 z-20 border-neutral-700">
+                          <img alt="cart-icon" src="/static/media/cart_nomal.e14ec582cc13a3e5f3dbc755ac4c0916.svg"
+                            class="w-4 h-4"></p>
+                      </div>
+                    </div><a class="absolute inset-0 z-10" href="/collection/market-item/56328"></a>
+                  </div>
                 </div>
               </div>
             </div>
+            <ul class="pagination mt-20 " role="navigation" aria-label="Pagination">
+              <li class="previous disabled"><a
+                  class="block py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white  "
+                  tabindex="-1" role="button" aria-disabled="true" aria-label="Previous page" rel="prev">&lt;</a></li>
+              <li class="h-[27px] selected"><a rel="canonical" role="button"
+                  class="text-sm py-2.5 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white z-10 py-2 px-3 leading-tight text-blue-600 bg-blue-50 border border-blue-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
+                  tabindex="-1" aria-label="Page 1 is your current page" aria-current="page">1</a></li>
+              <li class="h-[27px]"><a rel="next" role="button"
+                  class="text-sm py-2.5 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                  tabindex="0" aria-label="Page 2">2</a></li>
+              <li class="h-[27px]"><a role="button"
+                  class="text-sm py-2.5 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                  tabindex="0" aria-label="Page 3">3</a></li>
+              <li class="next"><a
+                  class="block py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                  tabindex="0" role="button" aria-disabled="false" aria-label="Next page" rel="next">&gt;</a></li>
+            </ul>
           </div>
         </div>
-      </main>
-    </div>
-    <span id=" " role="tabpanel" aria-labelledby=" " tabindex="-1"
-      style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px"></span>
+
+
+      </div>
+    </main>
   </div>
-</template>
+  <span id=" " role="tabpanel" aria-labelledby=" " tabindex="-1"
+    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px"></span>
+</div></template>
 <script>
 export default {
   data() {

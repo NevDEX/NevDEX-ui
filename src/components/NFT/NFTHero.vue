@@ -20,13 +20,6 @@
 
       <div class="mt-40 px-2">
         <BannerGroup />
-        <!-- <div class="h-[5px] mt-3 flex justify-center space-x-3">
-                    <span class="bg-gray-600 h-full w-5 rounded block"></span>
-                    <span class="bg-gray-600 h-full w-5 rounded block"></span>
-                    <span class="bg-gray-600 h-full w-5 rounded block"></span>
-                    <span class="bg-gray-600 h-full w-5 rounded block"></span>
-                    <span class="bg-gray-600 h-full w-5 rounded block"></span>
-                </div> -->
       </div>
     </div>
   </div>

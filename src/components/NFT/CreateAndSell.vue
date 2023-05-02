@@ -59,6 +59,9 @@ export default {
           this.$router.push({ name: 'create_nft', params: { id: 1 } })
           break
         case "Sell Now":
+          this.$router.push({ name: 'sell_nft', params: { id: 1 } })
+          break
+
       }
     }
   }
