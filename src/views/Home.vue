@@ -14,8 +14,8 @@
     </div>
     <!-- middle -->
   </div>
-  <div class="pb-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-4 mt-20 container mx-auto w-screen px-20 mb-36  ">
-    <div class="p-6 bg-gray-800 rounded-lg border border-gray-900 shadow-md mx-auto my-0 w-[90%]  ">
+  <div class="pb-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-4 mt-20 container mx-auto w-screen px-10 mb-36">
+    <div class="p-6 max-w-sm bg-gray-800 rounded-lg border border-gray-900 shadow-md mx-auto my-0 w-full">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
         <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
       </svg>
@@ -26,7 +26,7 @@
       <p class="mb-2 font-normal text-gray-500">Order Book Matching</p>
       <p class="mb-2 font-normal text-gray-500">Deep Liquidity Low Fees</p>
     </div>
-    <div class="p-6 bg-gray-800 rounded-lg border border-gray-900 shadow-md mx-auto my-0 w-[90%] ">
+    <div class="p-6 max-w-sm bg-gray-800 rounded-lg border border-gray-900 shadow-md mx-auto my-0 w-full">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
         <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
       </svg>
@@ -37,11 +37,9 @@
       <p class="mb-2 font-normal text-gray-500">Trade To Earn</p>
       <p class="mb-2 font-normal text-gray-500"><br /></p>
     </div>
-    <div class="p-6   bg-gray-800 rounded-lg border border-gray-900 shadow-md mx-auto my-0 w-[90%] ">
+    <div class="p-6 max-w-sm bg-gray-800 rounded-lg border border-gray-900 shadow-md mx-auto my-0 w-full">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
-        <path fill-rule="evenodd"
-          d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"
-          clip-rule="evenodd" />
+        <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
       </svg>
       <a href="javascript:void(0)">
         <h5 class="my-2 text-2xl font-bold tracking-tight text-gray-200">FOR NFT & DEFI LOVERS:</h5>
